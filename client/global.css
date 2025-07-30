@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 20% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 20%;
+
+    --primary: 185 85% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 185 20% 96%;
+    --secondary-foreground: 185 85% 25%;
+
+    --muted: 185 10% 95%;
+    --muted-foreground: 185 15% 45%;
+
+    --accent: 185 85% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 185 15% 88%;
+    --input: 185 15% 88%;
+    --ring: 185 85% 45%;
+
+    --radius: 0.75rem;
+
+    /* Oceanic brand colors */
+    --ocean-light: 185 60% 85%;
+    --ocean-medium: 185 70% 60%;
+    --ocean-dark: 185 85% 35%;
+    --wave-light: 200 30% 95%;
+    --wave-medium: 200 40% 85%;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 185 25% 8%;
+    --foreground: 185 10% 90%;
+
+    --card: 185 20% 12%;
+    --card-foreground: 185 10% 90%;
+
+    --popover: 185 20% 12%;
+    --popover-foreground: 185 10% 90%;
+
+    --primary: 185 85% 55%;
+    --primary-foreground: 185 25% 8%;
+
+    --secondary: 185 15% 20%;
+    --secondary-foreground: 185 10% 90%;
+
+    --muted: 185 15% 18%;
+    --muted-foreground: 185 10% 65%;
+
+    --accent: 185 70% 45%;
+    --accent-foreground: 185 10% 90%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 185 15% 20%;
+    --input: 185 15% 20%;
+    --ring: 185 85% 55%;
+
+    /* Dark mode oceanic colors */
+    --ocean-light: 185 40% 25%;
+    --ocean-medium: 185 60% 40%;
+    --ocean-dark: 185 85% 55%;
+    --wave-light: 200 20% 15%;
+    --wave-medium: 200 25% 25%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .wave-animation {
+    background: linear-gradient(
+      -45deg,
+      hsl(var(--ocean-light)),
+      hsl(var(--ocean-medium)),
+      hsl(var(--primary)),
+      hsl(var(--ocean-dark))
+    );
+    background-size: 400% 400%;
+    animation: wave-flow 8s ease-in-out infinite;
+  }
+
+  @keyframes wave-flow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}
