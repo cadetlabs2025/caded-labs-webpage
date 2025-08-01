@@ -8,10 +8,19 @@
   ],
   "navigationFallback": {
     "rewrite": "/index.html",
-    "exclude": ["*.{css,scss,js,png,gif,ico,jpg,jpeg,svg,pdf}"]
+    "exclude": [
+      "*.{css,scss,js,png,gif,ico,jpg,jpeg,svg,pdf,webp,woff,woff2,ttf,eot}"
+    ]
   },
   "mimeTypes": {
     ".json": "application/json",
-    ".pdf": "application/pdf"
+    ".pdf": "application/pdf",
+    ".jpeg": "image/jpeg",
+    ".jpg": "image/jpeg",
+    ".png": "image/png",
+    ".svg": "image/svg+xml"
+  },
+  "globalHeaders": {
+    "Cache-Control": "public, max-age=31536000"
   }
 }
