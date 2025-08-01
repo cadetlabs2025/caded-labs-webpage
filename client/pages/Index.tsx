@@ -304,12 +304,10 @@ function HomeTab({ onTabChange }: TabProps) {
               Our Mission
             </h2>
             <p className="text-xl text-slate-600 leading-relaxed">
-              <strong className="text-cyan-600">
-                "AI is an explainable superpower to humans."
-              </strong>{" "}
-              We believe in making artificial intelligence transparent,
-              understandable, and truly beneficial for maritime professionals
-              and industrial leaders who need reliable, intelligent solutions.
+              We believe in the soul of shipping. That the toughest maritime
+              challenges deserve not shortcuts, but sharp minds and honest
+              grind. We build AI not to dominate, but to complement — with
+              respect, precision, and balance.
             </p>
           </div>
         </div>
