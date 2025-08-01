@@ -281,9 +281,9 @@ function HomeTab({ onTabChange }: TabProps) {
               {/* Logo container with enhanced styling */}
               <div className="relative z-10 bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-white/50">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2Feacf4d198f7d471b831a310bf0945bc6%2F9af88a351923405ca30afd8d23a44e8b?format=webp&width=800"
-                  alt="Cadet Labs"
-                  className="h-64 lg:h-80 w-auto max-w-full filter drop-shadow-xl"
+                  src="/GPT_Marine.jpeg"
+                  alt="GPT Maritime AI Container Ship"
+                  className="h-80 lg:h-96 xl:h-[28rem] w-auto max-w-full filter drop-shadow-xl"
                 />
 
                 {/* Decorative elements around logo */}
