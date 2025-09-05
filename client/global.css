@@ -163,15 +163,4 @@
       transform: translateY(0px);
     }
   }
-
-  img {
-    height: 40px; /* try 50px or 60px */
-    width: auto;
-  }
-}
-
-.footer-logo img {
-  height: 50px; /* make it larger */
-  filter: brightness(0) invert(1); /* turns dark text into white */
-  opacity: 0.95;
 }
