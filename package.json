@@ -12,9 +12,10 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "npm run build:client && npm run build:server",
+    "build": "npm run build:client && npm run build:api",
     "build:client": "vite build",
-    "build:azure": "vite build",
+    "build:azure": "npm run build:client && npm run build:api",
+    "build:api": "cd api && npm install && npm run build:production",
     "copy-server-assets": "cpx \"server/**/*\" dist/spa/server",
     "build:server": "vite build --config vite.config.server.ts",
     "start": "node dist/server/node-build.mjs",

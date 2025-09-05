@@ -159,6 +159,15 @@ function Footer({ onTabChange }: TabProps) {
             AI-powered maritime and cybersecurity solutions that make complex
             technology accessible and actionable.
           </p>
+
+          {/* Microsoft Partnership Section */}
+          <div className="mt-8 pt-6 border-t border-primary-foreground/20">
+            <img
+              src="/microsoft-for-startups.png"
+              alt="Microsoft for Startups"
+              className="h-16 w-auto opacity-95 hover:opacity-100 transition-all duration-300 hover:scale-105 filter brightness-110"
+            />
+          </div>
         </div>
 
         <div>

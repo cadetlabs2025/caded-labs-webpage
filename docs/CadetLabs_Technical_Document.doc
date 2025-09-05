@@ -1,0 +1,1765 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv=Content-Type  content="text/html; charset=utf-8" ><meta name=ProgId  content=Word.Document ><meta name=Generator  content="Microsoft Word 14" ><meta name=Originator  content="Microsoft Word 14" ><link rel=File-List  href="CadetLabs_Technical_Document.files/filelist.xml" ><title></title><!--[if gte mso 9]><xml><o:DocumentProperties><o:Author>munen</o:Author><o:LastAuthor>WPS_1611150320</o:LastAuthor><o:Revision>1</o:Revision><o:Pages>2</o:Pages><o:Lines>1</o:Lines><o:Paragraphs>1</o:Paragraphs></o:DocumentProperties><o:CustomDocumentProperties><o:KSOProductBuildVer dt:dt="string" >1033-12.2.0.21931</o:KSOProductBuildVer><o:ICV dt:dt="string" >9B24233A9D914318A11DD79DB62B620E_12</o:ICV></o:CustomDocumentProperties></xml><![endif]--><!--[if gte mso 9]><xml><o:OfficeDocumentSettings></o:OfficeDocumentSettings></xml><![endif]--><!--[if gte mso 9]><xml><w:WordDocument><w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel><w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery><w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery><w:DocumentKind>DocumentNotSpecified</w:DocumentKind><w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing><w:View>Web</w:View><w:Compatibility></w:Compatibility><w:Zoom>0</w:Zoom></w:WordDocument></xml><![endif]--><!--[if gte mso 9]><xml><w:LatentStyles DefLockedState="false"  DefUnhideWhenUsed="true"  DefSemiHidden="true"  DefQFormat="false"  DefPriority="99"  LatentStyleCount="260" >
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  QFormat="true"  Name="Normal" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  QFormat="true"  Name="heading 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  QFormat="true"  Name="heading 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  QFormat="true"  Name="heading 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  QFormat="true"  Name="heading 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  QFormat="true"  Name="heading 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  QFormat="true"  Name="heading 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  QFormat="true"  Name="heading 7" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  QFormat="true"  Name="heading 8" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  QFormat="true"  Name="heading 9" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="index 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="index 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="index 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="index 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="index 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="index 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="index 7" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="index 8" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="index 9" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="toc 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="toc 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="toc 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="toc 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="toc 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="toc 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="toc 7" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="toc 8" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="toc 9" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Normal Indent" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="footnote text" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="annotation text" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="header" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="footer" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="index heading" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  QFormat="true"  Name="caption" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="table of figures" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="envelope address" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="envelope return" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="footnote reference" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="annotation reference" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="line number" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="page number" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="endnote reference" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="endnote text" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="table of authorities" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="macro" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="toa heading" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="List" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="List Bullet" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="List Number" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="List 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="List 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="List 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="List 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="List Bullet 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="List Bullet 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="List Bullet 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="List Bullet 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="List Number 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="List Number 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="List Number 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="List Number 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  QFormat="true"  Name="Title" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Closing" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Signature" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  UnhideWhenUsed="false"  Name="Default Paragraph Font" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Body Text" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Body Text Indent" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="List Continue" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="List Continue 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="List Continue 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="List Continue 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="List Continue 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Message Header" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  QFormat="true"  Name="Subtitle" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Salutation" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Date" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Body Text First Indent" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Body Text First Indent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Note Heading" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Body Text 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Body Text 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Body Text Indent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Body Text Indent 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Block Text" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Hyperlink" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="FollowedHyperlink" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  QFormat="true"  Name="Strong" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  QFormat="true"  Name="Emphasis" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Document Map" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Plain Text" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="E-mail Signature" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Normal (Web)" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="HTML Acronym" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="HTML Address" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="HTML Cite" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="HTML Code" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="HTML Definition" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="HTML Keyboard" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="HTML Preformatted" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="HTML Sample" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="HTML Typewriter" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="HTML Variable" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  UnhideWhenUsed="false"  Name="Normal Table" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="annotation subject" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="No List" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="1 / a / i" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="1 / 1.1 / 1.1.1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Article / Section" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Simple 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Simple 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Simple 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Classic 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Classic 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Classic 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Classic 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Colorful 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Colorful 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Colorful 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Columns 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Columns 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Columns 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Columns 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Columns 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Grid 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Grid 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Grid 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Grid 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Grid 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Grid 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Grid 7" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Grid 8" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table List 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table List 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table List 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table List 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table List 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table List 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table List 7" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table List 8" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table 3D effects 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table 3D effects 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table 3D effects 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Contemporary" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Elegant" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Professional" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Subtle 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Subtle 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Web 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Web 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Web 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Balloon Text" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Grid" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="0"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Table Theme" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Placeholder Text" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="No Spacing" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="60"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Light Shading" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="61"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Light List" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="62"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Light Grid" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="63"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Shading 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="64"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Shading 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="65"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium List 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="66"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium List 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="67"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Grid 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="68"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Grid 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="69"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Grid 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="70"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Dark List" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="71"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Colorful Shading" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="72"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Colorful List" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="73"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Colorful Grid" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="60"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Light Shading Accent 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="61"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Light List Accent 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="62"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Light Grid Accent 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="63"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Shading 1 Accent 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="64"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Shading 2 Accent 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="65"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium List 1 Accent 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="List Paragraph" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Quote" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="99"  SemiHidden="false"  Name="Intense Quote" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="66"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium List 2 Accent 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="67"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Grid 1 Accent 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="68"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Grid 2 Accent 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="69"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Grid 3 Accent 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="70"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Dark List Accent 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="71"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Colorful Shading Accent 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="72"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Colorful List Accent 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="73"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Colorful Grid Accent 1" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="60"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Light Shading Accent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="61"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Light List Accent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="62"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Light Grid Accent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="63"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Shading 1 Accent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="64"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Shading 2 Accent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="65"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium List 1 Accent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="66"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium List 2 Accent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="67"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Grid 1 Accent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="68"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Grid 2 Accent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="69"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Grid 3 Accent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="70"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Dark List Accent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="71"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Colorful Shading Accent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="72"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Colorful List Accent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="73"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Colorful Grid Accent 2" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="60"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Light Shading Accent 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="61"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Light List Accent 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="62"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Light Grid Accent 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="63"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Shading 1 Accent 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="64"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Shading 2 Accent 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="65"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium List 1 Accent 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="66"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium List 2 Accent 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="67"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Grid 1 Accent 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="68"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Grid 2 Accent 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="69"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Grid 3 Accent 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="70"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Dark List Accent 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="71"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Colorful Shading Accent 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="72"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Colorful List Accent 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="73"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Colorful Grid Accent 3" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="60"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Light Shading Accent 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="61"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Light List Accent 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="62"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Light Grid Accent 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="63"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Shading 1 Accent 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="64"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Shading 2 Accent 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="65"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium List 1 Accent 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="66"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium List 2 Accent 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="67"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Grid 1 Accent 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="68"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Grid 2 Accent 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="69"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Grid 3 Accent 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="70"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Dark List Accent 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="71"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Colorful Shading Accent 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="72"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Colorful List Accent 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="73"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Colorful Grid Accent 4" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="60"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Light Shading Accent 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="61"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Light List Accent 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="62"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Light Grid Accent 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="63"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Shading 1 Accent 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="64"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Shading 2 Accent 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="65"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium List 1 Accent 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="66"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium List 2 Accent 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="67"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Grid 1 Accent 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="68"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Grid 2 Accent 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="69"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Grid 3 Accent 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="70"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Dark List Accent 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="71"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Colorful Shading Accent 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="72"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Colorful List Accent 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="73"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Colorful Grid Accent 5" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="60"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Light Shading Accent 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="61"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Light List Accent 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="62"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Light Grid Accent 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="63"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Shading 1 Accent 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="64"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Shading 2 Accent 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="65"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium List 1 Accent 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="66"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium List 2 Accent 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="67"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Grid 1 Accent 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="68"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Grid 2 Accent 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="69"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Medium Grid 3 Accent 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="70"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Dark List Accent 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="71"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Colorful Shading Accent 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="72"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Colorful List Accent 6" ></w:LsdException>
+<w:LsdException Locked="false"  Priority="73"  SemiHidden="false"  UnhideWhenUsed="false"  Name="Colorful Grid Accent 6" ></w:LsdException>
+</w:LatentStyles></xml><![endif]--><style>
+@font-face{
+font-family:"Times New Roman";
+}
+
+@font-face{
+font-family:"宋体";
+}
+
+@font-face{
+font-family:"SimSun";
+}
+
+@font-face{
+font-family:"Symbol";
+}
+
+@font-face{
+font-family:"Courier New";
+}
+
+@font-face{
+font-family:"Wingdings";
+}
+
+@font-face{
+font-family:"Wingdings";
+}
+
+@font-face{
+font-family:"Consolas";
+}
+
+@font-face{
+font-family:"Calibri";
+}
+
+@font-face{
+font-family:"Segoe UI";
+}
+
+@list l0:level1{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:36.0000pt;
+mso-level-number-position:left;
+margin-left:36.0000pt;text-indent:-18.0000pt;tab-stops:blank 36.0000pt ;font-family:Symbol;font-size:10.0000pt;}
+
+@list l0:level2{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"o";
+mso-level-tab-stop:72.0000pt;
+mso-level-number-position:left;
+margin-left:72.0000pt;text-indent:-18.0000pt;tab-stops:blank 72.0000pt ;font-family:'Courier New';font-size:10.0000pt;}
+
+@list l0:level3{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:108.0000pt;
+mso-level-number-position:left;
+margin-left:108.0000pt;text-indent:-18.0000pt;tab-stops:blank 108.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l0:level4{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:144.0000pt;
+mso-level-number-position:left;
+margin-left:144.0000pt;text-indent:-18.0000pt;tab-stops:blank 144.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l0:level5{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:180.0000pt;
+mso-level-number-position:left;
+margin-left:180.0000pt;text-indent:-18.0000pt;tab-stops:blank 180.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l0:level6{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:216.0000pt;
+mso-level-number-position:left;
+margin-left:216.0000pt;text-indent:-18.0000pt;tab-stops:blank 216.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l0:level7{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:252.0000pt;
+mso-level-number-position:left;
+margin-left:252.0000pt;text-indent:-18.0000pt;tab-stops:blank 252.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l0:level8{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:288.0000pt;
+mso-level-number-position:left;
+margin-left:288.0000pt;text-indent:-18.0000pt;tab-stops:blank 288.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l0:level9{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:324.0000pt;
+mso-level-number-position:left;
+margin-left:324.0000pt;text-indent:-18.0000pt;tab-stops:blank 324.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l1:level1{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%1.";
+mso-level-tab-stop:36.0000pt;
+mso-level-number-position:left;
+margin-left:36.0000pt;text-indent:-18.0000pt;tab-stops:blank 36.0000pt ;font-family:'Times New Roman';font-size:12.0000pt;}
+
+@list l1:level2{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%2.";
+mso-level-tab-stop:72.0000pt;
+mso-level-number-position:left;
+margin-left:72.0000pt;text-indent:-18.0000pt;tab-stops:blank 72.0000pt ;font-family:'Times New Roman';font-size:12.0000pt;}
+
+@list l1:level3{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%3.";
+mso-level-tab-stop:108.0000pt;
+mso-level-number-position:left;
+margin-left:108.0000pt;text-indent:-18.0000pt;tab-stops:blank 108.0000pt ;font-family:'Times New Roman';font-size:12.0000pt;}
+
+@list l1:level4{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%4.";
+mso-level-tab-stop:125.8500pt;
+mso-level-number-position:left;
+margin-left:144.0000pt;text-indent:-18.0000pt;tab-stops:blank 125.8500pt ;font-family:'Times New Roman';font-size:12.0000pt;}
+
+@list l1:level5{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%5.";
+mso-level-tab-stop:161.9000pt;
+mso-level-number-position:left;
+margin-left:180.0000pt;text-indent:-18.0000pt;tab-stops:blank 161.9000pt ;font-family:'Times New Roman';font-size:12.0000pt;}
+
+@list l1:level6{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%6.";
+mso-level-tab-stop:197.9000pt;
+mso-level-number-position:left;
+margin-left:216.0000pt;text-indent:-18.0000pt;tab-stops:blank 197.9000pt ;font-family:'Times New Roman';font-size:12.0000pt;}
+
+@list l1:level7{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%7.";
+mso-level-tab-stop:233.9000pt;
+mso-level-number-position:left;
+margin-left:252.0000pt;text-indent:-18.0000pt;tab-stops:blank 233.9000pt ;font-family:'Times New Roman';font-size:12.0000pt;}
+
+@list l1:level8{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%8.";
+mso-level-tab-stop:269.9000pt;
+mso-level-number-position:left;
+margin-left:288.0000pt;text-indent:-18.0000pt;tab-stops:blank 269.9000pt ;font-family:'Times New Roman';font-size:12.0000pt;}
+
+@list l1:level9{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%9.";
+mso-level-tab-stop:305.9000pt;
+mso-level-number-position:left;
+margin-left:324.0000pt;text-indent:-18.0000pt;tab-stops:blank 305.9000pt ;font-family:'Times New Roman';font-size:12.0000pt;}
+
+@list l2:level1{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:36.0000pt;
+mso-level-number-position:left;
+margin-left:36.0000pt;text-indent:-18.0000pt;tab-stops:blank 36.0000pt ;font-family:Symbol;font-size:10.0000pt;}
+
+@list l2:level2{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"o";
+mso-level-tab-stop:72.0000pt;
+mso-level-number-position:left;
+margin-left:72.0000pt;text-indent:-18.0000pt;tab-stops:blank 72.0000pt ;font-family:'Courier New';font-size:10.0000pt;}
+
+@list l2:level3{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:108.0000pt;
+mso-level-number-position:left;
+margin-left:108.0000pt;text-indent:-18.0000pt;tab-stops:blank 108.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l2:level4{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:144.0000pt;
+mso-level-number-position:left;
+margin-left:144.0000pt;text-indent:-18.0000pt;tab-stops:blank 144.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l2:level5{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:180.0000pt;
+mso-level-number-position:left;
+margin-left:180.0000pt;text-indent:-18.0000pt;tab-stops:blank 180.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l2:level6{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:216.0000pt;
+mso-level-number-position:left;
+margin-left:216.0000pt;text-indent:-18.0000pt;tab-stops:blank 216.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l2:level7{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:252.0000pt;
+mso-level-number-position:left;
+margin-left:252.0000pt;text-indent:-18.0000pt;tab-stops:blank 252.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l2:level8{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:288.0000pt;
+mso-level-number-position:left;
+margin-left:288.0000pt;text-indent:-18.0000pt;tab-stops:blank 288.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l2:level9{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:324.0000pt;
+mso-level-number-position:left;
+margin-left:324.0000pt;text-indent:-18.0000pt;tab-stops:blank 324.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l3:level1{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:36.0000pt;
+mso-level-number-position:left;
+margin-left:36.0000pt;text-indent:-18.0000pt;tab-stops:blank 36.0000pt ;font-family:Symbol;font-size:10.0000pt;}
+
+@list l3:level2{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"o";
+mso-level-tab-stop:72.0000pt;
+mso-level-number-position:left;
+margin-left:72.0000pt;text-indent:-18.0000pt;tab-stops:blank 72.0000pt ;font-family:'Courier New';font-size:10.0000pt;}
+
+@list l3:level3{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:108.0000pt;
+mso-level-number-position:left;
+margin-left:108.0000pt;text-indent:-18.0000pt;tab-stops:blank 108.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l3:level4{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:144.0000pt;
+mso-level-number-position:left;
+margin-left:144.0000pt;text-indent:-18.0000pt;tab-stops:blank 144.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l3:level5{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:180.0000pt;
+mso-level-number-position:left;
+margin-left:180.0000pt;text-indent:-18.0000pt;tab-stops:blank 180.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l3:level6{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:216.0000pt;
+mso-level-number-position:left;
+margin-left:216.0000pt;text-indent:-18.0000pt;tab-stops:blank 216.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l3:level7{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:252.0000pt;
+mso-level-number-position:left;
+margin-left:252.0000pt;text-indent:-18.0000pt;tab-stops:blank 252.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l3:level8{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:288.0000pt;
+mso-level-number-position:left;
+margin-left:288.0000pt;text-indent:-18.0000pt;tab-stops:blank 288.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l3:level9{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:324.0000pt;
+mso-level-number-position:left;
+margin-left:324.0000pt;text-indent:-18.0000pt;tab-stops:blank 324.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l4:level1{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%1.";
+mso-level-tab-stop:36.0000pt;
+mso-level-number-position:left;
+margin-left:36.0000pt;text-indent:-18.0000pt;tab-stops:blank 36.0000pt ;font-family:'Times New Roman';font-size:12.0000pt;}
+
+@list l4:level2{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%2.";
+mso-level-tab-stop:72.0000pt;
+mso-level-number-position:left;
+margin-left:72.0000pt;text-indent:-18.0000pt;tab-stops:blank 72.0000pt ;font-family:'Times New Roman';font-size:12.0000pt;}
+
+@list l4:level3{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%3.";
+mso-level-tab-stop:108.0000pt;
+mso-level-number-position:left;
+margin-left:108.0000pt;text-indent:-18.0000pt;tab-stops:blank 108.0000pt ;font-family:'Times New Roman';font-size:12.0000pt;}
+
+@list l4:level4{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%4.";
+mso-level-tab-stop:125.8500pt;
+mso-level-number-position:left;
+margin-left:144.0000pt;text-indent:-18.0000pt;tab-stops:blank 125.8500pt ;font-family:'Times New Roman';font-size:12.0000pt;}
+
+@list l4:level5{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%5.";
+mso-level-tab-stop:161.9000pt;
+mso-level-number-position:left;
+margin-left:180.0000pt;text-indent:-18.0000pt;tab-stops:blank 161.9000pt ;font-family:'Times New Roman';font-size:12.0000pt;}
+
+@list l4:level6{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%6.";
+mso-level-tab-stop:197.9000pt;
+mso-level-number-position:left;
+margin-left:216.0000pt;text-indent:-18.0000pt;tab-stops:blank 197.9000pt ;font-family:'Times New Roman';font-size:12.0000pt;}
+
+@list l4:level7{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%7.";
+mso-level-tab-stop:233.9000pt;
+mso-level-number-position:left;
+margin-left:252.0000pt;text-indent:-18.0000pt;tab-stops:blank 233.9000pt ;font-family:'Times New Roman';font-size:12.0000pt;}
+
+@list l4:level8{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%8.";
+mso-level-tab-stop:269.9000pt;
+mso-level-number-position:left;
+margin-left:288.0000pt;text-indent:-18.0000pt;tab-stops:blank 269.9000pt ;font-family:'Times New Roman';font-size:12.0000pt;}
+
+@list l4:level9{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%9.";
+mso-level-tab-stop:305.9000pt;
+mso-level-number-position:left;
+margin-left:324.0000pt;text-indent:-18.0000pt;tab-stops:blank 305.9000pt ;font-family:'Times New Roman';font-size:12.0000pt;}
+
+@list l5:level1{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:36.0000pt;
+mso-level-number-position:left;
+margin-left:36.0000pt;text-indent:-18.0000pt;tab-stops:blank 36.0000pt ;font-family:Symbol;font-size:10.0000pt;}
+
+@list l5:level2{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"o";
+mso-level-tab-stop:72.0000pt;
+mso-level-number-position:left;
+margin-left:72.0000pt;text-indent:-18.0000pt;tab-stops:blank 72.0000pt ;font-family:'Courier New';font-size:10.0000pt;}
+
+@list l5:level3{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:108.0000pt;
+mso-level-number-position:left;
+margin-left:108.0000pt;text-indent:-18.0000pt;tab-stops:blank 108.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l5:level4{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:144.0000pt;
+mso-level-number-position:left;
+margin-left:144.0000pt;text-indent:-18.0000pt;tab-stops:blank 144.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l5:level5{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:180.0000pt;
+mso-level-number-position:left;
+margin-left:180.0000pt;text-indent:-18.0000pt;tab-stops:blank 180.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l5:level6{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:216.0000pt;
+mso-level-number-position:left;
+margin-left:216.0000pt;text-indent:-18.0000pt;tab-stops:blank 216.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l5:level7{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:252.0000pt;
+mso-level-number-position:left;
+margin-left:252.0000pt;text-indent:-18.0000pt;tab-stops:blank 252.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l5:level8{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:288.0000pt;
+mso-level-number-position:left;
+margin-left:288.0000pt;text-indent:-18.0000pt;tab-stops:blank 288.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l5:level9{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:324.0000pt;
+mso-level-number-position:left;
+margin-left:324.0000pt;text-indent:-18.0000pt;tab-stops:blank 324.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l6:level1{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:36.0000pt;
+mso-level-number-position:left;
+margin-left:36.0000pt;text-indent:-18.0000pt;tab-stops:blank 36.0000pt ;font-family:Symbol;font-size:10.0000pt;}
+
+@list l6:level2{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"o";
+mso-level-tab-stop:72.0000pt;
+mso-level-number-position:left;
+margin-left:72.0000pt;text-indent:-18.0000pt;tab-stops:blank 72.0000pt ;font-family:'Courier New';font-size:10.0000pt;}
+
+@list l6:level3{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:108.0000pt;
+mso-level-number-position:left;
+margin-left:108.0000pt;text-indent:-18.0000pt;tab-stops:blank 108.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l6:level4{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:144.0000pt;
+mso-level-number-position:left;
+margin-left:144.0000pt;text-indent:-18.0000pt;tab-stops:blank 144.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l6:level5{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:180.0000pt;
+mso-level-number-position:left;
+margin-left:180.0000pt;text-indent:-18.0000pt;tab-stops:blank 180.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l6:level6{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:216.0000pt;
+mso-level-number-position:left;
+margin-left:216.0000pt;text-indent:-18.0000pt;tab-stops:blank 216.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l6:level7{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:252.0000pt;
+mso-level-number-position:left;
+margin-left:252.0000pt;text-indent:-18.0000pt;tab-stops:blank 252.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l6:level8{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:288.0000pt;
+mso-level-number-position:left;
+margin-left:288.0000pt;text-indent:-18.0000pt;tab-stops:blank 288.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l6:level9{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:324.0000pt;
+mso-level-number-position:left;
+margin-left:324.0000pt;text-indent:-18.0000pt;tab-stops:blank 324.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l7:level1{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:36.0000pt;
+mso-level-number-position:left;
+margin-left:36.0000pt;text-indent:-18.0000pt;tab-stops:blank 36.0000pt ;font-family:Symbol;font-size:10.0000pt;}
+
+@list l7:level2{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"o";
+mso-level-tab-stop:72.0000pt;
+mso-level-number-position:left;
+margin-left:72.0000pt;text-indent:-18.0000pt;tab-stops:blank 72.0000pt ;font-family:'Courier New';font-size:10.0000pt;}
+
+@list l7:level3{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:108.0000pt;
+mso-level-number-position:left;
+margin-left:108.0000pt;text-indent:-18.0000pt;tab-stops:blank 108.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l7:level4{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:144.0000pt;
+mso-level-number-position:left;
+margin-left:144.0000pt;text-indent:-18.0000pt;tab-stops:blank 144.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l7:level5{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:180.0000pt;
+mso-level-number-position:left;
+margin-left:180.0000pt;text-indent:-18.0000pt;tab-stops:blank 180.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l7:level6{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:216.0000pt;
+mso-level-number-position:left;
+margin-left:216.0000pt;text-indent:-18.0000pt;tab-stops:blank 216.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l7:level7{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:252.0000pt;
+mso-level-number-position:left;
+margin-left:252.0000pt;text-indent:-18.0000pt;tab-stops:blank 252.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l7:level8{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:288.0000pt;
+mso-level-number-position:left;
+margin-left:288.0000pt;text-indent:-18.0000pt;tab-stops:blank 288.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l7:level9{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:"";
+mso-level-tab-stop:324.0000pt;
+mso-level-number-position:left;
+margin-left:324.0000pt;text-indent:-18.0000pt;tab-stops:blank 324.0000pt ;font-family:Wingdings;font-size:10.0000pt;}
+
+@list l8:level1{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%1.";
+mso-level-tab-stop:36.0000pt;
+mso-level-number-position:left;
+margin-left:36.0000pt;text-indent:-18.0000pt;tab-stops:blank 36.0000pt ;font-family:'Times New Roman';font-size:12.0000pt;}
+
+@list l8:level2{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%2.";
+mso-level-tab-stop:72.0000pt;
+mso-level-number-position:left;
+margin-left:72.0000pt;text-indent:-18.0000pt;tab-stops:blank 72.0000pt ;font-family:'Times New Roman';font-size:12.0000pt;}
+
+@list l8:level3{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%3.";
+mso-level-tab-stop:108.0000pt;
+mso-level-number-position:left;
+margin-left:108.0000pt;text-indent:-18.0000pt;tab-stops:blank 108.0000pt ;font-family:'Times New Roman';font-size:12.0000pt;}
+
+@list l8:level4{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%4.";
+mso-level-tab-stop:125.8500pt;
+mso-level-number-position:left;
+margin-left:144.0000pt;text-indent:-18.0000pt;tab-stops:blank 125.8500pt ;font-family:'Times New Roman';font-size:12.0000pt;}
+
+@list l8:level5{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%5.";
+mso-level-tab-stop:161.9000pt;
+mso-level-number-position:left;
+margin-left:180.0000pt;text-indent:-18.0000pt;tab-stops:blank 161.9000pt ;font-family:'Times New Roman';font-size:12.0000pt;}
+
+@list l8:level6{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%6.";
+mso-level-tab-stop:197.9000pt;
+mso-level-number-position:left;
+margin-left:216.0000pt;text-indent:-18.0000pt;tab-stops:blank 197.9000pt ;font-family:'Times New Roman';font-size:12.0000pt;}
+
+@list l8:level7{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%7.";
+mso-level-tab-stop:233.9000pt;
+mso-level-number-position:left;
+margin-left:252.0000pt;text-indent:-18.0000pt;tab-stops:blank 233.9000pt ;font-family:'Times New Roman';font-size:12.0000pt;}
+
+@list l8:level8{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%8.";
+mso-level-tab-stop:269.9000pt;
+mso-level-number-position:left;
+margin-left:288.0000pt;text-indent:-18.0000pt;tab-stops:blank 269.9000pt ;font-family:'Times New Roman';font-size:12.0000pt;}
+
+@list l8:level9{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%9.";
+mso-level-tab-stop:305.9000pt;
+mso-level-number-position:left;
+margin-left:324.0000pt;text-indent:-18.0000pt;tab-stops:blank 305.9000pt ;font-family:'Times New Roman';font-size:12.0000pt;}
+
+p.MsoNormal{
+mso-style-name:Normal;
+mso-style-parent:"";
+margin:0pt;
+margin-bottom:.0001pt;
+text-align:left;
+font-family:Calibri;
+mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';
+font-size:12.0000pt;
+}
+
+h1{
+mso-style-name:"Heading 1";
+mso-style-next:Normal;
+margin-top:14.4000pt;
+margin-bottom:5.0000pt;
+mso-margin-bottom-alt:auto;
+text-align:left;
+font-family:SimSun;
+color:rgb(11,92,171);
+font-weight:bold;
+font-size:16.5000pt;
+mso-font-kerning:22.0000pt;
+}
+
+h2{
+mso-style-name:"Heading 2";
+mso-style-noshow:yes;
+mso-style-next:Normal;
+margin-top:14.4000pt;
+margin-bottom:5.0000pt;
+mso-margin-bottom-alt:auto;
+text-align:left;
+font-family:SimSun;
+color:rgb(11,92,171);
+font-weight:bold;
+font-size:13.0000pt;
+}
+
+h3{
+mso-style-name:"Heading 3";
+mso-style-noshow:yes;
+mso-style-next:Normal;
+margin-top:14.4000pt;
+margin-bottom:5.0000pt;
+mso-margin-bottom-alt:auto;
+text-align:left;
+font-family:SimSun;
+color:rgb(11,92,171);
+font-weight:bold;
+font-size:10.5000pt;
+}
+
+h4{
+mso-style-name:"Heading 4";
+mso-style-noshow:yes;
+mso-style-next:Normal;
+margin-top:5.0000pt;
+margin-bottom:5.0000pt;
+mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;
+text-align:left;
+font-family:SimSun;
+font-weight:bold;
+font-size:12.0000pt;
+}
+
+h5{
+mso-style-name:"Heading 5";
+mso-style-noshow:yes;
+mso-style-next:Normal;
+margin-top:5.0000pt;
+margin-bottom:5.0000pt;
+mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;
+text-align:left;
+font-family:SimSun;
+font-weight:bold;
+font-size:10.0000pt;
+}
+
+h6{
+mso-style-name:"Heading 6";
+mso-style-noshow:yes;
+mso-style-next:Normal;
+margin-top:5.0000pt;
+margin-bottom:5.0000pt;
+mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;
+text-align:left;
+font-family:SimSun;
+font-weight:bold;
+font-size:7.5000pt;
+}
+
+span.10{
+font-family:'Times New Roman';
+}
+
+span.15{
+font-family:Consolas;
+font-size:10.0000pt;
+}
+
+span.16{
+font-family:'Times New Roman';
+color:rgb(85,85,85);
+font-size:7.0000pt;
+}
+
+p.pre{
+mso-style-name:"HTML Preformatted";
+margin:0pt;
+margin-bottom:.0001pt;
+padding:0pt 0pt 0pt 0pt ;
+tab-stops:left blank 45.8000pt left blank 91.6000pt left blank 137.4000pt left blank 183.2000pt left blank 229.0000pt left blank 274.8000pt left blank 320.6000pt left blank 366.4000pt left blank 412.2000pt left blank 458.0000pt left blank 503.8000pt left blank 549.6000pt left blank 595.4000pt left blank 641.2000pt left blank 687.0000pt left blank 732.8000pt ;
+text-align:left;
+background:rgb(246,248,250);
+font-family:Consolas;
+font-size:12.0000pt;
+}
+
+p.p{
+mso-style-name:"Normal \(Web\)";
+margin-top:5.0000pt;
+margin-right:0.0000pt;
+margin-bottom:5.0000pt;
+margin-left:0.0000pt;
+mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;
+text-align:left;
+font-family:Calibri;
+mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';
+font-size:12.0000pt;
+}
+
+p.19{
+mso-style-name:small;
+margin:0pt;
+margin-bottom:.0001pt;
+text-align:left;
+font-family:Calibri;
+mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';
+color:rgb(85,85,85);
+font-size:7.0000pt;
+}
+
+span.msoIns{
+mso-style-type:export-only;
+mso-style-name:"";
+text-decoration:underline;
+text-underline:single;
+color:blue;
+}
+
+span.msoDel{
+mso-style-type:export-only;
+mso-style-name:"";
+text-decoration:line-through;
+color:red;
+}
+
+table.MsoNormalTable{
+mso-style-name:"Table Normal";
+mso-style-parent:"";
+mso-style-noshow:yes;
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-padding-alt:0.0000pt 5.4000pt 0.0000pt 5.4000pt;
+mso-para-margin:0pt;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-family:'Times New Roman';
+font-size:10.0000pt;
+mso-ansi-language:#0400;
+mso-fareast-language:#0400;
+mso-bidi-language:#0400;
+}
+@page{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}@page Section0{
+size:595.3000pt 841.9500pt;
+mso-header-margin:42.5500pt;
+mso-footer-margin:49.6000pt;
+}
+div.Section0{page:Section0;}</style></head><body style="tab-interval:21pt;" ><!--StartFragment--><div class="Section0" ><h1 style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:16.5000pt;mso-font-kerning:22.0000pt;" ><font face="SimSun" >Cadet Labs Website – Technical Document</font></span></b><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:16.5000pt;mso-font-kerning:22.0000pt;" ><o:p></o:p></span></b></h1><p class=19  style="margin-top:5.0000pt;margin-right:0.0000pt;margin-bottom:5.0000pt;
+margin-left:0.0000pt;mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(85,85,85);
+font-size:7.0000pt;mso-font-kerning:0.0000pt;" >Version 1.0 </span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';color:rgb(85,85,85);font-size:7.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><h2 style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:13.0000pt;mso-font-kerning:0.0000pt;" ><font face="SimSun" >1. Overview</font></span></b><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:13.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></b></h2><p class=p  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >This document describes the architecture, stack, configuration, build, deployment, and operational guidance for the Cadet Labs marketing website hosted in this repository. The frontend is a React application built with Vite and TypeScript, styled with Tailwind CSS. Routing is handled client-side with React Router. The project also includes serverless/API options for local dev and deployment targets (Azure / Netlify). </span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><h2 style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:13.0000pt;mso-font-kerning:0.0000pt;" ><font face="SimSun" >2. Tech Stack</font></span></b><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:13.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></b></h2><table class=MsoNormalTable  border=0  cellspacing=0  style="border-collapse:collapse;width:100.0000%;margin-left:0.6000pt;
+border:none;mso-padding-alt:0.7500pt 0.7500pt 0.7500pt 0.7500pt ;" ><tr><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:1.0000pt solid rgb(208,215,222);mso-border-left-alt:0.5000pt solid rgb(208,215,222);
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:1.0000pt solid rgb(208,215,222);
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);
+background:rgb(243,244,246);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><b><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-weight:bold;
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >Category</span></b><b><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-weight:bold;
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></b></p></td><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:none;mso-border-left-alt:none;
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:1.0000pt solid rgb(208,215,222);
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);
+background:rgb(243,244,246);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><b><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-weight:bold;
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >Technology</span></b><b><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-weight:bold;
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></b></p></td><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:none;mso-border-left-alt:none;
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:1.0000pt solid rgb(208,215,222);
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);
+background:rgb(243,244,246);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><b><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-weight:bold;
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >Notes</span></b><b><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-weight:bold;
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></b></p></td></tr><tr><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:1.0000pt solid rgb(208,215,222);mso-border-left-alt:0.5000pt solid rgb(208,215,222);
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >Language</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:none;mso-border-left-alt:none;
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >TypeScript</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:none;mso-border-left-alt:none;
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >Strict-typed React app</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td></tr><tr><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:1.0000pt solid rgb(208,215,222);mso-border-left-alt:0.5000pt solid rgb(208,215,222);
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >Build Tool</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:none;mso-border-left-alt:none;
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >Vite </span><span class="16"  style="font-family:'Segoe UI';color:rgb(85,85,85);font-size:7.0000pt;" >(^6.2)</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:none;mso-border-left-alt:none;
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >Fast dev server & bundler</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td></tr><tr><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:1.0000pt solid rgb(208,215,222);mso-border-left-alt:0.5000pt solid rgb(208,215,222);
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >UI Library</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:none;mso-border-left-alt:none;
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >React 18</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:none;mso-border-left-alt:none;
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >SPA architecture</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td></tr><tr><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:1.0000pt solid rgb(208,215,222);mso-border-left-alt:0.5000pt solid rgb(208,215,222);
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >Styling</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:none;mso-border-left-alt:none;
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >Tailwind CSS 3</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:none;mso-border-left-alt:none;
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >Configured in </span><span class="15"  style="font-family:SimSun;color:rgb(17,17,17);font-size:12.0000pt;" >tailwind.config.ts</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td></tr><tr><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:1.0000pt solid rgb(208,215,222);mso-border-left-alt:0.5000pt solid rgb(208,215,222);
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >Routing</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:none;mso-border-left-alt:none;
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >react-router-dom 6</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:none;mso-border-left-alt:none;
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >Browser history, SPA routes</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td></tr><tr><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:1.0000pt solid rgb(208,215,222);mso-border-left-alt:0.5000pt solid rgb(208,215,222);
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >Data/Queries</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:none;mso-border-left-alt:none;
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >@tanstack/react-query 5</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:none;mso-border-left-alt:none;
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >Async data management</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td></tr><tr><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:1.0000pt solid rgb(208,215,222);mso-border-left-alt:0.5000pt solid rgb(208,215,222);
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >Testing</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:none;mso-border-left-alt:none;
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >Vitest 3</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:none;mso-border-left-alt:none;
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >Unit tests</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td></tr><tr><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:1.0000pt solid rgb(208,215,222);mso-border-left-alt:0.5000pt solid rgb(208,215,222);
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >Server (dev)</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:none;mso-border-left-alt:none;
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >Express (middleware for Vite)</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:none;mso-border-left-alt:none;
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >See </span><span class="15"  style="font-family:SimSun;color:rgb(17,17,17);font-size:12.0000pt;" >vite.config.ts</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td></tr><tr><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:1.0000pt solid rgb(208,215,222);mso-border-left-alt:0.5000pt solid rgb(208,215,222);
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >Deployment Targets</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:none;mso-border-left-alt:none;
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >Azure Static Web Apps / Azure App Service / Netlify</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:none;mso-border-left-alt:none;
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >Configs included in repo</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td></tr></table><h2 style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:13.0000pt;mso-font-kerning:0.0000pt;" ><font face="SimSun" >3. Repository Layout</font></span></b><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:13.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></b></h2><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >Final One/</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><o:p></o:p></span></p><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >&nbsp;&nbsp;client/</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><o:p></o:p></span></p><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >&nbsp;&nbsp;&nbsp;&nbsp;App.tsx &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# SPA root, routes</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><o:p></o:p></span></p><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >&nbsp;&nbsp;&nbsp;&nbsp;components/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# UI components</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><o:p></o:p></span></p><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >&nbsp;&nbsp;&nbsp;&nbsp;pages/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Route components (Home, Products, Services, ...)</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><o:p></o:p></span></p><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >&nbsp;&nbsp;&nbsp;&nbsp;global.css &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Tailwind entry</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><o:p></o:p></span></p><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >&nbsp;&nbsp;server/</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><o:p></o:p></span></p><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >&nbsp;&nbsp;&nbsp;&nbsp;index.ts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Express server (dev)</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><o:p></o:p></span></p><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >&nbsp;&nbsp;&nbsp;&nbsp;routes/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Example routes</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><o:p></o:p></span></p><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >&nbsp;&nbsp;netlify/</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><o:p></o:p></span></p><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >&nbsp;&nbsp;&nbsp;&nbsp;functions/api.ts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Netlify Functions entry</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><o:p></o:p></span></p><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >&nbsp;&nbsp;public/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Static assets (favicon, images, PDFs)</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><o:p></o:p></span></p><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >&nbsp;&nbsp;index.html &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Document shell & page title</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><o:p></o:p></span></p><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >&nbsp;&nbsp;vite.config.ts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Vite configuration</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><o:p></o:p></span></p><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >&nbsp;&nbsp;staticwebapp.config.json &nbsp;# Azure Static Web Apps routing</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><o:p></o:p></span></p><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >&nbsp;&nbsp;netlify.toml &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Netlify build + redirects</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><o:p></o:p></span></p><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >&nbsp;&nbsp;tailwind.config.ts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Tailwind configuration</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><o:p></o:p></span></p><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >&nbsp;&nbsp;tsconfig.json &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# TypeScript configuration</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><o:p></o:p></span></p><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >&nbsp;&nbsp;package.json &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Scripts & dependencies</span><span style="mso-spacerun:'yes';font-family:Consolas;font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><h2 style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:13.0000pt;mso-font-kerning:0.0000pt;" ><font face="SimSun" >4. Key Files</font></span></b><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:13.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></b></h2><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:36.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l3 level1 lfo1;" ><![if !supportLists]><span style="font-family:Symbol;mso-fareast-font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><span style='mso-list:Ignore;' >&#183;<span>&nbsp;</span></span></span><![endif]><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >index.html</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >: Sets the base HTML and title. Updated to </span><b><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-weight:bold;font-size:12.0000pt;mso-font-kerning:0.0000pt;" >Cadet Labs</span></b><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >.</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:36.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l3 level1 lfo1;" ><![if !supportLists]><span style="font-family:Symbol;mso-fareast-font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><span style='mso-list:Ignore;' >&#183;<span>&nbsp;</span></span></span><![endif]><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >client/App.tsx</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >: Initializes providers and declares all SPA routes.</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:36.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l3 level1 lfo1;" ><![if !supportLists]><span style="font-family:Symbol;mso-fareast-font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><span style='mso-list:Ignore;' >&#183;<span>&nbsp;</span></span></span><![endif]><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >vite.config.ts</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >: Vite build and dev server config, Express middleware in dev.</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:36.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l3 level1 lfo1;" ><![if !supportLists]><span style="font-family:Symbol;mso-fareast-font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><span style='mso-list:Ignore;' >&#183;<span>&nbsp;</span></span></span><![endif]><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >staticwebapp.config.json</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >: Azure SWA rewrite rules to </span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >/index.html</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >.</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:36.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l3 level1 lfo1;" ><![if !supportLists]><span style="font-family:Symbol;mso-fareast-font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><span style='mso-list:Ignore;' >&#183;<span>&nbsp;</span></span></span><![endif]><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >netlify.toml</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >: Netlify build output path and API redirects.</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:36.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l3 level1 lfo1;" ><![if !supportLists]><span style="font-family:Symbol;mso-fareast-font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><span style='mso-list:Ignore;' >&#183;<span>&nbsp;</span></span></span><![endif]><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >tailwind.config.ts</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >&nbsp;& </span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >client/global.css</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >: Tailwind setup.</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><h2 style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:13.0000pt;mso-font-kerning:0.0000pt;" ><font face="SimSun" >5. Application Routing</font></span></b><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:13.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></b></h2><p class=p  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >All routes are registered in </span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >client/App.tsx</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >&nbsp;using React Router:</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→ Index (Home)</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><o:p></o:p></span></p><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >/products &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→ Products</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><o:p></o:p></span></p><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >/services &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→ Services</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><o:p></o:p></span></p><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >/about &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→ About</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><o:p></o:p></span></p><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >/contact &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→ Contact</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><o:p></o:p></span></p><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >/* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→ NotFound</span><span style="mso-spacerun:'yes';font-family:Consolas;font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><h2 style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:13.0000pt;mso-font-kerning:0.0000pt;" ><font face="SimSun" >6. Build & Run</font></span></b><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:13.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></b></h2><h3 style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:10.5000pt;mso-font-kerning:0.0000pt;" ><font face="SimSun" >Prerequisites</font></span></b><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:10.5000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></b></h3><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:36.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l2 level1 lfo2;" ><![if !supportLists]><span style="font-family:Symbol;mso-fareast-font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:10.0000pt;mso-font-kerning:0.0000pt;" ><span style='mso-list:Ignore;' >&#183;<span>&nbsp;</span></span></span><![endif]><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >Node.js 18+ (recommended)</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:36.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l2 level1 lfo2;" ><![if !supportLists]><span style="font-family:Symbol;mso-fareast-font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:10.0000pt;mso-font-kerning:0.0000pt;" ><span style='mso-list:Ignore;' >&#183;<span>&nbsp;</span></span></span><![endif]><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >npm 9+ (or compatible)</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><h3 style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:10.5000pt;mso-font-kerning:0.0000pt;" ><font face="SimSun" >Install</font></span></b><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:10.5000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></b></h3><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >npm install</span><span style="mso-spacerun:'yes';font-family:Consolas;font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><h3 style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:10.5000pt;mso-font-kerning:0.0000pt;" ><font face="SimSun" >Development</font></span></b><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:10.5000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></b></h3><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >npm run dev</span><span style="mso-spacerun:'yes';font-family:Consolas;font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><p class=p  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >Dev server starts on </span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >http://localhost:8080</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >&nbsp;(see </span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >vite.config.ts</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >).</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><h3 style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:10.5000pt;mso-font-kerning:0.0000pt;" ><font face="SimSun" >Production build</font></span></b><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:10.5000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></b></h3><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >npm run build &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Builds client + API</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><o:p></o:p></span></p><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >npm run build:client &nbsp;&nbsp;# Builds SPA → dist/spa</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><o:p></o:p></span></p><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >npm run build:api &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Builds Azure Functions in /api</span><span style="mso-spacerun:'yes';font-family:Consolas;font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><h3 style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:10.5000pt;mso-font-kerning:0.0000pt;" ><font face="SimSun" >Preview</font></span></b><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:10.5000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></b></h3><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >npm run build:client</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><o:p></o:p></span></p><p class=pre  style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >npx serve dist/spa</span><span style="mso-spacerun:'yes';font-family:Consolas;font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><h2 style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:13.0000pt;mso-font-kerning:0.0000pt;" ><font face="SimSun" >7. Deployment</font></span></b><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:13.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></b></h2><h3 style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:10.5000pt;mso-font-kerning:0.0000pt;" ><font face="SimSun" >Azure Static Web Apps</font></span></b><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:10.5000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></b></h3><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:36.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l8 level1 lfo3;" ><![if !supportLists]><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><span style='mso-list:Ignore;' >1.<span>&nbsp;</span></span></span><![endif]><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >Build output directory: </span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >dist/spa</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >.</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:36.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l8 level1 lfo3;" ><![if !supportLists]><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><span style='mso-list:Ignore;' >2.<span>&nbsp;</span></span></span><![endif]><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >Ensure </span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >staticwebapp.config.json</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >&nbsp;is deployed; it rewrites client routes to </span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >/index.html</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >.</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:36.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l8 level1 lfo3;" ><![if !supportLists]><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><span style='mso-list:Ignore;' >3.<span>&nbsp;</span></span></span><![endif]><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >Add custom domains in the portal: </span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >cadetlabs.io</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >&nbsp;and </span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >www.cadetlabs.io</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >.</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:36.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l8 level1 lfo3;" ><![if !supportLists]><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><span style='mso-list:Ignore;' >4.<span>&nbsp;</span></span></span><![endif]><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >DNS: </span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:72.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 72.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l2 level2 lfo4;" ><![if !supportLists]><span style="font-family:'Courier New';mso-fareast-font-family:'Segoe UI';color:rgb(17,17,17);
+font-weight:bold;font-size:10.0000pt;mso-font-kerning:0.0000pt;" ><span style='mso-list:Ignore;' >o<span>&nbsp;</span></span></span><![endif]><b><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-weight:bold;font-size:12.0000pt;mso-font-kerning:0.0000pt;" >CNAME</span></b><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >&nbsp;</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >www</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >&nbsp;<font face="Segoe UI" >→ your </font></span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >*.azurestaticapps.net</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >&nbsp;default hostname.</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:72.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 72.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l2 level2 lfo4;" ><![if !supportLists]><span style="font-family:'Courier New';mso-fareast-font-family:'Segoe UI';color:rgb(17,17,17);
+font-weight:bold;font-size:10.0000pt;mso-font-kerning:0.0000pt;" ><span style='mso-list:Ignore;' >o<span>&nbsp;</span></span></span><![endif]><b><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-weight:bold;font-size:12.0000pt;mso-font-kerning:0.0000pt;" >ALIAS/ANAME</span></b><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >&nbsp;(flattened CNAME) for apex </span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >cadetlabs.io</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >&nbsp;<font face="Segoe UI" >→ the same </font></span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >*.azurestaticapps.net</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >.</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:36.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l8 level1 lfo3;" ><![if !supportLists]><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><span style='mso-list:Ignore;' >5.<span>&nbsp;</span></span></span><![endif]><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >Set preferred domain to </span><b><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-weight:bold;font-size:12.0000pt;mso-font-kerning:0.0000pt;" >www.cadetlabs.io</span></b><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >&nbsp;to auto-redirect other hostnames.</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><h3 style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:10.5000pt;mso-font-kerning:0.0000pt;" ><font face="SimSun" >Azure App Service (alternative)</font></span></b><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:10.5000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></b></h3><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:36.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l1 level1 lfo5;" ><![if !supportLists]><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><span style='mso-list:Ignore;' >1.<span>&nbsp;</span></span></span><![endif]><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >Add custom domains: </span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >cadetlabs.io</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >&nbsp;and </span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >www.cadetlabs.io</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >.</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:36.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l1 level1 lfo5;" ><![if !supportLists]><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><span style='mso-list:Ignore;' >2.<span>&nbsp;</span></span></span><![endif]><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >DNS: CNAME </span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >www</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >&nbsp;<font face="Segoe UI" >→ </font></span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >yourapp.azurewebsites.net</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >, A/ALIAS for apex → App Service IP.</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:36.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l1 level1 lfo5;" ><![if !supportLists]><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><span style='mso-list:Ignore;' >3.<span>&nbsp;</span></span></span><![endif]><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >To force canonical host (e.g., redirect apex → www), use rewrite rules or Azure Front Door.</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><h3 style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:10.5000pt;mso-font-kerning:0.0000pt;" ><font face="SimSun" >Netlify (alternative)</font></span></b><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:10.5000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></b></h3><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:36.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l4 level1 lfo6;" ><![if !supportLists]><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><span style='mso-list:Ignore;' >1.<span>&nbsp;</span></span></span><![endif]><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >Publish directory: </span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >dist/spa</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >. Functions: </span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >netlify/functions</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >.</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:36.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l4 level1 lfo6;" ><![if !supportLists]><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><span style='mso-list:Ignore;' >2.<span>&nbsp;</span></span></span><![endif]><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >Add both domains in Domain settings; set </span><b><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-weight:bold;font-size:12.0000pt;mso-font-kerning:0.0000pt;" >www.cadetlabs.io</span></b><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >&nbsp;as primary.</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:72.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l4 level1 lfo6;" ><![if !supportLists]><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><span style='mso-list:Ignore;' >3.<span>&nbsp;</span></span></span><![endif]><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >Optional redirect in </span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >netlify.toml</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >: </span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><p class=pre  style="margin-left:36.0000pt;mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >[[redirects]]</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><o:p></o:p></span></p><p class=pre  style="margin-left:36.0000pt;mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >from = "https://cadetlabs.io/*"</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><o:p></o:p></span></p><p class=pre  style="margin-left:36.0000pt;mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >to = "https://www.cadetlabs.io/:splat"</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><o:p></o:p></span></p><p class=pre  style="margin-left:36.0000pt;mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >status = 301</span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" ><o:p></o:p></span></p><p class=pre  style="margin-left:36.0000pt;mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >force = true</span><span style="mso-spacerun:'yes';font-family:Consolas;font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:72.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l4 level1 lfo6;" ><![if !supportLists]><span style="font-family:Calibri;mso-fareast-font-family:SimSun;mso-bidi-font-family:'Times New Roman';
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><span style='mso-list:Ignore;' >4.<span>&nbsp;</span></span></span><![endif]><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><h2 style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:13.0000pt;mso-font-kerning:0.0000pt;" ><font face="SimSun" >8. Configuration Highlights</font></span></b><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:13.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></b></h2><table class=MsoNormalTable  border=0  cellspacing=0  style="border-collapse:collapse;width:100.0000%;margin-left:0.6000pt;
+border:none;mso-padding-alt:0.7500pt 0.7500pt 0.7500pt 0.7500pt ;" ><tr><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:1.0000pt solid rgb(208,215,222);mso-border-left-alt:0.5000pt solid rgb(208,215,222);
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:1.0000pt solid rgb(208,215,222);
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);
+background:rgb(243,244,246);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><b><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-weight:bold;
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >File</span></b><b><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-weight:bold;
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></b></p></td><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:none;mso-border-left-alt:none;
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:1.0000pt solid rgb(208,215,222);
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);
+background:rgb(243,244,246);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><b><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-weight:bold;
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >Purpose</span></b><b><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-weight:bold;
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></b></p></td></tr><tr><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:1.0000pt solid rgb(208,215,222);mso-border-left-alt:0.5000pt solid rgb(208,215,222);
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span class="15"  style="font-family:SimSun;color:rgb(17,17,17);font-size:12.0000pt;" >vite.config.ts</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:none;mso-border-left-alt:none;
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >Dev server on port 8080; React SWC; path aliases </span><span class="15"  style="font-family:SimSun;color:rgb(17,17,17);font-size:12.0000pt;" >@</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><span style="mso-spacerun:'yes';" >&nbsp;</span><font face="Segoe UI" >→ </font></span><span class="15"  style="font-family:SimSun;color:rgb(17,17,17);font-size:12.0000pt;" >./client</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >, </span><span class="15"  style="font-family:SimSun;color:rgb(17,17,17);font-size:12.0000pt;" >@shared</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><span style="mso-spacerun:'yes';" >&nbsp;</span><font face="Segoe UI" >→ </font></span><span class="15"  style="font-family:SimSun;color:rgb(17,17,17);font-size:12.0000pt;" >./shared</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >. Adds Express middleware in dev.</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td></tr><tr><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:1.0000pt solid rgb(208,215,222);mso-border-left-alt:0.5000pt solid rgb(208,215,222);
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span class="15"  style="font-family:SimSun;color:rgb(17,17,17);font-size:12.0000pt;" >staticwebapp.config.json</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:none;mso-border-left-alt:none;
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >Routes all paths to </span><span class="15"  style="font-family:SimSun;color:rgb(17,17,17);font-size:12.0000pt;" >/index.html</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >, sets cache headers and MIME types.</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td></tr><tr><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:1.0000pt solid rgb(208,215,222);mso-border-left-alt:0.5000pt solid rgb(208,215,222);
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span class="15"  style="font-family:SimSun;color:rgb(17,17,17);font-size:12.0000pt;" >netlify.toml</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:none;mso-border-left-alt:none;
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >Builds SPA, wires </span><span class="15"  style="font-family:SimSun;color:rgb(17,17,17);font-size:12.0000pt;" >/api/*</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><span style="mso-spacerun:'yes';" >&nbsp;</span>to Netlify Functions.</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td></tr><tr><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:1.0000pt solid rgb(208,215,222);mso-border-left-alt:0.5000pt solid rgb(208,215,222);
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span class="15"  style="font-family:SimSun;color:rgb(17,17,17);font-size:12.0000pt;" >tailwind.config.ts</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:none;mso-border-left-alt:none;
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >Tailwind presets and content scanning.</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td></tr><tr><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:1.0000pt solid rgb(208,215,222);mso-border-left-alt:0.5000pt solid rgb(208,215,222);
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span class="15"  style="font-family:SimSun;color:rgb(17,17,17);font-size:12.0000pt;" >index.html</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td><td valign=top  style="padding:4.8000pt 4.8000pt 4.8000pt 4.8000pt ;border-left:none;mso-border-left-alt:none;
+border-right:1.0000pt solid rgb(208,215,222);mso-border-right-alt:0.5000pt solid rgb(208,215,222);border-top:none;
+mso-border-top-alt:0.5000pt solid rgb(208,215,222);border-bottom:1.0000pt solid rgb(208,215,222);mso-border-bottom-alt:0.5000pt solid rgb(208,215,222);" ><p class=MsoNormal  style="mso-pagination:widow-orphan;text-align:left;vertical-align:top;
+mso-line-height-alt:12pt;" ><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >Document shell and page title (</span><b><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-weight:bold;
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >Cadet Labs</span></b><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" >).</span><span style="font-family:'Segoe UI';color:rgb(17,17,17);font-size:12.0000pt;
+mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></td></tr></table><h2 style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:13.0000pt;mso-font-kerning:0.0000pt;" ><font face="SimSun" >9. Testing</font></span></b><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:13.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></b></h2><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:36.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l7 level1 lfo7;" ><![if !supportLists]><span style="font-family:Symbol;mso-fareast-font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:10.0000pt;mso-font-kerning:0.0000pt;" ><span style='mso-list:Ignore;' >&#183;<span>&nbsp;</span></span></span><![endif]><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >Unit tests with Vitest. Run: </span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >npm test</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:36.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l7 level1 lfo7;" ><![if !supportLists]><span style="font-family:Symbol;mso-fareast-font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:10.0000pt;mso-font-kerning:0.0000pt;" ><span style='mso-list:Ignore;' >&#183;<span>&nbsp;</span></span></span><![endif]><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >Type-check: </span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >npm run typecheck</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><h2 style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:13.0000pt;mso-font-kerning:0.0000pt;" ><font face="SimSun" >10. Operations & Maintenance</font></span></b><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:13.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></b></h2><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:36.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l5 level1 lfo8;" ><![if !supportLists]><span style="font-family:Symbol;mso-fareast-font-family:'Segoe UI';color:rgb(17,17,17);
+font-weight:bold;font-size:10.0000pt;mso-font-kerning:0.0000pt;" ><span style='mso-list:Ignore;' >&#183;<span>&nbsp;</span></span></span><![endif]><b><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-weight:bold;font-size:12.0000pt;mso-font-kerning:0.0000pt;" >Caching</span></b><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >: SWA sets </span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >Cache-Control: public, max-age=31536000</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >&nbsp;via </span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >staticwebapp.config.json</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >.</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:36.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l5 level1 lfo8;" ><![if !supportLists]><span style="font-family:Symbol;mso-fareast-font-family:'Segoe UI';color:rgb(17,17,17);
+font-weight:bold;font-size:10.0000pt;mso-font-kerning:0.0000pt;" ><span style='mso-list:Ignore;' >&#183;<span>&nbsp;</span></span></span><![endif]><b><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-weight:bold;font-size:12.0000pt;mso-font-kerning:0.0000pt;" >HTTPS</span></b><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >: Ensure certificates are issued for both apex and </span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >www</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >&nbsp;when domains are added.</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:36.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l5 level1 lfo8;" ><![if !supportLists]><span style="font-family:Symbol;mso-fareast-font-family:'Segoe UI';color:rgb(17,17,17);
+font-weight:bold;font-size:10.0000pt;mso-font-kerning:0.0000pt;" ><span style='mso-list:Ignore;' >&#183;<span>&nbsp;</span></span></span><![endif]><b><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-weight:bold;font-size:12.0000pt;mso-font-kerning:0.0000pt;" >SEO</span></b><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >: Update tags in </span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >index.html</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >&nbsp;as needed.</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:36.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l5 level1 lfo8;" ><![if !supportLists]><span style="font-family:Symbol;mso-fareast-font-family:'Segoe UI';color:rgb(17,17,17);
+font-weight:bold;font-size:10.0000pt;mso-font-kerning:0.0000pt;" ><span style='mso-list:Ignore;' >&#183;<span>&nbsp;</span></span></span><![endif]><b><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-weight:bold;font-size:12.0000pt;mso-font-kerning:0.0000pt;" >Analytics</span></b><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >: Add provider script tags to </span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >index.html</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >&nbsp;if required.</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><h2 style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:13.0000pt;mso-font-kerning:0.0000pt;" ><font face="SimSun" >11. Troubleshooting</font></span></b><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:13.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></b></h2><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:36.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l0 level1 lfo9;" ><![if !supportLists]><span style="font-family:Symbol;mso-fareast-font-family:'Segoe UI';color:rgb(17,17,17);
+font-weight:bold;font-size:10.0000pt;mso-font-kerning:0.0000pt;" ><span style='mso-list:Ignore;' >&#183;<span>&nbsp;</span></span></span><![endif]><b><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-weight:bold;font-size:12.0000pt;mso-font-kerning:0.0000pt;" >SPA routes 404 on refresh</span></b><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >: Ensure rewrite to </span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >/index.html</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >&nbsp;is active (SWA config or Netlify).</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:36.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l0 level1 lfo9;" ><![if !supportLists]><span style="font-family:Symbol;mso-fareast-font-family:'Segoe UI';color:rgb(17,17,17);
+font-weight:bold;font-size:10.0000pt;mso-font-kerning:0.0000pt;" ><span style='mso-list:Ignore;' >&#183;<span>&nbsp;</span></span></span><![endif]><b><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-weight:bold;font-size:12.0000pt;mso-font-kerning:0.0000pt;" >Wrong page title</span></b><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >: Check </span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >index.html</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >&nbsp;&lt;title&gt; tag.</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:36.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l0 level1 lfo9;" ><![if !supportLists]><span style="font-family:Symbol;mso-fareast-font-family:'Segoe UI';color:rgb(17,17,17);
+font-weight:bold;font-size:10.0000pt;mso-font-kerning:0.0000pt;" ><span style='mso-list:Ignore;' >&#183;<span>&nbsp;</span></span></span><![endif]><b><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-weight:bold;font-size:12.0000pt;mso-font-kerning:0.0000pt;" >www not working</span></b><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >: Verify DNS (CNAME </span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >www</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >), add both domains in hosting, set preferred canonical host.</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:36.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l0 level1 lfo9;" ><![if !supportLists]><span style="font-family:Symbol;mso-fareast-font-family:'Segoe UI';color:rgb(17,17,17);
+font-weight:bold;font-size:10.0000pt;mso-font-kerning:0.0000pt;" ><span style='mso-list:Ignore;' >&#183;<span>&nbsp;</span></span></span><![endif]><b><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-weight:bold;font-size:12.0000pt;mso-font-kerning:0.0000pt;" >Blank page after deploy</span></b><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >: Open browser console; confirm bundle paths and </span><span class="15"  style="mso-spacerun:'yes';font-family:Consolas;color:rgb(17,17,17);
+font-size:10.0000pt;" >dist/spa</span><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >&nbsp;contents.</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p><h2 style="mso-pagination:widow-orphan;mso-line-height-alt:12pt;" ><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:13.0000pt;mso-font-kerning:0.0000pt;" ><font face="SimSun" >12. Release Notes</font></span></b><b><span style="mso-spacerun:'yes';font-family:SimSun;color:rgb(11,92,171);
+font-weight:bold;font-size:13.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></b></h2><p class=MsoNormal  style="margin-top:5.0000pt;margin-bottom:5.0000pt;margin-left:36.0000pt;
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;text-indent:-18.0000pt;
+tab-stops:left blank 36.0000pt ;mso-pagination:widow-orphan;mso-line-height-alt:12pt;
+mso-list:l6 level1 lfo10;" ><![if !supportLists]><span style="font-family:Symbol;mso-fareast-font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:10.0000pt;mso-font-kerning:0.0000pt;" ><span style='mso-list:Ignore;' >&#183;<span>&nbsp;</span></span></span><![endif]><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >v1.0: Set page title to </span><b><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-weight:bold;font-size:12.0000pt;mso-font-kerning:0.0000pt;" >Cadet Labs</span></b><span style="mso-spacerun:'yes';font-family:'Segoe UI';color:rgb(17,17,17);
+font-size:12.0000pt;mso-font-kerning:0.0000pt;" >; prepared deployment/domain guidance.</span><span style="mso-spacerun:'yes';font-family:Calibri;mso-fareast-font-family:SimSun;
+mso-bidi-font-family:'Times New Roman';font-size:12.0000pt;mso-font-kerning:0.0000pt;" ><o:p></o:p></span></p></div><!--EndFragment--></body></html>
