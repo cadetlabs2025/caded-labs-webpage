@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import {
@@ -70,9 +71,11 @@ const products = [
 ];
 
 export default function Products() {
+  const [activeTab, setActiveTab] = useState("products");
+
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
+      <Navigation activeTab={activeTab} onTabChange={setActiveTab} />
 
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-wave-light to-ocean-light">

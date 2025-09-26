@@ -18,8 +18,15 @@ import {
   ChevronRight,
   Star,
   MapPin,
+  CheckCircle,
   Mail,
   Phone,
+  ChevronDown,
+  ChevronUp,
+  Database,
+  BarChart3,
+  Ship,
+  ArrowLeft,
 } from "lucide-react";
 import Navigation from "@/components/Navigation";
 
@@ -369,9 +376,9 @@ function HomeTab({ onTabChange }: TabProps) {
 // Products Tab Component
 function ProductsTab({ onTabChange }: TabProps) {
   return (
-    <section className="py-20 bg-background min-h-screen">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+    <section className="py-24 bg-background min-h-screen">
+      <div className="container mx-auto px-6 lg:px-8">
+        <div className="text-center mb-20">
           <h1 className="text-4xl lg:text-6xl font-bold mb-6">Our Products</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Innovative AI solutions designed specifically for maritime and
@@ -379,68 +386,62 @@ function ProductsTab({ onTabChange }: TabProps) {
           </p>
         </div>
 
-        <div className="space-y-16">
+        <div className="grid md:grid-cols-2 gap-12 max-w-7xl mx-auto px-4 mb-16">
           {/* PMS Asset Builder */}
-          <div className="max-w-4xl mx-auto">
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle className="text-3xl font-bold">
-                  PMS Asset Builder
-                </CardTitle>
-                <CardDescription className="text-xl text-primary">
-                  <a
-                    href="/PMS Asset Builder Brochure.pdf"
-                    download="PMS Asset Builder Brochure.pdf"
-                    className="hover:underline cursor-pointer"
-                    onClick={(e) => {
-                      // You can add analytics tracking here if needed
-                      console.log("PDF download initiated");
-                    }}
-                  >
-                    AI-driven extraction and structuring of PMS data — 5×
-                    faster.
-                  </a>
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  PMS Asset Builder is our AI-augmented scribe, built to
-                  decipher the dense, oil-smudged scriptures of vessel manuals
-                  and spin them into clean, structured PMS data. It doesn't just
-                  speed up the data building — it builds a living library of
-                  reusable equipment intelligence while shaping every output to
-                  fit your target PMS like a glove. Less grunt work, more smart
-                  work — exactly what your chief engineer would've wanted.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
+          <Card className="hover:shadow-lg transition-shadow p-6">
+            <CardHeader className="pb-6">
+              <CardTitle className="text-2xl font-bold mb-4">
+                PMS Asset Builder
+              </CardTitle>
+              <CardDescription className="text-lg text-primary">
+                <a
+                  href="/PMS Asset Builder Brochure.pdf"
+                  download="PMS Asset Builder Brochure.pdf"
+                  className="hover:underline cursor-pointer"
+                  onClick={(e) => {
+                    // You can add analytics tracking here if needed
+                    console.log("PDF download initiated");
+                  }}
+                >
+                  AI-driven extraction and structuring of PMS data — 5× faster.
+                </a>
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="pt-0">
+              <p className="text-base text-muted-foreground leading-relaxed">
+                PMS Asset Builder is our AI-augmented scribe, built to decipher
+                the dense, oil-smudged scriptures of vessel manuals and spin
+                them into clean, structured PMS data. It doesn't just speed up
+                the data building — it builds a living library of reusable
+                equipment intelligence while shaping every output to fit your
+                target PMS like a glove. Less grunt work, more smart work —
+                exactly what your chief engineer would've wanted.
+              </p>
+            </CardContent>
+          </Card>
 
           {/* Data Anchorage */}
-          <div className="max-w-4xl mx-auto">
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle className="text-3xl font-bold">
-                  Data Anchorage
-                </CardTitle>
-                <CardDescription className="text-xl text-primary">
-                  Enterprise data restructured for agentic AI and clean
-                  cutovers.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Data Anchorage is a maritime-grade data integration and
-                  migration platform. It standardizes enterprise data for
-                  agentic AI use cases and enables seamless transitions between
-                  software systems — preserving full historical context and
-                  transactional integrity. Designed for ship operators and
-                  managers, it turns messy datasets into structured intelligence
-                  without friction or loss.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
+          <Card className="hover:shadow-lg transition-shadow p-6">
+            <CardHeader className="pb-6">
+              <CardTitle className="text-2xl font-bold mb-4">
+                Data Anchorage
+              </CardTitle>
+              <CardDescription className="text-lg text-primary">
+                Enterprise data restructured for agentic AI and clean cutovers.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="pt-0">
+              <p className="text-base text-muted-foreground leading-relaxed">
+                Data Anchorage is a maritime-grade data integration and
+                migration platform. It standardizes enterprise data for agentic
+                AI use cases and enables seamless transitions between software
+                systems — preserving full historical context and transactional
+                integrity. Designed for ship operators and managers, it turns
+                messy datasets into structured intelligence without friction or
+                loss.
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </div>
 
@@ -456,13 +457,315 @@ function ProductsTab({ onTabChange }: TabProps) {
 
 // Services Tab Component
 function ServicesTab({ onTabChange }: TabProps) {
+  const [selectedService, setSelectedService] = useState<number | null>(null);
+
+  const services = [
+    {
+      id: 1,
+      title: "PMS Data Building",
+      icon: Database,
+      shortDescription:
+        "Deep maritime expertise and digital innovation to deliver reliable PMS data from day one.",
+      image: "/Service1.jpeg",
+      fullDescription:
+        "At Cadet Labs, we bring deep maritime expertise and digital innovation together to deliver PMS data that you can rely on from day one.",
+      sectionTitle: "Why choose us?",
+      benefits: [
+        {
+          title: "Accuracy that matters",
+          description:
+            "99% guaranteed accuracy through AI-powered extraction validated by marine engineers.",
+        },
+        {
+          title: "Speed of delivery",
+          description:
+            "Projects completed in a fraction of the time compared to traditional data builders.",
+        },
+        {
+          title: "Quality control by experts",
+          description:
+            "Every dataset reviewed by engineers who understand PMS requirements inside out.",
+        },
+        {
+          title: "Future-ready datasets",
+          description:
+            "Clean, structured and consistent data designed to power your PMS effectively.",
+        },
+        {
+          title: "Trusted approach",
+          description:
+            "No compromise on data quality while accelerating results with technology.",
+        },
+      ],
+      highlightText:
+        "With Cadet Labs, you get PMS data that is not only built faster but also built right.",
+    },
+    {
+      id: 2,
+      title: "PMS Data Migration",
+      icon: Ship,
+      shortDescription:
+        "Expert-led migration projects ensuring data integrity and usability throughout the process.",
+      image: "/Service2.jpeg",
+      fullDescription:
+        "Migrating PMS data between applications is not just a technical task, it requires a deep understanding of the maritime context. At Cadet Labs, our migration projects are led by experienced marine engineers who ensure the integrity and usability of your data throughout the process.",
+      sectionTitle: "Why choose us?",
+      benefits: [
+        {
+          title: "Context-driven migration",
+          description:
+            "We recognize that PMS data does not follow a universal schema. Our domain expertise ensures that every data element is mapped and migrated with its operational meaning intact.",
+        },
+        {
+          title: "AI-powered intelligence",
+          description:
+            "Our domain-trained AI models help interpret the data context, making migrations more accurate and reducing manual intervention.",
+        },
+        {
+          title: "Marine engineers in the loop",
+          description:
+            "Each migration is supervised by experts who understand the technical and operational implications of your PMS data.",
+        },
+        {
+          title: "Seamless transition",
+          description:
+            "We ensure smooth migration between applications without data loss or misinterpretation.",
+        },
+        {
+          title: "Trusted expertise",
+          description:
+            "A combination of maritime knowledge and digital tools to safeguard the value of your data.",
+        },
+      ],
+      highlightText:
+        "With Cadet Labs, PMS data migration is not just about moving data but about preserving its accuracy, relevance and operational value.",
+    },
+    {
+      id: 3,
+      title: "Vessel Performance Analytics",
+      icon: BarChart3,
+      shortDescription:
+        "Cut through the noise with rigorous statistical methods and maritime expertise to diagnose performance issues.",
+      image: "/Service3.jpeg",
+      fullDescription:
+        "Vessel underperformance is a costly problem. From penalties imposed by charterers to rising fuel consumption, the consequences of poor performance ripple across operations and profitability. Many operators are overwhelmed by data but lack the clarity needed to uncover the true drivers of inefficiency. At Cadet Labs, our Vessel Performance Analytics service is designed to cut through the noise. We combine rigorous statistical methods with deep maritime domain expertise to diagnose performance issues with precision. Our team dissects your noon reports, engine performance data, weather inputs and sea trial benchmarks to highlight the exact factors affecting your vessels.",
+      sectionTitle: "Our approach delivers:",
+      benefits: [
+        {
+          title: "",
+          description:
+            "A comprehensive evaluation of your data quality and reliability.",
+        },
+        {
+          title: "",
+          description: "Root cause analysis of performance deviations.",
+        },
+        {
+          title: "",
+          description:
+            "Actionable insights to improve compliance, fuel efficiency and charter party performance.",
+        },
+        {
+          title: "",
+          description:
+            "Recommendations that balance technical feasibility with operational practicality.",
+        },
+      ],
+      additionalText:
+        "Unlike generic analytics providers, we understand vessel operations at the granular level. Every variable — from hull condition to engine load — is interpreted by experts with years of maritime experience. This ensures that our findings are not just theoretical but directly applicable to your fleet.",
+      highlightText:
+        "With Cadet Labs, you gain a clear, unbiased view of your vessels' performance and a roadmap for measurable improvement.",
+    },
+  ];
+
+  const selectService = (serviceId: number) => {
+    setSelectedService(serviceId);
+  };
+
+  const backToOverview = () => {
+    setSelectedService(null);
+  };
+
+  const getSelectedServiceData = () => {
+    return services.find((service) => service.id === selectedService);
+  };
+
+  // If a service is selected, show detailed view
+  if (selectedService) {
+    const service = getSelectedServiceData();
+    if (!service) return null;
+
+    return (
+      <section className="py-20 bg-wave-light min-h-screen">
+        <div className="container mx-auto px-4">
+          {/* Back Button */}
+          <div className="max-w-6xl mx-auto mb-8">
+            <Button
+              variant="outline"
+              onClick={backToOverview}
+              className="flex items-center gap-2"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              Back to Services
+            </Button>
+          </div>
+
+          {/* Service Detail View */}
+          <div className="max-w-6xl mx-auto">
+            <div className="bg-gradient-to-br from-wave-light/50 to-ocean-light/30 rounded-lg overflow-hidden">
+              <div className="px-8 py-12">
+                {/* Hero Section with Image and Content */}
+                <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+                  {/* Content Side */}
+                  <div>
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className="bg-primary/10 p-3 rounded-lg">
+                        <service.icon className="h-8 w-8 text-primary" />
+                      </div>
+                      <h1 className="text-4xl lg:text-5xl font-bold text-foreground">
+                        {service.title}
+                      </h1>
+                    </div>
+                    <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+                      {service.fullDescription}
+                    </p>
+                  </div>
+
+                  {/* Image Side */}
+                  <div>
+                    <img
+                      src={service.image}
+                      alt={`${service.title} Service`}
+                      className="w-full h-80 object-cover rounded-lg shadow-xl"
+                    />
+                  </div>
+                </div>
+
+                {/* Detailed Content Section */}
+                <div className="bg-background rounded-lg p-8 shadow-sm">
+                  <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
+                    {service.sectionTitle}
+                  </h2>
+
+                  <div className="grid md:grid-cols-2 gap-8 mb-10">
+                    {service.benefits.map((benefit, benefitIndex) => (
+                      <div
+                        key={benefitIndex}
+                        className="flex items-start gap-4 p-6 bg-accent/20 rounded-lg"
+                      >
+                        <CheckCircle className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                        <div>
+                          {benefit.title && (
+                            <h3 className="font-bold text-foreground mb-3 text-lg">
+                              {benefit.title}
+                            </h3>
+                          )}
+                          <p className="text-muted-foreground">
+                            {benefit.description}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {service.additionalText && (
+                    <div className="mb-8">
+                      <p className="text-muted-foreground leading-relaxed text-lg">
+                        {service.additionalText}
+                      </p>
+                    </div>
+                  )}
+
+                  <div className="bg-primary/10 border-l-4 border-primary p-8 rounded-r-lg mb-8">
+                    <p className="text-foreground font-semibold text-xl">
+                      {service.highlightText}
+                    </p>
+                  </div>
+
+                  {/* Call to Action Footer */}
+                  <div className="text-center">
+                    <p className="text-muted-foreground mb-6 text-lg">
+                      Ready to get started with {service.title}?
+                    </p>
+                    <Button
+                      variant="default"
+                      size="lg"
+                      onClick={() => onTabChange("contact")}
+                      className="px-12 py-3 text-lg"
+                    >
+                      Contact Our Team
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer */}
+        <div className="bg-primary mt-16">
+          <div className="container mx-auto px-4">
+            <Footer onTabChange={onTabChange} />
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  // Default: Show services overview
   return (
     <section className="py-20 bg-wave-light min-h-screen">
       <div className="container mx-auto px-4">
-        <div className="text-center">
+        <div className="text-center mb-16">
           <h1 className="text-4xl lg:text-6xl font-bold mb-6">Our Services</h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Coming Soon
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Click on any service to explore detailed information, benefits, and
+            how we can help transform your maritime operations.
+          </p>
+        </div>
+
+        {/* Services Overview */}
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-6 mb-16">
+          {services.map((service, index) => (
+            <div
+              key={service.id}
+              className="bg-background border border-border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer"
+              onClick={() => selectService(service.id)}
+            >
+              {/* Service Image */}
+              <div className="relative">
+                <img
+                  src={service.image}
+                  alt={`${service.title} Service`}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="absolute top-4 right-4">
+                  <ChevronDown className="h-6 w-6 text-white bg-black/50 rounded-full p-1" />
+                </div>
+              </div>
+
+              {/* Service Title and Description */}
+              <div className="p-6 hover:bg-accent/30 transition-colors duration-200">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="bg-primary/10 p-2 rounded-lg">
+                    <service.icon className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground">
+                    {service.title}
+                  </h3>
+                </div>
+                <p className="text-muted-foreground text-sm">
+                  {service.shortDescription}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* General Service Inquiry */}
+        <div className="text-center mb-12">
+          <p className="text-lg text-muted-foreground">
+            For service-related inquiries, our team is ready to assist you.
           </p>
         </div>
       </div>
@@ -488,31 +791,33 @@ function AboutTab({ onTabChange }: TabProps) {
           </h1>
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              Cadet Labs wasn't born — it happened. Somewhere between
-              caffeine-fuelled rants and maritime war stories, a curious crew of
+              Cadet Labs wasn’t born. It happened. Somewhere between
+              caffeine-fueled rants and maritime war stories, a curious crew of
               ex-seafarers, data whisperers, and product alchemists stumbled
-              into a common cause: why, in Neptune's name, is marine data still
-              such a tangled net?
+              into a common cause: why is marine data still such a tangled net?
             </p>
             <p>
-              As we sparred over schemas and swapped sea tales, something odd
-              occurred — domain met technology, and didn't run away screaming. A
-              bridge was built (well, argued into existence), and across it
-              marched an accidental company with a very deliberate mission.
+              As we sparred over schemas and swapped sea tales, something
+              unexpected occurred. Domain met technology, and instead of turning
+              away, they shook hands. Out of that uneasy truce came an
+              accidental company with a very deliberate mission.
             </p>
             <p>
-              We don't worship AI, nor do we scoff at it. We're not here to
-              automate souls out of the system, but to let machines do the heavy
-              lifting so the mariner's mind can do what it does best — think.
-              Every line of code we write, every dashboard we sketch, is an
-              attempt to anchor intelligence (the human kind) at the heart of
-              digital progress.
+              We believe in grinding through the hard problems. We take the long
+              route when shortcuts would only leave cracks behind. We think like
+              the users we once were, knowing that real value lies in tools that
+              work in the mess of daily operations, not just in polished demos.
             </p>
             <p>
-              So here we are — part workshop, part think tank, part confessional
-              booth for broken ETLs — building the tools we once wished we had.
-              And if our solutions feel oddly intuitive, it's because they're
-              forged from lived chaos, not lab theory.
+              We don’t worship AI, and we don’t dismiss it either. Machines
+              should shoulder the heavy lifting so that the mariner’s mind can
+              focus on judgment, skill, and the decisions only humans can make.
+            </p>
+            <p>
+              So here we are. Part workshop, part think tank, part confessional
+              for broken ETLs. Building the tools we once wished we had. And if
+              our solutions feel oddly intuitive, it is because they are forged
+              from lived chaos, not lab theory.
             </p>
             <p className="text-primary font-semibold text-xl text-center mt-8">
               Fleet above. Data below. We hold the line.

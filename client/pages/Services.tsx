@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import {
@@ -13,7 +14,15 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Shield, Globe, Database, TrendingUp, Cog, Search } from "lucide-react";
+import {
+  Shield,
+  Globe,
+  Database,
+  TrendingUp,
+  Cog,
+  Search,
+  CheckCircle,
+} from "lucide-react";
 
 const services = [
   {
