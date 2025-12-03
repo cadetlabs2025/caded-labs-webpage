@@ -600,7 +600,7 @@ function ProductsTab({ onTabChange }: TabProps) {
                   </Button>
                 </Link>
                 <a href="/PMS Asset Builder Brochure.pdf" download="PMS Asset Builder Brochure.pdf">
-                  <Button variant="outline" className="border-2 border-cyan-600 text-cyan-600 hover:bg-cyan-50">
+                  <Button className="bg-cyan-600 hover:bg-cyan-700 text-white">
                     Download Brochure
                   </Button>
                 </a>
