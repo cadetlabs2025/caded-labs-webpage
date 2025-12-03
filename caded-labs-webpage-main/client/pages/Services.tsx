@@ -209,12 +209,6 @@ export default function Services() {
                       {service.description}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent>
-                    <Button variant="outline" className="w-full group/btn">
-                      Learn More
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-                    </Button>
-                  </CardContent>
                 </Card>
               </motion.div>
             ))}
