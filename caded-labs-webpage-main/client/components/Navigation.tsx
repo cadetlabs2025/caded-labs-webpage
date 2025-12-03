@@ -26,6 +26,20 @@ const navigationItems = [
   { name: "Contact Us", value: "contact", route: "/contact" },
 ];
 
+function useSafeRouter() {
+  try {
+    const navigate = useNavigate();
+    const location = useLocation();
+    return { navigate, location, isRouterAvailable: true };
+  } catch {
+    return { 
+      navigate: () => {}, 
+      location: { pathname: "/" }, 
+      isRouterAvailable: false 
+    };
+  }
+}
+
 interface NavigationProps {
   activeTab?: string;
   onTabChange?: (tab: string) => void;
@@ -35,10 +49,10 @@ export default function Navigation({
   activeTab: propActiveTab,
   onTabChange: propOnTabChange,
 }: NavigationProps = {}) {
-  const navigate = useNavigate();
-  const location = useLocation();
+  const { navigate, location, isRouterAvailable } = useSafeRouter();
   
   const getActiveTabFromRoute = () => {
+    if (!isRouterAvailable) return "home";
     const path = location.pathname;
     if (path === "/") return "home";
     if (path === "/products") return "products";
@@ -53,13 +67,14 @@ export default function Navigation({
   const handleTabChange = (tab: string) => {
     if (propOnTabChange) {
       propOnTabChange(tab);
-    } else {
+    } else if (isRouterAvailable) {
       const navItem = navigationItems.find(item => item.value === tab);
       if (navItem) {
         navigate(navItem.route);
       }
     }
   };
+
   const [isOpen, setIsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [isSearchOpen, setIsSearchOpen] = useState(false);
