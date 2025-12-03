@@ -199,12 +199,31 @@ export default function Products() {
                   )}
                   {/* Product Image */}
                   <div className="relative h-40 sm:h-48 md:h-56 overflow-hidden">
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 md:group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+                    {(product as any).link ? (
+                      <Link to={(product as any).link} className="block w-full h-full">
+                        <img
+                          src={product.image}
+                          alt={product.name}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 md:group-hover:scale-110"
+                        />
+                        {/* Clickable overlay for featured products */}
+                        {(product as any).featured && (
+                          <div className="absolute inset-0 bg-gradient-to-t from-cyan-900/80 via-transparent to-transparent flex items-end justify-center pb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span className="bg-white text-cyan-600 px-4 py-2 rounded-full font-semibold text-sm flex items-center gap-2 shadow-lg">
+                              View Product Details
+                              <ArrowRight className="h-4 w-4" />
+                            </span>
+                          </div>
+                        )}
+                      </Link>
+                    ) : (
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 md:group-hover:scale-110"
+                      />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent pointer-events-none" />
                     <div className="absolute top-3 right-3 sm:top-4 sm:right-4">
                       <Badge className={`shadow-lg text-xs sm:text-sm ${(product as any).featured ? 'bg-cyan-500 text-white' : 'bg-white/90 text-primary'}`}>
                         {product.category}
@@ -232,6 +251,12 @@ export default function Products() {
                     <CardDescription className="text-base">
                       {product.description}
                     </CardDescription>
+                    {(product as any).link && (
+                      <Link to={(product as any).link} className="inline-flex items-center gap-1 text-cyan-600 hover:text-cyan-700 font-medium mt-2 group/details">
+                        View Details
+                        <ArrowRight className="h-4 w-4 group-hover/details:translate-x-1 transition-transform" />
+                      </Link>
+                    )}
                   </CardHeader>
 
                   <CardContent>
