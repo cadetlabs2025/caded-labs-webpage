@@ -273,3 +273,34 @@ The Navigation component uses a `useSafeRouter` hook that gracefully handles cas
    - All buttons now have shadow effects (shadow-md default, shadow-lg on hover)
    - Press effect added with scale and translate animations (active:scale-[0.98] active:translate-y-[1px])
    - Ghost and link button variants exempt from shadow effects
+
+### About Us Page Updates (December 3, 2025)
+
+1. **Sections Removed**:
+   - Leadership Team section removed
+   - Certifications & Affiliations section removed
+
+2. **Our Story Content Updated**:
+   - New narrative about Cadet Labs' origin from ex-seafarers, data specialists, and product developers
+   - Focus on grinding through hard problems, user-centric design, and practical AI philosophy
+
+3. **CTA Changes**:
+   - "View Open Positions" now links to the Careers page
+   - "Contact HR" CTA removed
+
+### Contact Us Page Updates (December 3, 2025)
+
+1. **Sections Removed**:
+   - Phone contact information removed
+   - Address contact information removed
+   - Business Hours removed
+   - Our Offices section removed
+   - Find Us (map) section removed
+
+2. **Simplified Contact Information**:
+   - Only Email contact information remains
+
+3. **Book Consultation Call**:
+   - Now opens the demo request popup (same modal as Products page)
+   - Modal includes form fields: Name, Email ID, Company, Designation, Country
+   - Dark mode support added to the modal
