@@ -24,7 +24,7 @@ const navigationItems = [
   { name: "Products", value: "products", route: "/products" },
   { name: "Services", value: "services", route: "/services" },
   { name: "About Us", value: "about", route: "/about" },
-  { name: "Careers", value: "careers", route: "/" },
+  { name: "Careers", value: "careers", route: "/careers" },
   { name: "Contact Us", value: "contact", route: "/contact" },
 ];
 
@@ -57,9 +57,10 @@ export default function Navigation({
     if (!isRouterAvailable) return "home";
     const path = location.pathname;
     if (path === "/") return "home";
-    if (path === "/products") return "products";
+    if (path === "/products" || path.startsWith("/products/")) return "products";
     if (path === "/services") return "services";
     if (path === "/about") return "about";
+    if (path === "/careers") return "careers";
     if (path === "/contact") return "contact";
     return "home";
   };
@@ -270,9 +271,13 @@ export default function Navigation({
         {/* Logo */}
         <div className="flex items-center flex-shrink-0 mr-8">
           <img
-            src="https://cdn.builder.io/api/v1/image/assets%2Feacf4d198f7d471b831a310bf0945bc6%2F9af88a351923405ca30afd8d23a44e8b?format=webp&width=800"
+            src="/cadet-labs-logo.png"
             alt="Cadet Labs"
-            className={cn("h-24 w-auto max-w-[400px]", theme === "dark" && "brightness-150")}
+            className={cn(
+              "h-16 w-auto object-contain select-none pointer-events-none",
+              theme === "dark" && "brightness-110 contrast-110"
+            )}
+            draggable={false}
           />
         </div>
 
