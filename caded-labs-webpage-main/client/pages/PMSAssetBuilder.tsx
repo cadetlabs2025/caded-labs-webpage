@@ -194,7 +194,7 @@ export default function PMSAssetBuilder() {
                 className="text-lg text-white/70 leading-relaxed"
                 variants={itemVariants}
               >
-                From unstructured manuals to clean, PMS-ready datasets — in a fraction of the time.
+                From unstructured manuals to clean, PMS-ready datasets in a fraction of the time.
               </motion.p>
 
               <motion.div
@@ -394,7 +394,7 @@ export default function PMSAssetBuilder() {
                   <h3 className="text-2xl font-bold mb-4">Built by Maritime Professionals</h3>
                   <p className="text-white/80 leading-relaxed mb-6">
                     We are ex-seafarers, marine engineers, and product builders who understand the pain of 
-                    PMS data setup. This product is not just tech — it's a practical response to a long-standing 
+                    PMS data setup. This product is not just tech. It's a practical response to a long-standing 
                     operational headache.
                   </p>
                   <p className="text-cyan-400 italic">
@@ -424,7 +424,7 @@ export default function PMSAssetBuilder() {
                   </div>
                   <div>
                     <h4 className="font-bold text-slate-900 mb-1">Complete vessel PMS data in 7 days</h4>
-                    <p className="text-slate-600">That's right — just 7 days! (Average ETA: 1 month)</p>
+                    <p className="text-slate-600">That's right: just 7 days! (Average ETA: 1 month)</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">

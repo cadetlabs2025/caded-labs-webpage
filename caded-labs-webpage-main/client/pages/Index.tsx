@@ -355,7 +355,7 @@ function HomeTab({ onTabChange }: TabProps) {
                   animate="visible"
                   transition={{ delay: prefersReducedMotion ? 0 : 0.8 }}
                 >
-                  — and thank goodness someone does.
+                  And thank goodness someone does.
                 </motion.p>
               </div>
 
@@ -369,8 +369,8 @@ function HomeTab({ onTabChange }: TabProps) {
                   the occasional AI hallucination.
                 </p>
                 <p>
-                  Think of us as the below-deck crew in your digital engine room
-                  — not glamorous, perhaps, but absolutely vital.
+                  Think of us as the below-deck crew in your digital engine room.
+                  Not glamorous, perhaps, but absolutely vital.
                 </p>
                 <p>
                   At Cadet Labs, we build systems that make maritime data
@@ -469,7 +469,7 @@ function HomeTab({ onTabChange }: TabProps) {
             <p className="text-xl text-slate-600 leading-relaxed">
               We believe in the soul of shipping. That the toughest maritime
               challenges deserve not shortcuts, but sharp minds and honest
-              grind. We build AI not to dominate, but to complement — with
+              grind. We build AI not to dominate, but to complement, with
               respect, precision, and balance.
             </p>
           </div>
@@ -560,7 +560,7 @@ function ProductsTab({ onTabChange }: TabProps) {
                 </CardTitle>
               </Link>
               <CardDescription className="text-lg text-primary">
-                AI-driven extraction and structuring of PMS data — 5× faster.
+                AI-driven extraction and structuring of PMS data, 5× faster.
               </CardDescription>
             </CardHeader>
             <CardContent className="pt-0">
@@ -568,9 +568,9 @@ function ProductsTab({ onTabChange }: TabProps) {
                 PMS Asset Builder is our AI-augmented scribe, built to decipher
                 the dense, oil-smudged scriptures of vessel manuals and spin
                 them into clean, structured PMS data. It doesn't just speed up
-                the data building — it builds a living library of reusable
+                the data building. It builds a living library of reusable
                 equipment intelligence while shaping every output to fit your
-                target PMS like a glove. Less grunt work, more smart work —
+                target PMS like a glove. Less grunt work, more smart work,
                 exactly what your chief engineer would've wanted.
               </p>
               <div className="flex gap-3">
@@ -604,7 +604,7 @@ function ProductsTab({ onTabChange }: TabProps) {
                 Data Anchorage is a maritime-grade data integration and
                 migration platform. It standardizes enterprise data for agentic
                 AI use cases and enables seamless transitions between software
-                systems — preserving full historical context and transactional
+                systems while preserving full historical context and transactional
                 integrity. Designed for ship operators and managers, it turns
                 messy datasets into structured intelligence without friction or
                 loss.
@@ -741,7 +741,7 @@ function ServicesTab({ onTabChange }: TabProps) {
         },
       ],
       additionalText:
-        "Unlike generic analytics providers, we understand vessel operations at the granular level. Every variable — from hull condition to engine load — is interpreted by experts with years of maritime experience. This ensures that our findings are not just theoretical but directly applicable to your fleet.",
+        "Unlike generic analytics providers, we understand vessel operations at the granular level. Every variable, from hull condition to engine load, is interpreted by experts with years of maritime experience. This ensures that our findings are not just theoretical but directly applicable to your fleet.",
       highlightText:
         "With Cadet Labs, you gain a clear, unbiased view of your vessels' performance and a roadmap for measurable improvement.",
     },
@@ -1020,7 +1020,7 @@ function CareersTab({ onTabChange }: TabProps) {
               </strong>
             </p>
             <p>
-              We're building something extraordinary at Cadet Labs — where
+              We're building something extraordinary at Cadet Labs where
               maritime expertise meets cutting-edge AI technology. Our team is
               growing, and we're looking for passionate individuals who share
               our vision of making complex maritime data intelligent and
@@ -1072,7 +1072,7 @@ function CareersTab({ onTabChange }: TabProps) {
               >
                 our contact page
               </button>{" "}
-              — we'd love to hear from you!
+              and we'd love to hear from you!
             </p>
           </div>
         </div>
