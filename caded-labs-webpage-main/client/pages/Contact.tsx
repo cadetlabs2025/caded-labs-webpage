@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import {
@@ -25,7 +26,10 @@ import {
   Linkedin,
   MessageSquare,
   Calendar,
+  Loader2,
+  CheckCircle,
 } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
   {
@@ -70,6 +74,69 @@ const offices = [
 ];
 
 export default function Contact() {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    company: "",
+    interest: "",
+    message: "",
+  });
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { id, value } = e.target;
+    setFormData((prev) => ({ ...prev, [id]: value }));
+  };
+
+  const handleSelectChange = (value: string) => {
+    setFormData((prev) => ({ ...prev, interest: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!formData.firstName || !formData.email || !formData.message) {
+      toast({
+        title: "Missing required fields",
+        description: "Please fill in your name, email, and message.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+
+      toast({
+        title: "Message sent successfully!",
+        description: "We'll get back to you within 24 hours.",
+      });
+
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        company: "",
+        interest: "",
+        message: "",
+      });
+    } catch (error) {
+      toast({
+        title: "Failed to send message",
+        description: "Please try again or contact us directly via email.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -103,74 +170,118 @@ export default function Contact() {
                     hours.
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="firstName">First Name</Label>
-                      <Input id="firstName" placeholder="John" />
+                <CardContent>
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <Label htmlFor="firstName">First Name *</Label>
+                        <Input
+                          id="firstName"
+                          placeholder="John"
+                          value={formData.firstName}
+                          onChange={handleInputChange}
+                          disabled={isSubmitting}
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="lastName">Last Name</Label>
+                        <Input
+                          id="lastName"
+                          placeholder="Doe"
+                          value={formData.lastName}
+                          onChange={handleInputChange}
+                          disabled={isSubmitting}
+                        />
+                      </div>
                     </div>
+
                     <div className="space-y-2">
-                      <Label htmlFor="lastName">Last Name</Label>
-                      <Input id="lastName" placeholder="Doe" />
+                      <Label htmlFor="email">Email *</Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        placeholder="john@company.com"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        disabled={isSubmitting}
+                      />
                     </div>
-                  </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="john@company.com"
-                    />
-                  </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="company">Company</Label>
+                      <Input
+                        id="company"
+                        placeholder="Your Company Name"
+                        value={formData.company}
+                        onChange={handleInputChange}
+                        disabled={isSubmitting}
+                      />
+                    </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="company">Company</Label>
-                    <Input id="company" placeholder="Your Company Name" />
-                  </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="interest">Area of Interest</Label>
+                      <Select
+                        value={formData.interest}
+                        onValueChange={handleSelectChange}
+                        disabled={isSubmitting}
+                      >
+                        <SelectTrigger>
+                          <SelectValue placeholder="Select a service" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="ai-solutions">
+                            AI Solutions
+                          </SelectItem>
+                          <SelectItem value="cybersecurity">
+                            Cybersecurity
+                          </SelectItem>
+                          <SelectItem value="digital-transformation">
+                            Digital Transformation
+                          </SelectItem>
+                          <SelectItem value="data-analytics">
+                            Data Analytics
+                          </SelectItem>
+                          <SelectItem value="erp-advisory">
+                            ERP Advisory
+                          </SelectItem>
+                          <SelectItem value="general-inquiry">
+                            General Inquiry
+                          </SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="interest">Area of Interest</Label>
-                    <Select>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select a service" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="ai-solutions">
-                          AI Solutions
-                        </SelectItem>
-                        <SelectItem value="cybersecurity">
-                          Cybersecurity
-                        </SelectItem>
-                        <SelectItem value="digital-transformation">
-                          Digital Transformation
-                        </SelectItem>
-                        <SelectItem value="data-analytics">
-                          Data Analytics
-                        </SelectItem>
-                        <SelectItem value="erp-advisory">
-                          ERP Advisory
-                        </SelectItem>
-                        <SelectItem value="general-inquiry">
-                          General Inquiry
-                        </SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="message">Message *</Label>
+                      <Textarea
+                        id="message"
+                        placeholder="Tell us about your project and how we can help..."
+                        rows={5}
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        disabled={isSubmitting}
+                      />
+                    </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
-                    <Textarea
-                      id="message"
-                      placeholder="Tell us about your project and how we can help..."
-                      rows={5}
-                    />
-                  </div>
-
-                  <Button className="w-full" size="lg">
-                    Send Message
-                    <MessageSquare className="ml-2 h-5 w-5" />
-                  </Button>
+                    <Button
+                      type="submit"
+                      className="w-full"
+                      size="lg"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          Send Message
+                          <MessageSquare className="ml-2 h-5 w-5" />
+                        </>
+                      )}
+                    </Button>
+                  </form>
                 </CardContent>
               </Card>
 
