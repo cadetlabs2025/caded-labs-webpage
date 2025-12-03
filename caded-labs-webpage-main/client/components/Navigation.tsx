@@ -120,7 +120,7 @@ export default function Navigation({
           "Cybersecurity Consultancy",
           "Digital Transformation",
           "Advanced Data Analytics",
-          "NIST 2.0 framework",
+          "Security framework",
           "MSC circulars compliance",
         ],
         about: [

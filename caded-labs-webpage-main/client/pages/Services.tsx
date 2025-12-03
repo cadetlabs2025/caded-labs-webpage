@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { motion } from "framer-motion";
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import {
@@ -22,16 +22,49 @@ import {
   Cog,
   Search,
   CheckCircle,
+  ArrowRight,
 } from "lucide-react";
+import { useReducedMotion } from "@/hooks/use-reduced-motion";
+
+const getContainerVariants = (reduceMotion: boolean) => ({
+  hidden: { opacity: reduceMotion ? 1 : 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: reduceMotion ? 0 : 0.12,
+    },
+  },
+});
+
+const getItemVariants = (reduceMotion: boolean) => ({
+  hidden: { opacity: reduceMotion ? 1 : 0, y: reduceMotion ? 0 : 25 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: reduceMotion ? 0 : 0.5,
+      ease: "easeOut",
+    },
+  },
+});
+
+const getFadeInUp = (reduceMotion: boolean) => ({
+  hidden: { opacity: reduceMotion ? 1 : 0, y: reduceMotion ? 0 : 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: reduceMotion ? 0 : 0.6, ease: "easeOut" },
+  },
+});
 
 const services = [
   {
     title: "Cybersecurity Consultancy",
     description:
-      "Comprehensive security assessments and implementations following NIST 2.0 framework and MSC circulars.",
+      "Comprehensive security assessments and implementations following industry-standard frameworks and maritime regulations.",
     icon: Shield,
     details: [
-      "NIST 2.0 Framework Implementation",
+      "Security Framework Implementation",
       "MSC Circulars Compliance",
       "Vulnerability Assessments",
       "Security Policy Development",
@@ -112,47 +145,80 @@ const services = [
 ];
 
 export default function Services() {
+  const prefersReducedMotion = useReducedMotion();
+  
+  const containerVariants = getContainerVariants(prefersReducedMotion);
+  const itemVariants = getItemVariants(prefersReducedMotion);
+  const fadeInUp = getFadeInUp(prefersReducedMotion);
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-wave-light to-ocean-light">
+      <section className="py-20 bg-gradient-to-br from-wave-light to-ocean-light overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <motion.div
+            className="max-w-4xl mx-auto text-center"
+            initial={prefersReducedMotion ? "visible" : "hidden"}
+            animate="visible"
+            variants={fadeInUp}
+          >
+            <motion.h1
+              className="text-4xl lg:text-6xl font-bold text-foreground mb-6"
+              initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: prefersReducedMotion ? 0 : 0.6 }}
+            >
               Our Services
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            </motion.h1>
+            <motion.p
+              className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
+              initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: prefersReducedMotion ? 0 : 0.6, delay: prefersReducedMotion ? 0 : 0.2 }}
+            >
               Comprehensive consulting and implementation services to accelerate
               your digital transformation journey.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
         </div>
       </section>
 
       {/* Services Overview */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <motion.div
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+            variants={containerVariants}
+            initial={prefersReducedMotion ? "visible" : "hidden"}
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+          >
             {services.map((service, index) => (
-              <Card
-                key={index}
-                className="text-center hover:shadow-lg transition-shadow"
-              >
-                <CardHeader>
-                  <service.icon className="h-12 w-12 text-primary mx-auto mb-4" />
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
-                  <CardDescription>{service.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button variant="outline" className="w-full">
-                    Learn More
-                  </Button>
-                </CardContent>
-              </Card>
+              <motion.div key={index} variants={itemVariants}>
+                <Card className="text-center hover:shadow-2xl transition-all duration-300 h-full group md:hover:-translate-y-2 border-2 hover:border-primary/20 active:shadow-xl active:border-primary/10">
+                  <CardHeader>
+                    <div className="group-hover:scale-110 md:group-hover:rotate-3 transition-transform duration-300">
+                      <service.icon className="h-10 w-10 sm:h-12 sm:w-12 text-primary mx-auto mb-4 group-hover:text-primary/80 transition-colors" />
+                    </div>
+                    <CardTitle className="text-lg sm:text-xl group-hover:text-primary transition-colors">
+                      {service.title}
+                    </CardTitle>
+                    <CardDescription className="text-sm sm:text-base">
+                      {service.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Button variant="outline" className="w-full group/btn">
+                      Learn More
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 

@@ -63,14 +63,14 @@ const team = [
   {
     name: "Dr. Priya Sharma",
     role: "Head of Cybersecurity",
-    bio: "NIST framework expert, former government cybersecurity consultant",
+    bio: "Security framework expert, former government cybersecurity consultant",
     linkedin: "#",
   },
 ];
 
 const certifications = [
   "ISO 27001 Certified",
-  "NIST Cybersecurity Framework",
+  "Industry Security Standards",
   "Microsoft Partner",
   "AWS Select Tier",
   "Chennai Chamber of Commerce",
