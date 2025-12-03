@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
@@ -11,8 +11,11 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Brain, Shield, Globe, Eye, FileText, TrendingUp, ArrowRight, Database, Zap, Star } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Brain, Shield, Globe, Eye, FileText, TrendingUp, ArrowRight, Database, Zap, Star, X, Anchor } from "lucide-react";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
+import { useToast } from "@/hooks/use-toast";
 
 const products = [
   {
@@ -33,18 +36,18 @@ const products = [
     link: "/products/pms-asset-builder",
   },
   {
-    name: "Maritime AI Vision",
+    name: "Data Anchorage",
     description:
-      "Advanced computer vision solutions for vessel monitoring, port security, and automated surveillance systems.",
-    tech: ["Computer Vision", "Deep Learning", "Real-time Analytics"],
-    category: "AI",
-    icon: Eye,
-    image: "/maritime_vessel_moni_458599bd.jpg",
+      "Enterprise data restructured for agentic AI and clean cutovers. Maritime-grade data integration and migration platform.",
+    tech: ["Data Integration", "Migration", "Agentic AI", "ETL"],
+    category: "Data",
+    icon: Anchor,
+    image: "/data_analytics_dashb_80ee824c.jpg",
     features: [
-      "Vessel detection and tracking",
-      "Port security monitoring",
-      "Automated incident detection",
-      "Real-time alerts",
+      "Enterprise data standardization",
+      "Agentic AI readiness",
+      "Seamless system transitions",
+      "Historical context preservation",
     ],
   },
   {
@@ -130,7 +133,63 @@ const getHeroVariants = (reduceMotion: boolean) => ({
 
 export default function Products() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [showDemoModal, setShowDemoModal] = useState(false);
+  const [demoForm, setDemoForm] = useState({
+    name: "",
+    email: "",
+    company: "",
+    designation: "",
+    country: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const prefersReducedMotion = useReducedMotion();
+  const { toast } = useToast();
+
+  const handleDemoFormChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setDemoForm((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleDemoSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!demoForm.name || !demoForm.email || !demoForm.company) {
+      toast({
+        title: "Missing Information",
+        description: "Please fill in all required fields.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      
+      toast({
+        title: "Demo Request Submitted!",
+        description: "Our team will contact you shortly at " + demoForm.email,
+      });
+      
+      setDemoForm({
+        name: "",
+        email: "",
+        company: "",
+        designation: "",
+        country: "",
+      });
+      setShowDemoModal(false);
+    } catch (error) {
+      toast({
+        title: "Submission Failed",
+        description: "Please try again or email us at ranjith@cadetlabs.io",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   
   const containerVariants = getContainerVariants(prefersReducedMotion);
   const itemVariants = getItemVariants(prefersReducedMotion);
@@ -162,8 +221,7 @@ export default function Products() {
               Our Products
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Cutting-edge AI and cybersecurity solutions designed specifically
-              for maritime and industrial applications.
+              Thoughtfully ideated and crafted products and solutions for Maritime Industry.
             </p>
           </motion.div>
         </div>
@@ -298,27 +356,26 @@ export default function Products() {
                         </div>
                       </div>
 
-                      <div className="flex flex-col sm:flex-row gap-3 pt-4">
-                        <Button className={`flex-1 group/btn ${(product as any).featured ? 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700' : ''}`}>
-                          Request Demo
-                          <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-                        </Button>
-                        {(product as any).link ? (
+                      {(product as any).featured && (
+                        <div className="flex flex-col sm:flex-row gap-3 pt-4">
+                          <Button 
+                            className="flex-1 group/btn bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
+                            onClick={() => setShowDemoModal(true)}
+                          >
+                            Request Demo
+                            <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                          </Button>
                           <Link to={(product as any).link} className="flex-1">
                             <Button 
-                              variant={(product as any).featured ? "default" : "outline"} 
-                              className={`w-full group/learn ${(product as any).featured ? 'bg-cyan-600 hover:bg-cyan-700 text-white' : ''}`}
+                              variant="default" 
+                              className="w-full group/learn bg-cyan-600 hover:bg-cyan-700 text-white"
                             >
                               Learn More
                               <ArrowRight className="ml-2 h-4 w-4 group-hover/learn:translate-x-1 transition-transform" />
                             </Button>
                           </Link>
-                        ) : (
-                          <Button variant="outline" className="flex-1">
-                            Learn More
-                          </Button>
-                        )}
-                      </div>
+                        </div>
+                      )}
                     </div>
                   </CardContent>
                 </Card>
@@ -379,6 +436,146 @@ export default function Products() {
           </div>
         </div>
       </motion.section>
+
+      {/* Demo Request Modal */}
+      <AnimatePresence>
+        {showDemoModal && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+            initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={prefersReducedMotion ? { opacity: 1 } : { opacity: 0 }}
+            onClick={() => setShowDemoModal(false)}
+          >
+            <motion.div
+              className="bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden"
+              initial={prefersReducedMotion ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={prefersReducedMotion ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 0 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Modal Header */}
+              <div className="bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-5 relative">
+                <button
+                  onClick={() => setShowDemoModal(false)}
+                  className="absolute top-4 right-4 text-white/80 hover:text-white transition-colors"
+                >
+                  <X className="h-5 w-5" />
+                </button>
+                <h3 className="text-xl font-bold text-white">Request a Demo</h3>
+                <p className="text-white/80 text-sm mt-1">
+                  Fill in your details and our team will reach out to schedule a demo
+                </p>
+              </div>
+
+              {/* Modal Form */}
+              <form onSubmit={handleDemoSubmit} className="p-6 space-y-4">
+                <div className="space-y-2">
+                  <Label htmlFor="name" className="text-sm font-medium">
+                    Name <span className="text-red-500">*</span>
+                  </Label>
+                  <Input
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="Your full name"
+                    value={demoForm.name}
+                    onChange={handleDemoFormChange}
+                    required
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="email" className="text-sm font-medium">
+                    Email ID <span className="text-red-500">*</span>
+                  </Label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="your.email@company.com"
+                    value={demoForm.email}
+                    onChange={handleDemoFormChange}
+                    required
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="company" className="text-sm font-medium">
+                    Company <span className="text-red-500">*</span>
+                  </Label>
+                  <Input
+                    id="company"
+                    name="company"
+                    type="text"
+                    placeholder="Your company name"
+                    value={demoForm.company}
+                    onChange={handleDemoFormChange}
+                    required
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="designation" className="text-sm font-medium">
+                    Designation
+                  </Label>
+                  <Input
+                    id="designation"
+                    name="designation"
+                    type="text"
+                    placeholder="Your job title"
+                    value={demoForm.designation}
+                    onChange={handleDemoFormChange}
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="country" className="text-sm font-medium">
+                    Country
+                  </Label>
+                  <Input
+                    id="country"
+                    name="country"
+                    type="text"
+                    placeholder="Your country"
+                    value={demoForm.country}
+                    onChange={handleDemoFormChange}
+                  />
+                </div>
+
+                <div className="flex gap-3 pt-4">
+                  <Button
+                    type="button"
+                    variant="outline"
+                    className="flex-1"
+                    onClick={() => setShowDemoModal(false)}
+                    disabled={isSubmitting}
+                  >
+                    Cancel
+                  </Button>
+                  <Button
+                    type="submit"
+                    className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? "Submitting..." : "Submit Request"}
+                  </Button>
+                </div>
+
+                <p className="text-xs text-center text-muted-foreground pt-2">
+                  Or email us directly at{" "}
+                  <a
+                    href="mailto:ranjith@cadetlabs.io"
+                    className="text-cyan-600 hover:underline"
+                  >
+                    ranjith@cadetlabs.io
+                  </a>
+                </p>
+              </form>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
