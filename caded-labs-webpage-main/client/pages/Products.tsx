@@ -218,9 +218,17 @@ export default function Products() {
                   </div>
 
                   <CardHeader className="pb-4">
-                    <CardTitle className="text-2xl group-hover:text-primary transition-colors duration-300">
-                      {product.name}
-                    </CardTitle>
+                    {(product as any).link ? (
+                      <Link to={(product as any).link}>
+                        <CardTitle className="text-2xl group-hover:text-primary transition-colors duration-300 cursor-pointer hover:underline">
+                          {product.name}
+                        </CardTitle>
+                      </Link>
+                    ) : (
+                      <CardTitle className="text-2xl group-hover:text-primary transition-colors duration-300">
+                        {product.name}
+                      </CardTitle>
+                    )}
                     <CardDescription className="text-base">
                       {product.description}
                     </CardDescription>
@@ -273,7 +281,10 @@ export default function Products() {
                         </Button>
                         {(product as any).link ? (
                           <Link to={(product as any).link} className="flex-1">
-                            <Button variant="outline" className="w-full group/learn">
+                            <Button 
+                              variant={(product as any).featured ? "default" : "outline"} 
+                              className={`w-full group/learn ${(product as any).featured ? 'bg-cyan-600 hover:bg-cyan-700 text-white' : ''}`}
+                            >
                               Learn More
                               <ArrowRight className="ml-2 h-4 w-4 group-hover/learn:translate-x-1 transition-transform" />
                             </Button>
