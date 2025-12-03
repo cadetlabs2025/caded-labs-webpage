@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
@@ -569,27 +570,20 @@ function ProductsTab({ onTabChange }: TabProps) {
 
         <div className="grid md:grid-cols-2 gap-12 max-w-7xl mx-auto px-4 mb-16">
           {/* PMS Asset Builder */}
-          <Card className="hover:shadow-lg transition-shadow p-6">
+          <Card className="hover:shadow-lg transition-shadow p-6 relative border-2 border-cyan-500/30 ring-2 ring-cyan-500/20">
+            <Badge className="absolute top-4 right-4 bg-cyan-500 text-white">Featured</Badge>
             <CardHeader className="pb-6">
-              <CardTitle className="text-2xl font-bold mb-4">
-                PMS Asset Builder
-              </CardTitle>
+              <Link to="/products/pms-asset-builder">
+                <CardTitle className="text-2xl font-bold mb-4 hover:text-cyan-600 cursor-pointer transition-colors">
+                  PMS Asset Builder
+                </CardTitle>
+              </Link>
               <CardDescription className="text-lg text-primary">
-                <a
-                  href="/PMS Asset Builder Brochure.pdf"
-                  download="PMS Asset Builder Brochure.pdf"
-                  className="hover:underline cursor-pointer"
-                  onClick={(e) => {
-                    // You can add analytics tracking here if needed
-                    console.log("PDF download initiated");
-                  }}
-                >
-                  AI-driven extraction and structuring of PMS data — 5× faster.
-                </a>
+                AI-driven extraction and structuring of PMS data — 5× faster.
               </CardDescription>
             </CardHeader>
             <CardContent className="pt-0">
-              <p className="text-base text-muted-foreground leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed mb-6">
                 PMS Asset Builder is our AI-augmented scribe, built to decipher
                 the dense, oil-smudged scriptures of vessel manuals and spin
                 them into clean, structured PMS data. It doesn't just speed up
@@ -598,6 +592,19 @@ function ProductsTab({ onTabChange }: TabProps) {
                 target PMS like a glove. Less grunt work, more smart work —
                 exactly what your chief engineer would've wanted.
               </p>
+              <div className="flex gap-3">
+                <Link to="/products/pms-asset-builder">
+                  <Button className="bg-cyan-600 hover:bg-cyan-700 text-white">
+                    View Details
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+                <a href="/PMS Asset Builder Brochure.pdf" download="PMS Asset Builder Brochure.pdf">
+                  <Button variant="outline">
+                    Download Brochure
+                  </Button>
+                </a>
+              </div>
             </CardContent>
           </Card>
 
