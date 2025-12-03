@@ -1,4 +1,5 @@
 import { useState, useCallback } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -17,23 +18,48 @@ import { Menu, Search, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navigationItems = [
-  { name: "Home", value: "home" },
-  { name: "Products", value: "products" },
-  { name: "Services", value: "services" },
-  { name: "About Us", value: "about" },
-  { name: "Careers", value: "careers" },
-  { name: "Contact Us", value: "contact" },
+  { name: "Home", value: "home", route: "/" },
+  { name: "Products", value: "products", route: "/products" },
+  { name: "Services", value: "services", route: "/services" },
+  { name: "About Us", value: "about", route: "/about" },
+  { name: "Careers", value: "careers", route: "/" },
+  { name: "Contact Us", value: "contact", route: "/contact" },
 ];
 
 interface NavigationProps {
-  activeTab: string;
-  onTabChange: (tab: string) => void;
+  activeTab?: string;
+  onTabChange?: (tab: string) => void;
 }
 
 export default function Navigation({
-  activeTab,
-  onTabChange,
-}: NavigationProps) {
+  activeTab: propActiveTab,
+  onTabChange: propOnTabChange,
+}: NavigationProps = {}) {
+  const navigate = useNavigate();
+  const location = useLocation();
+  
+  const getActiveTabFromRoute = () => {
+    const path = location.pathname;
+    if (path === "/") return "home";
+    if (path === "/products") return "products";
+    if (path === "/services") return "services";
+    if (path === "/about") return "about";
+    if (path === "/contact") return "contact";
+    return "home";
+  };
+
+  const activeTab = propActiveTab ?? getActiveTabFromRoute();
+  
+  const handleTabChange = (tab: string) => {
+    if (propOnTabChange) {
+      propOnTabChange(tab);
+    } else {
+      const navItem = navigationItems.find(item => item.value === tab);
+      if (navItem) {
+        navigate(navItem.route);
+      }
+    }
+  };
   const [isOpen, setIsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -162,7 +188,7 @@ export default function Navigation({
   const scrollToElement = (element: Element, targetTab: string) => {
     // If we need to switch tabs, do it first
     if (targetTab !== activeTab) {
-      onTabChange(targetTab);
+      handleTabChange(targetTab);
 
       // Wait for tab change to complete, then search and scroll
       setTimeout(() => {
@@ -308,7 +334,7 @@ export default function Navigation({
           {navigationItems.map((item) => (
             <button
               key={item.name}
-              onClick={() => onTabChange(item.value)}
+              onClick={() => handleTabChange(item.value)}
               className={cn(
                 "text-sm font-medium transition-colors px-2 py-1 hover:text-primary",
                 activeTab === item.value
@@ -401,7 +427,7 @@ export default function Navigation({
                 <button
                   key={item.name}
                   onClick={() => {
-                    onTabChange(item.value);
+                    handleTabChange(item.value);
                     setIsOpen(false);
                   }}
                   className={cn(
