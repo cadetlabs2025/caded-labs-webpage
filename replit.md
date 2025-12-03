@@ -177,7 +177,33 @@ No database is currently configured in this application. All content is static o
 
 ## Recent Changes (December 2025)
 
-### Bug Fixes Applied
+### Visual Enhancements (December 3, 2025)
+
+1. **Framer Motion Animations**: Added smooth animations to Index.tsx, Products.tsx, and Services.tsx:
+   - Fade-in and slide-up effects on page sections
+   - Staggered animations for card grids and feature lists
+   - Hover effects on interactive elements (cards, buttons, icons)
+   - Hero section with animated floating decorative elements
+
+2. **Accessibility - Reduced Motion Support**: Created `useReducedMotion` React hook (`client/hooks/use-reduced-motion.ts`):
+   - Dynamically detects `prefers-reduced-motion` media query
+   - All animations conditionally disabled for users who prefer reduced motion
+   - Static fallbacks provided for decorative animated elements
+
+3. **Product Images**: Integrated visual imagery for all four products:
+   - Maritime AI Vision - monitoring dashboard
+   - Document Intelligence - document processing
+   - Predictive Analytics - analytics visualization
+   - Cybersecurity Shield - security interface
+
+4. **Mobile Responsive Improvements**:
+   - Touch-friendly active states for mobile devices
+   - Responsive sizing for all interactive elements
+   - Smooth transitions that respect reduced motion preferences
+
+5. **Content Updates**: Removed all NIST 2.0 references and replaced with generic compliance language across all pages.
+
+### Bug Fixes Applied (Earlier)
 
 1. **Vite Configuration**: Fixed port from 8080 to 5000 for Replit compatibility, added `allowedHosts: true` for proper webview access.
 
@@ -195,3 +221,7 @@ No database is currently configured in this application. All content is static o
 ### Component Architecture Note
 
 The Navigation component uses a `useSafeRouter` hook that gracefully handles cases where the Router context might not be available, providing fallback behavior for maximum compatibility.
+
+### Custom Hooks
+
+- `useReducedMotion` (`client/hooks/use-reduced-motion.ts`): Detects user's motion preference dynamically using `matchMedia` and returns a boolean for conditional animation rendering.
