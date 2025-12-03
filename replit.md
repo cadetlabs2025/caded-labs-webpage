@@ -225,3 +225,40 @@ The Navigation component uses a `useSafeRouter` hook that gracefully handles cas
 ### Custom Hooks
 
 - `useReducedMotion` (`client/hooks/use-reduced-motion.ts`): Detects user's motion preference dynamically using `matchMedia` and returns a boolean for conditional animation rendering.
+- `useTheme` (`client/hooks/use-theme.tsx`): Theme context hook for managing light/dark mode with localStorage persistence and system preference detection.
+
+### Theme System (December 3, 2025)
+
+1. **Dark Mode Support**: Full dark theme implementation using the oceanic color palette:
+   - CSS variables defined in `global.css` for both light and dark modes
+   - Tailwind configured with `darkMode: ["class"]` for class-based theme switching
+   - All components use theme-aware color tokens (foreground, background, muted, etc.)
+
+2. **Theme Toggle Component** (`client/components/ThemeToggle.tsx`):
+   - Animated sun/moon icon toggle with Framer Motion
+   - Respects reduced motion preferences
+   - Available in both icon-only and labeled variants
+
+3. **Theme Provider** (`client/hooks/use-theme.tsx`):
+   - React Context for theme state management
+   - Persists theme preference to localStorage
+   - Detects system color scheme preference on first visit
+   - Adds/removes `dark` class on document root
+
+4. **Navigation Integration**:
+   - Theme toggle in desktop navigation (next to search)
+   - Theme toggle in mobile menu with label
+   - Logo brightness adjusted for dark mode visibility
+
+### Products Page Updates (December 3, 2025)
+
+1. **Content Updates**:
+   - Subtitle changed to "Thoughtfully ideated and crafted products and solutions for Maritime Industry"
+   - Maritime AI Vision replaced with Data Anchorage product
+   - CTAs removed from non-featured products (only featured PMS Asset Builder shows Request Demo and Learn More)
+
+2. **Demo Request Popup**:
+   - Modal form triggered by "Request Demo" button
+   - Form fields: Name (required), Email ID (required), Company (required), Designation, Country
+   - Toast notifications for success/error feedback
+   - Fallback email link to ranjith@cadetlabs.io

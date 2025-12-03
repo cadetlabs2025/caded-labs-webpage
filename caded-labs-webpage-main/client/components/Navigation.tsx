@@ -16,6 +16,8 @@ import {
 } from "@/components/ui/popover";
 import { Menu, Search, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import { useTheme } from "@/hooks/use-theme";
 
 const navigationItems = [
   { name: "Home", value: "home", route: "/" },
@@ -260,20 +262,25 @@ export default function Navigation({
     setSearchResults([]);
   };
 
+  const { theme } = useTheme();
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white m-0 p-0">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 m-0 p-0">
       <div className="max-w-7xl mx-auto px-4 h-24 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center flex-shrink-0 mr-8">
           <img
             src="https://cdn.builder.io/api/v1/image/assets%2Feacf4d198f7d471b831a310bf0945bc6%2F9af88a351923405ca30afd8d23a44e8b?format=webp&width=800"
             alt="Cadet Labs"
-            className="h-24 w-auto max-w-[400px]"
+            className={cn("h-24 w-auto max-w-[400px]", theme === "dark" && "brightness-150")}
           />
         </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-6">
+          {/* Theme Toggle */}
+          <ThemeToggle />
+          
           {/* Search */}
           <Popover open={isSearchOpen} onOpenChange={setIsSearchOpen}>
             <PopoverTrigger asChild>
@@ -282,10 +289,10 @@ export default function Navigation({
                 <span className="sr-only">Search</span>
               </Button>
             </PopoverTrigger>
-            <PopoverContent className="w-80 p-0" align="end">
+            <PopoverContent className="w-80 p-0 bg-popover" align="end">
               <div className="p-4">
                 <div className="flex items-center space-x-2">
-                  <Search className="h-4 w-4 text-gray-400" />
+                  <Search className="h-4 w-4 text-muted-foreground" />
                   <Input
                     placeholder="Search content..."
                     value={searchQuery}
@@ -313,7 +320,7 @@ export default function Navigation({
 
                 {searchResults.length > 0 && (
                   <div className="mt-4 max-h-60 overflow-y-auto">
-                    <div className="text-xs text-gray-500 mb-2">
+                    <div className="text-xs text-muted-foreground mb-2">
                       Found {searchResults.length} results
                     </div>
                     {searchResults.map((result, index) => (
@@ -322,7 +329,7 @@ export default function Navigation({
                         onClick={() =>
                           scrollToElement(result.element, result.tab)
                         }
-                        className="w-full text-left p-2 hover:bg-gray-50 rounded text-sm border-b border-gray-100 last:border-b-0"
+                        className="w-full text-left p-2 hover:bg-muted rounded text-sm border-b border-border last:border-b-0"
                       >
                         <div className="truncate">
                           {result.text}
@@ -338,7 +345,7 @@ export default function Navigation({
                 )}
 
                 {searchQuery && searchResults.length === 0 && (
-                  <div className="mt-4 text-sm text-gray-500 text-center py-4">
+                  <div className="mt-4 text-sm text-muted-foreground text-center py-4">
                     No results found for "{searchQuery}"
                   </div>
                 )}
@@ -354,7 +361,7 @@ export default function Navigation({
                 "text-sm font-medium transition-colors px-2 py-1 hover:text-primary",
                 activeTab === item.value
                   ? "text-primary border-b-2 border-primary"
-                  : "text-gray-700",
+                  : "text-foreground/80",
               )}
             >
               {item.name}
@@ -375,10 +382,16 @@ export default function Navigation({
               <SheetTitle>Navigation Menu</SheetTitle>
             </SheetHeader>
 
+            {/* Theme Toggle for Mobile */}
+            <div className="flex items-center justify-between mt-4 px-3 py-2 bg-muted/50 rounded-lg">
+              <span className="text-sm font-medium">Theme</span>
+              <ThemeToggle showLabel />
+            </div>
+
             {/* Mobile Search */}
-            <div className="mt-6 p-3 border rounded-lg bg-gray-50">
+            <div className="mt-6 p-3 border rounded-lg bg-muted/50">
               <div className="flex items-center space-x-2 mb-3">
-                <Search className="h-4 w-4 text-gray-400" />
+                <Search className="h-4 w-4 text-muted-foreground" />
                 <Input
                   placeholder="Search content..."
                   value={searchQuery}
@@ -405,7 +418,7 @@ export default function Navigation({
 
               {searchResults.length > 0 && (
                 <div className="max-h-40 overflow-y-auto">
-                  <div className="text-xs text-gray-500 mb-2">
+                  <div className="text-xs text-muted-foreground mb-2">
                     Found {searchResults.length} results
                   </div>
                   {searchResults.map((result, index) => (
@@ -415,7 +428,7 @@ export default function Navigation({
                         scrollToElement(result.element, result.tab);
                         setIsOpen(false);
                       }}
-                      className="w-full text-left p-2 hover:bg-white rounded text-sm border-b border-gray-200 last:border-b-0"
+                      className="w-full text-left p-2 hover:bg-background rounded text-sm border-b border-border last:border-b-0"
                     >
                       <div className="truncate text-xs">
                         {result.text}
@@ -431,7 +444,7 @@ export default function Navigation({
               )}
 
               {searchQuery && searchResults.length === 0 && (
-                <div className="text-sm text-gray-500 text-center py-2">
+                <div className="text-sm text-muted-foreground text-center py-2">
                   No results found
                 </div>
               )}
