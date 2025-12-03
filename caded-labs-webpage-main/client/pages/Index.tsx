@@ -162,37 +162,18 @@ const testimonials = [
 ];
 
 export default function Index() {
-  const [activeTab, setActiveTab] = useState("home");
-
-  const renderTabContent = () => {
-    switch (activeTab) {
-      case "home":
-        return <HomeTab onTabChange={setActiveTab} />;
-      case "products":
-        return <ProductsTab onTabChange={setActiveTab} />;
-      case "services":
-        return <ServicesTab onTabChange={setActiveTab} />;
-      case "about":
-        return <AboutTab onTabChange={setActiveTab} />;
-      case "careers":
-        return <CareersTab onTabChange={setActiveTab} />;
-      case "contact":
-        return <ContactTab onTabChange={setActiveTab} />;
-      default:
-        return <HomeTab onTabChange={setActiveTab} />;
-    }
-  };
-
   return (
     <div className="min-h-screen bg-background">
-      <Navigation activeTab={activeTab} onTabChange={setActiveTab} />
-      <main className="min-h-screen">{renderTabContent()}</main>
+      <Navigation />
+      <main className="min-h-screen">
+        <HomeTab />
+      </main>
     </div>
   );
 }
 
 interface TabProps {
-  onTabChange: (tab: string) => void;
+  onTabChange?: (tab: string) => void;
 }
 
 // Footer Component

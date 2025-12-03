@@ -129,7 +129,6 @@ const getHeroVariants = (reduceMotion: boolean) => ({
 });
 
 export default function Products() {
-  const [activeTab, setActiveTab] = useState("products");
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const prefersReducedMotion = useReducedMotion();
   
@@ -139,7 +138,7 @@ export default function Products() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navigation activeTab={activeTab} onTabChange={setActiveTab} />
+      <Navigation />
 
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-wave-light to-ocean-light overflow-hidden">
