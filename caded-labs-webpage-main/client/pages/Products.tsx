@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import {
@@ -10,10 +11,27 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Brain, Shield, Globe, Eye, FileText, TrendingUp, ArrowRight } from "lucide-react";
+import { Brain, Shield, Globe, Eye, FileText, TrendingUp, ArrowRight, Database, Zap, Star } from "lucide-react";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
 const products = [
+  {
+    name: "PMS Asset Builder",
+    description:
+      "AI-augmented platform to accelerate PMS data creation and structuring. Build PMS data 5x faster with no guesswork.",
+    tech: ["Document AI", "NLP", "Data Extraction", "PMS Integration"],
+    category: "Featured",
+    icon: Database,
+    image: "/digital_document_pro_1a30a36e.jpg",
+    features: [
+      "AI-powered manual parsing",
+      "Structured equipment metadata",
+      "Export-ready PMS format",
+      "7-day vessel delivery",
+    ],
+    featured: true,
+    link: "/products/pms-asset-builder",
+  },
   {
     name: "Maritime AI Vision",
     description:
@@ -171,7 +189,14 @@ export default function Products() {
                 onTouchStart={() => setHoveredIndex(index)}
                 onTouchEnd={() => setTimeout(() => setHoveredIndex(null), 300)}
               >
-                <Card className="overflow-hidden h-full group hover:shadow-2xl transition-all duration-500 border-2 hover:border-primary/30 active:shadow-xl active:border-primary/20">
+                <Card className={`relative overflow-hidden h-full group hover:shadow-2xl transition-all duration-500 border-2 hover:border-primary/30 active:shadow-xl active:border-primary/20 ${(product as any).featured ? 'ring-2 ring-cyan-500/50 border-cyan-500/30' : ''}`}>
+                  {/* Featured Badge */}
+                  {(product as any).featured && (
+                    <div className="absolute top-0 left-0 z-20 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-1 text-xs font-bold rounded-br-lg flex items-center gap-1">
+                      <Star className="h-3 w-3" />
+                      FEATURED
+                    </div>
+                  )}
                   {/* Product Image */}
                   <div className="relative h-40 sm:h-48 md:h-56 overflow-hidden">
                     <img
@@ -181,13 +206,13 @@ export default function Products() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
                     <div className="absolute top-3 right-3 sm:top-4 sm:right-4">
-                      <Badge className="bg-white/90 text-primary shadow-lg text-xs sm:text-sm">
+                      <Badge className={`shadow-lg text-xs sm:text-sm ${(product as any).featured ? 'bg-cyan-500 text-white' : 'bg-white/90 text-primary'}`}>
                         {product.category}
                       </Badge>
                     </div>
                     <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4">
-                      <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white shadow-lg flex items-center justify-center group-hover:-translate-y-1 md:group-hover:-translate-y-2 transition-transform duration-300">
-                        <product.icon className="h-6 w-6 sm:h-7 sm:w-7 text-primary" />
+                      <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl shadow-lg flex items-center justify-center group-hover:-translate-y-1 md:group-hover:-translate-y-2 transition-transform duration-300 ${(product as any).featured ? 'bg-gradient-to-br from-cyan-500 to-blue-600' : 'bg-white'}`}>
+                        <product.icon className={`h-6 w-6 sm:h-7 sm:w-7 ${(product as any).featured ? 'text-white' : 'text-primary'}`} />
                       </div>
                     </div>
                   </div>
@@ -242,13 +267,22 @@ export default function Products() {
                       </div>
 
                       <div className="flex flex-col sm:flex-row gap-3 pt-4">
-                        <Button className="flex-1 group/btn">
+                        <Button className={`flex-1 group/btn ${(product as any).featured ? 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700' : ''}`}>
                           Request Demo
                           <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                         </Button>
-                        <Button variant="outline" className="flex-1">
-                          Learn More
-                        </Button>
+                        {(product as any).link ? (
+                          <Link to={(product as any).link} className="flex-1">
+                            <Button variant="outline" className="w-full group/learn">
+                              Learn More
+                              <ArrowRight className="ml-2 h-4 w-4 group-hover/learn:translate-x-1 transition-transform" />
+                            </Button>
+                          </Link>
+                        ) : (
+                          <Button variant="outline" className="flex-1">
+                            Learn More
+                          </Button>
+                        )}
                       </div>
                     </div>
                   </CardContent>

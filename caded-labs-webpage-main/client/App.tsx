@@ -15,6 +15,7 @@ import IndexOption5 from "./pages/IndexOption5";
 import IndexOption6 from "./pages/IndexOption6";
 import IndexOption7 from "./pages/IndexOption7";
 import Products from "./pages/Products";
+import PMSAssetBuilder from "./pages/PMSAssetBuilder";
 import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/option6" element={<IndexOption6 />} />
           <Route path="/option7" element={<IndexOption7 />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/products/pms-asset-builder" element={<PMSAssetBuilder />} />
           <Route path="/services" element={<Services />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
