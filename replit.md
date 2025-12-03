@@ -256,9 +256,20 @@ The Navigation component uses a `useSafeRouter` hook that gracefully handles cas
    - Subtitle changed to "Thoughtfully ideated and crafted products and solutions for Maritime Industry"
    - Maritime AI Vision replaced with Data Anchorage product
    - CTAs removed from non-featured products (only featured PMS Asset Builder shows Request Demo and Learn More)
+   - Added Vessel Performance Analytics as 5th product (speed performance monitoring, hull fouling detection, engine efficiency analysis)
+   - Cybersecurity Platform moved to last position (6th product)
+   - Removed "View Details" CTA from PMS Asset Builder panel to align with other product panels
+   - Removed all em dashes across all pages and rephrased text while maintaining meaning
 
 2. **Demo Request Popup**:
    - Modal form triggered by "Request Demo" button
+   - Schedule Consultation CTA now also opens the demo request popup
+   - Removed "Download Brochure" CTA from bottom section
    - Form fields: Name (required), Email ID (required), Company (required), Designation, Country
    - Toast notifications for success/error feedback
    - Fallback email link to ranjith@cadetlabs.io
+
+3. **Button Styling Enhancement**:
+   - All buttons now have shadow effects (shadow-md default, shadow-lg on hover)
+   - Press effect added with scale and translate animations (active:scale-[0.98] active:translate-y-[1px])
+   - Ghost and link button variants exempt from shadow effects

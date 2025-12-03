@@ -13,7 +13,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Brain, Shield, Globe, Eye, FileText, TrendingUp, ArrowRight, Database, Zap, Star, X, Anchor } from "lucide-react";
+import { Brain, Shield, Globe, Eye, FileText, TrendingUp, ArrowRight, Database, Zap, Star, X, Anchor, Ship } from "lucide-react";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 import { useToast } from "@/hooks/use-toast";
 
@@ -78,6 +78,21 @@ const products = [
       "Route optimization",
       "Risk prediction",
       "Performance analytics",
+    ],
+  },
+  {
+    name: "Vessel Performance Analytics",
+    description:
+      "Advanced performance analytics leveraging vessel operational data to identify speed degradation, optimize hull efficiency, and guide critical maintenance decisions.",
+    tech: ["Performance Modeling", "Data Analytics", "Predictive Insights", "Operational Intelligence"],
+    category: "Performance",
+    icon: Ship,
+    image: "/data_analytics_dashb_80ee824c.jpg",
+    features: [
+      "Speed performance monitoring",
+      "Hull fouling detection",
+      "Engine efficiency analysis",
+      "Maintenance decision support",
     ],
   },
   {
@@ -308,12 +323,6 @@ export default function Products() {
                     <CardDescription className="text-base">
                       {product.description}
                     </CardDescription>
-                    {(product as any).link && (
-                      <Link to={(product as any).link} className="inline-flex items-center gap-1 text-cyan-600 hover:text-cyan-700 font-medium mt-2 group/details">
-                        View Details
-                        <ArrowRight className="h-4 w-4 group-hover/details:translate-x-1 transition-transform" />
-                      </Link>
-                    )}
                   </CardHeader>
 
                   <CardContent>
@@ -421,16 +430,14 @@ export default function Products() {
               viewport={{ once: true }}
               transition={{ delay: prefersReducedMotion ? 0 : 0.4 }}
             >
-              <Button variant="secondary" size="lg" className="group">
+              <Button 
+                variant="secondary" 
+                size="lg" 
+                className="group"
+                onClick={() => setShowDemoModal(true)}
+              >
                 Schedule Consultation
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-              >
-                Download Brochure
               </Button>
             </motion.div>
           </div>
