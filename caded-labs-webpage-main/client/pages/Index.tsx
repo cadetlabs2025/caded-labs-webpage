@@ -484,10 +484,7 @@ function HomeTab({ onTabChange }: TabProps) {
               Our Mission
             </h2>
             <p className="text-xl text-slate-600 leading-relaxed">
-              We believe in the soul of shipping. That the toughest maritime
-              challenges deserve not shortcuts, but sharp minds and honest
-              grind. We build AI not to dominate, but to complement, with
-              respect, precision, and balance.
+              At Cadet Labs, we use technology carefully and purposefully, learning from the human grind of maritime work and building solutions through the eyes of the peers who live it every day.
             </p>
           </div>
         </div>
