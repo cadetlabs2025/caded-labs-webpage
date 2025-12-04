@@ -199,7 +199,7 @@ export default function Products() {
     } catch (error) {
       toast({
         title: "Submission Failed",
-        description: "Please try again or email us at ranjith@cadetlabs.io",
+        description: "Please try again or email us at contact@cadetlabs.io",
         variant: "destructive",
       });
     } finally {
@@ -573,10 +573,10 @@ export default function Products() {
                 <p className="text-xs text-center text-muted-foreground pt-2">
                   Or email us directly at{" "}
                   <a
-                    href="mailto:ranjith@cadetlabs.io"
+                    href="mailto:contact@cadetlabs.io"
                     className="text-cyan-600 hover:underline"
                   >
-                    ranjith@cadetlabs.io
+                    contact@cadetlabs.io
                   </a>
                 </p>
               </form>

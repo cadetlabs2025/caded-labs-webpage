@@ -1156,7 +1156,7 @@ function ContactTab({ onTabChange }: TabProps) {
           <div>
             <Mail className="h-8 w-8 mx-auto mb-4" />
             <h3 className="text-lg font-semibold mb-2">Email</h3>
-            <p className="text-primary-foreground/80">ranjith@cadetlabs.io</p>
+            <p className="text-primary-foreground/80">contact@cadetlabs.io</p>
           </div>
           <div>
             <Phone className="h-8 w-8 mx-auto mb-4" />

@@ -145,7 +145,7 @@ export default function Navigation({
           "Employment",
         ],
         contact: [
-          "ranjith@cadetlabs.io",
+          "contact@cadetlabs.io",
           "+919940211712",
           "Chennai, India",
           "Contact Us",

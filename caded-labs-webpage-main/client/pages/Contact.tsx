@@ -152,7 +152,7 @@ export default function Contact() {
     } catch (error) {
       toast({
         title: "Submission Failed",
-        description: "Please try again or email us at ranjith@cadetlabs.io",
+        description: "Please try again or email us at contact@cadetlabs.io",
         variant: "destructive",
       });
     } finally {

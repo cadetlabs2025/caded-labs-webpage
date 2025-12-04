@@ -159,7 +159,7 @@ export default function PMSAssetBuilder() {
     } catch (error) {
       toast({
         title: "Submission Failed",
-        description: "Please try again or email us at ranjith@cadetlabs.io",
+        description: "Please try again or email us at contact@cadetlabs.io",
         variant: "destructive",
       });
     } finally {
@@ -568,8 +568,8 @@ export default function PMSAssetBuilder() {
               transition={{ delay: prefersReducedMotion ? 0 : 0.5 }}
             >
               <Mail className="h-5 w-5" />
-              <a href="mailto:ranjith@cadetlabs.io" className="hover:text-white transition-colors underline">
-                ranjith@cadetlabs.io
+              <a href="mailto:contact@cadetlabs.io" className="hover:text-white transition-colors underline">
+                contact@cadetlabs.io
               </a>
             </motion.div>
           </div>
@@ -693,10 +693,10 @@ export default function PMSAssetBuilder() {
                 <p className="text-xs text-center text-slate-500">
                   Or email us directly at{" "}
                   <a
-                    href="mailto:ranjith@cadetlabs.io"
+                    href="mailto:contact@cadetlabs.io"
                     className="text-cyan-600 hover:underline"
                   >
-                    ranjith@cadetlabs.io
+                    contact@cadetlabs.io
                   </a>
                 </p>
               </form>
