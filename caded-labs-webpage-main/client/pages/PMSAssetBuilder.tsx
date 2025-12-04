@@ -1,8 +1,11 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import {
   FileText,
   Database,
@@ -19,9 +22,11 @@ import {
   Users,
   Mail,
   Anchor,
+  X,
 } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
+import { useToast } from "@/hooks/use-toast";
 
 const getContainerVariants = (reduceMotion: boolean) => ({
   hidden: { opacity: reduceMotion ? 1 : 0 },
@@ -101,10 +106,66 @@ const stats = [
 
 export default function PMSAssetBuilder() {
   const prefersReducedMotion = useReducedMotion();
+  const { toast } = useToast();
+  const [showDemoModal, setShowDemoModal] = useState(false);
+  const [demoForm, setDemoForm] = useState({
+    name: "",
+    email: "",
+    company: "",
+    designation: "",
+    country: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const containerVariants = getContainerVariants(prefersReducedMotion);
   const itemVariants = getItemVariants(prefersReducedMotion);
   const fadeInUp = getFadeInUp(prefersReducedMotion);
+
+  const handleDemoFormChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setDemoForm((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleDemoSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!demoForm.name || !demoForm.email || !demoForm.company) {
+      toast({
+        title: "Missing Information",
+        description: "Please fill in all required fields.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      
+      toast({
+        title: "Demo Request Submitted!",
+        description: "Our team will contact you shortly at " + demoForm.email,
+      });
+      
+      setDemoForm({
+        name: "",
+        email: "",
+        company: "",
+        designation: "",
+        country: "",
+      });
+      setShowDemoModal(false);
+    } catch (error) {
+      toast({
+        title: "Submission Failed",
+        description: "Please try again or email us at ranjith@cadetlabs.io",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -201,12 +262,16 @@ export default function PMSAssetBuilder() {
                 className="flex flex-wrap gap-4"
                 variants={itemVariants}
               >
-                <Button size="lg" className="bg-cyan-500 hover:bg-cyan-600 text-white group">
+                <Button 
+                  size="lg" 
+                  className="bg-cyan-500 hover:bg-cyan-600 text-white group shadow-md hover:shadow-lg active:scale-[0.98] transition-all"
+                  onClick={() => setShowDemoModal(true)}
+                >
                   Request Demo
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 <a href="/PMS Asset Builder Brochure.pdf" download>
-                  <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
+                  <Button size="lg" className="bg-cyan-500 hover:bg-cyan-600 text-white shadow-md hover:shadow-lg active:scale-[0.98] transition-all">
                     <Download className="mr-2 h-4 w-4" />
                     Download Brochure
                   </Button>
@@ -486,16 +551,14 @@ export default function PMSAssetBuilder() {
               viewport={{ once: true }}
               transition={{ delay: prefersReducedMotion ? 0 : 0.4 }}
             >
-              <Button size="lg" className="bg-white text-cyan-600 hover:bg-white/90 group">
+              <Button 
+                size="lg" 
+                className="bg-white text-cyan-600 hover:bg-white/90 group shadow-md hover:shadow-lg active:scale-[0.98] transition-all"
+                onClick={() => setShowDemoModal(true)}
+              >
                 Schedule Consultation
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <a href="/PMS Asset Builder Brochure.pdf" download>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 w-full sm:w-auto">
-                  <Download className="mr-2 h-4 w-4" />
-                  Download Brochure
-                </Button>
-              </a>
             </motion.div>
             <motion.div
               className="flex items-center justify-center gap-2 text-white/80"
@@ -512,6 +575,135 @@ export default function PMSAssetBuilder() {
           </div>
         </div>
       </motion.section>
+
+      {/* Demo Request Modal */}
+      <AnimatePresence>
+        {showDemoModal && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+            initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={prefersReducedMotion ? { opacity: 1 } : { opacity: 0 }}
+            onClick={() => setShowDemoModal(false)}
+          >
+            <motion.div
+              className="bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden"
+              initial={prefersReducedMotion ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={prefersReducedMotion ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 0 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Modal Header */}
+              <div className="bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-5 relative">
+                <button
+                  onClick={() => setShowDemoModal(false)}
+                  className="absolute top-4 right-4 text-white/80 hover:text-white transition-colors"
+                >
+                  <X className="h-5 w-5" />
+                </button>
+                <h3 className="text-xl font-bold text-white">Request a Demo</h3>
+                <p className="text-white/80 text-sm mt-1">
+                  Fill in your details and our team will reach out to schedule a demo
+                </p>
+              </div>
+
+              {/* Modal Form */}
+              <form onSubmit={handleDemoSubmit} className="p-6 space-y-4">
+                <div className="space-y-2">
+                  <Label htmlFor="name" className="text-sm font-medium">
+                    Name <span className="text-red-500">*</span>
+                  </Label>
+                  <Input
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="Your full name"
+                    value={demoForm.name}
+                    onChange={handleDemoFormChange}
+                    required
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="email" className="text-sm font-medium">
+                    Email ID <span className="text-red-500">*</span>
+                  </Label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="your.email@company.com"
+                    value={demoForm.email}
+                    onChange={handleDemoFormChange}
+                    required
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="company" className="text-sm font-medium">
+                    Company <span className="text-red-500">*</span>
+                  </Label>
+                  <Input
+                    id="company"
+                    name="company"
+                    type="text"
+                    placeholder="Your company name"
+                    value={demoForm.company}
+                    onChange={handleDemoFormChange}
+                    required
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="designation" className="text-sm font-medium">
+                    Designation
+                  </Label>
+                  <Input
+                    id="designation"
+                    name="designation"
+                    type="text"
+                    placeholder="Your role"
+                    value={demoForm.designation}
+                    onChange={handleDemoFormChange}
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="country" className="text-sm font-medium">
+                    Country
+                  </Label>
+                  <Input
+                    id="country"
+                    name="country"
+                    type="text"
+                    placeholder="Your country"
+                    value={demoForm.country}
+                    onChange={handleDemoFormChange}
+                  />
+                </div>
+
+                <Button
+                  type="submit"
+                  className="w-full bg-cyan-500 hover:bg-cyan-600 text-white shadow-md hover:shadow-lg active:scale-[0.98] transition-all"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Submitting..." : "Submit Request"}
+                </Button>
+
+                <p className="text-xs text-center text-slate-500">
+                  Or email us directly at{" "}
+                  <a
+                    href="mailto:ranjith@cadetlabs.io"
+                    className="text-cyan-600 hover:underline"
+                  >
+                    ranjith@cadetlabs.io
+                  </a>
+                </p>
+              </form>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
