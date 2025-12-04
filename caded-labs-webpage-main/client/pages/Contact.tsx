@@ -35,8 +35,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    details: "contact@cadetlabs.com",
-    action: "mailto:contact@cadetlabs.com",
+    details: "contact@cadetlabs.io",
+    action: "mailto:contact@cadetlabs.io",
   },
 ];
 
