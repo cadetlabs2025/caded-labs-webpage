@@ -380,14 +380,15 @@ function HomeTab({ onTabChange }: TabProps) {
               </motion.div>
 
               <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
-                <Button
-                  size="lg"
-                  className="group"
-                  onClick={() => onTabChange("products")}
-                >
-                  Explore Products
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                <Link to="/products">
+                  <Button
+                    size="lg"
+                    className="group"
+                  >
+                    Explore Products
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
               </motion.div>
             </motion.div>
 
