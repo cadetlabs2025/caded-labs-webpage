@@ -533,7 +533,7 @@ export default function PMSAssetBuilder() {
               viewport={{ once: true }}
               transition={{ delay: prefersReducedMotion ? 0 : 0.2 }}
             >
-              Ready to Transform Your PMS Data Workflow?
+              Ready to transform your PMS data building process?
             </motion.h2>
             <motion.p
               className="text-xl text-white/80 mb-8"
