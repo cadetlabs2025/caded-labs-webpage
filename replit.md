@@ -1,335 +1,64 @@
 # Cadet Labs Webpage
 
 ## Overview
-
-This is a production-ready full-stack web application for Cadet Labs, a maritime technology company specializing in AI-powered solutions and cybersecurity. The application is built as a Single Page Application (SPA) using React 18 with an integrated Express backend server. The site showcases the company's products, services, and expertise in maritime AI, cybersecurity, and digital transformation.
-
-The application features multiple page designs (7+ homepage variations), product catalogs, service offerings, and contact forms. It's designed for deployment on Azure Static Web Apps with support for both development and production environments.
+This project is a production-ready full-stack web application for Cadet Labs, a maritime technology company. It's a Single Page Application (SPA) built with React 18 and an Express backend. The application showcases the company's AI-powered solutions, cybersecurity, and digital transformation services, featuring various page designs, product catalogs, service offerings, and contact forms. It's designed for deployment on Azure Static Web Apps.
 
 ## User Preferences
-
 Preferred communication style: Simple, everyday language.
 
 ## System Architecture
 
-### Frontend Architecture
+### Frontend
+- **Framework:** React 18 with TypeScript, using React Router 6.
+- **Build Tool:** Vite for development and optimized production builds.
+- **UI Component System:** Radix UI primitives, TailwindCSS 3 (oceanic/maritime theme), Shadcn/ui.
+- **State Management:** React Query for server state, React hooks for local state, Context API for notifications.
+- **Routing:** Client-side routing with multiple homepage variations (Index, IndexOption1-7) and core pages (Products, Services, About, Contact).
+- **Design:** Mobile-first responsive design, custom `use-mobile` hook, ocean/maritime color palette, typography using `@tailwindcss/typography`.
+- **Animations:** Framer Motion for smooth transitions, with `useReducedMotion` hook for accessibility.
+- **Theme:** Full dark mode support using CSS variables and Tailwind's `darkMode: ["class"]`, managed by `useTheme` hook with localStorage persistence.
 
-**Framework:** React 18 with TypeScript, using React Router 6 in SPA mode for client-side routing.
-
-**Build Tool:** Vite for fast development and optimized production builds. The development server runs on port 5000 with Express middleware integration.
-
-**UI Component System:** 
-- Radix UI primitives for accessible, unstyled components
-- TailwindCSS 3 for styling with custom oceanic/maritime theme
-- Shadcn/ui component library (configured via `components.json`)
-- Custom theme with HSL color variables defined in `global.css`
-
-**State Management:**
-- React Query (TanStack Query) for server state and data fetching
-- React hooks for local component state
-- Context API for toast notifications and tooltips
-
-**Routing Strategy:**
-- All routes defined in `client/App.tsx` using `BrowserRouter` and `Routes`
-- Pages located in `client/pages/` directory
-- Catch-all route for 404 handling
-- Multiple homepage design variations (Index, IndexOption1-7)
-- Core pages: Products, Services, About, Contact
-
-**Design Approach:**
-- Mobile-first responsive design
-- Custom hook `use-mobile` for breakpoint detection (768px)
-- Ocean/maritime themed color palette
-- Typography using @tailwindcss/typography plugin
-
-### Backend Architecture
-
-**Server Framework:** Express 4.18 with TypeScript
-
-**Development Mode:**
-- Express runs as Vite middleware plugin (configured in `vite.config.ts`)
-- API routes mounted at `/api/*`
-- CORS enabled for cross-origin requests
-
-**Production Build:**
-- Separate server build configuration in `vite.config.server.ts`
-- Server code compiled to ESM format targeting Node 22
-- Static SPA files served from `dist/spa/` directory
-- Server handles React Router fallback for client-side routing
-- All non-API routes serve `index.html` for SPA navigation
-
-**API Structure:**
-- Routes defined in `server/routes/` directory
-- Example endpoints: `/api/ping`, `/api/demo`
-- JSON parsing and URL-encoded body parsing enabled
-- API responses typed using shared interfaces
-
-**Deployment Targets:**
-- Azure Static Web Apps (primary, configured via `staticwebapp.config.json`)
-- Netlify Functions support (serverless function in `netlify/functions/api.ts`)
-- Generic Node.js server (`server/node-build.ts` for standalone deployment)
+### Backend
+- **Server Framework:** Express 4.18 with TypeScript.
+- **Development:** Express runs as Vite middleware; API routes at `/api/*`; CORS enabled.
+- **Production:** Separate server build (Node 22 target); serves static SPA files from `dist/spa/`; handles React Router fallback.
+- **API Structure:** Routes in `server/routes/`; JSON and URL-encoded body parsing; typed API responses.
+- **Deployment:** Primarily Azure Static Web Apps; also supports Netlify Functions and generic Node.js server.
 
 ### Type Safety and Validation
-
-**TypeScript Configuration:**
-- Strict mode disabled for faster development
-- Path aliases: `@/*` maps to `client/*`, `@shared/*` maps to `shared/*`
-- Module resolution set to "bundler" for modern bundling
-- Shared types between client and server in `shared/` directory
-
-**Runtime Validation:**
-- Zod library included for schema validation
-- React Hook Form with Zod resolvers for form validation
+- **TypeScript:** Strict mode disabled for faster development; path aliases; shared types in `shared/` directory.
+- **Runtime Validation:** Zod for schema validation; React Hook Form with Zod resolvers for form validation.
 
 ### Testing
-
-**Test Framework:** Vitest for unit testing
-- Example test in `client/lib/utils.spec.ts`
-- Test command: `npm run test`
+- **Framework:** Vitest for unit testing.
 
 ### Build and Deployment
-
-**Build Commands:**
-- `npm run build` - Builds both client and server
-- `npm run build:client` - Vite build for SPA (outputs to `dist/spa/`)
-- `npm run build:server` - Server build for production (outputs to `dist/server/`)
-- `npm run build:azure` - Alias for client build (Azure-specific)
-
-**Production Server:**
-- Entry point: `dist/server/production.mjs`
-- Serves static files from `dist/spa/`
-- Handles graceful shutdown on SIGTERM/SIGINT
-- Port configured via `PORT` environment variable (default: 3000)
-
-**Static Configuration:**
-- Azure Static Web Apps config includes navigation fallback to `index.html`
-- MIME types configured for common file extensions
-- Cache-Control headers set for static assets (1 year max-age)
-- Excluded file types bypass SPA routing (CSS, JS, images, fonts, PDFs)
+- **Build Commands:** `npm run build` (client and server), `npm run build:client`, `npm run build:server`.
+- **Production Server:** `dist/server/production.mjs` serves `dist/spa/` files.
+- **Static Configuration:** `staticwebapp.config.json` for Azure, including navigation fallback and caching.
 
 ## External Dependencies
 
-### Core Framework Dependencies
-
-**Frontend:**
-- React 18.3 with react-dom
-- React Router 6 for SPA routing
-- @tanstack/react-query for data fetching and caching
-
-**Backend:**
-- Express 4.18 for HTTP server
-- CORS middleware for cross-origin requests
-
-**Build Tools:**
-- Vite with @vitejs/plugin-react-swc (fast refresh using SWC compiler)
-- TypeScript for type checking
-- PostCSS with TailwindCSS and Autoprefixer
+### Core Framework
+- **Frontend:** React 18, react-dom, React Router 6, @tanstack/react-query.
+- **Backend:** Express 4.18, CORS middleware.
+- **Build Tools:** Vite, @vitejs/plugin-react-swc, TypeScript, PostCSS, TailwindCSS, Autoprefixer.
 
 ### UI Component Libraries
+- **Radix UI:** A comprehensive set of accessible, unstyled components.
+- **Utilities:** class-variance-authority, clsx, tailwind-merge.
+- **Specialized UI:** cmdk (command palette), embla-carousel-react, input-otp, lucide-react (icons), react-day-picker, recharts, sonner (toast notifications), vaul (drawers).
 
-**Radix UI Components:**
-- Accordion, AlertDialog, AspectRatio, Avatar, Checkbox, Collapsible
-- ContextMenu, Dialog, DropdownMenu, HoverCard, Label
-- Menubar, NavigationMenu, Popover, Progress, RadioGroup
-- ScrollArea, Select, Separator, Slider, Switch, Tabs
-- Toast, Toggle, ToggleGroup, Tooltip
-
-**Other UI Libraries:**
-- class-variance-authority for component variants
-- clsx and tailwind-merge for className utilities
-- cmdk for command palette
-- embla-carousel-react for carousels
-- input-otp for OTP inputs
-- lucide-react for icons
-- react-day-picker for date selection
-- recharts for data visualization
-- sonner for toast notifications
-- vaul for drawers
-
-### 3D Graphics (Optional)
-
-- @react-three/fiber and @react-three/drei for Three.js integration (included but not actively used in current pages)
+### 3D Graphics
+- @react-three/fiber, @react-three/drei (for Three.js integration, optional).
 
 ### Form Handling
-
-- react-hook-form for form state management
-- @hookform/resolvers for validation integration
-- Zod for schema validation
+- react-hook-form, @hookform/resolvers, Zod.
 
 ### Development Tools
-
-- Vitest for testing
-- Prettier for code formatting (`.fix` script available)
-- cpx for file copying during builds
+- Vitest, Prettier, cpx.
 
 ### Deployment Infrastructure
+- Azure Static Web Apps, Netlify.
 
-**Azure Static Web Apps:**
-- Configured for GitHub integration
-- Custom build settings via `staticwebapp.config.json`
-- Deployment guide in `azure-deployment-guide.md`
-
-**Netlify:**
-- Serverless function wrapper for Express app
-- Alternative deployment target
-
-No database is currently configured in this application. All content is static or would be fetched from external APIs through the Express backend.
-
-## Recent Changes (December 2025)
-
-### Visual Enhancements (December 3, 2025)
-
-1. **Framer Motion Animations**: Added smooth animations to Index.tsx, Products.tsx, and Services.tsx:
-   - Fade-in and slide-up effects on page sections
-   - Staggered animations for card grids and feature lists
-   - Hover effects on interactive elements (cards, buttons, icons)
-   - Hero section with animated floating decorative elements
-
-2. **Accessibility - Reduced Motion Support**: Created `useReducedMotion` React hook (`client/hooks/use-reduced-motion.ts`):
-   - Dynamically detects `prefers-reduced-motion` media query
-   - All animations conditionally disabled for users who prefer reduced motion
-   - Static fallbacks provided for decorative animated elements
-
-3. **Product Images**: Integrated visual imagery for all four products:
-   - Maritime AI Vision - monitoring dashboard
-   - Document Intelligence - document processing
-   - Predictive Analytics - analytics visualization
-   - Cybersecurity Shield - security interface
-
-4. **Mobile Responsive Improvements**:
-   - Touch-friendly active states for mobile devices
-   - Responsive sizing for all interactive elements
-   - Smooth transitions that respect reduced motion preferences
-
-5. **Content Updates**: Removed all NIST 2.0 references and replaced with generic compliance language across all pages.
-
-### Bug Fixes Applied (Earlier)
-
-1. **Vite Configuration**: Fixed port from 8080 to 5000 for Replit compatibility, added `allowedHosts: true` for proper webview access.
-
-2. **Navigation Component**: Made `activeTab` and `onTabChange` props optional with React Router fallback. Navigation now works in two modes:
-   - **Tab mode**: When props are passed (used by Index.tsx, Products.tsx) for internal tab switching
-   - **Router mode**: When no props are passed (used by About.tsx, Contact.tsx, Services.tsx) for URL-based navigation
-   
-3. **Contact Form**: Added complete form functionality with:
-   - Form state management using React useState
-   - Input validation for required fields (First Name, Email, Message)
-   - Submit handler with loading state
-   - Toast notifications for success/error feedback
-   - Form reset after successful submission
-
-### Component Architecture Note
-
-The Navigation component uses a `useSafeRouter` hook that gracefully handles cases where the Router context might not be available, providing fallback behavior for maximum compatibility.
-
-### Custom Hooks
-
-- `useReducedMotion` (`client/hooks/use-reduced-motion.ts`): Detects user's motion preference dynamically using `matchMedia` and returns a boolean for conditional animation rendering.
-- `useTheme` (`client/hooks/use-theme.tsx`): Theme context hook for managing light/dark mode with localStorage persistence and system preference detection.
-
-### Theme System (December 3, 2025)
-
-1. **Dark Mode Support**: Full dark theme implementation using the oceanic color palette:
-   - CSS variables defined in `global.css` for both light and dark modes
-   - Tailwind configured with `darkMode: ["class"]` for class-based theme switching
-   - All components use theme-aware color tokens (foreground, background, muted, etc.)
-
-2. **Theme Toggle Component** (`client/components/ThemeToggle.tsx`):
-   - Animated sun/moon icon toggle with Framer Motion
-   - Respects reduced motion preferences
-   - Available in both icon-only and labeled variants
-
-3. **Theme Provider** (`client/hooks/use-theme.tsx`):
-   - React Context for theme state management
-   - Persists theme preference to localStorage
-   - Detects system color scheme preference on first visit
-   - Adds/removes `dark` class on document root
-
-4. **Navigation Integration**:
-   - Theme toggle in desktop navigation (next to search)
-   - Theme toggle in mobile menu with label
-   - Logo brightness adjusted for dark mode visibility
-
-### Products Page Updates (December 3, 2025)
-
-1. **Content Updates**:
-   - Subtitle changed to "Thoughtfully ideated and crafted products and solutions for Maritime Industry"
-   - Maritime AI Vision replaced with Data Anchorage product
-   - CTAs removed from non-featured products (only featured PMS Asset Builder shows Request Demo and Learn More)
-   - Added Vessel Performance Analytics as 5th product (speed performance monitoring, hull fouling detection, engine efficiency analysis)
-   - Cybersecurity Platform moved to last position (6th product)
-   - Removed "View Details" CTA from PMS Asset Builder panel to align with other product panels
-   - Removed all em dashes across all pages and rephrased text while maintaining meaning
-
-2. **Demo Request Popup**:
-   - Modal form triggered by "Request Demo" button
-   - Schedule Consultation CTA now also opens the demo request popup
-   - Removed "Download Brochure" CTA from bottom section
-   - Form fields: Name (required), Email ID (required), Company (required), Designation, Country
-   - Toast notifications for success/error feedback
-   - Fallback email link to ranjith@cadetlabs.io
-
-3. **Button Styling Enhancement**:
-   - All buttons now have shadow effects (shadow-md default, shadow-lg on hover)
-   - Press effect added with scale and translate animations (active:scale-[0.98] active:translate-y-[1px])
-   - Ghost and link button variants exempt from shadow effects
-
-### About Us Page Updates (December 3, 2025)
-
-1. **Sections Removed**:
-   - Leadership Team section removed
-   - Certifications & Affiliations section removed
-
-2. **Our Story Content Updated**:
-   - New narrative about Cadet Labs' origin from ex-seafarers, data specialists, and product developers
-   - Focus on grinding through hard problems, user-centric design, and practical AI philosophy
-
-3. **CTA Changes**:
-   - "View Open Positions" now links to the Careers page
-   - "Contact HR" CTA removed
-
-### Contact Us Page Updates (December 3, 2025)
-
-1. **Sections Removed**:
-   - Phone contact information removed
-   - Address contact information removed
-   - Business Hours removed
-   - Our Offices section removed
-   - Find Us (map) section removed
-
-2. **Simplified Contact Information**:
-   - Only Email contact information remains
-
-3. **Book Consultation Call**:
-   - Now opens the demo request popup (same modal as Products page)
-   - Modal includes form fields: Name, Email ID, Company, Designation, Country
-   - Dark mode support added to the modal
-
-### About Us Page Updates (December 4, 2025)
-
-1. **Innovation Hub Panel Removed**:
-   - Chennai Office gradient panel removed from Our Story section
-   - Our Story section now displays as full-width content
-
-2. **"Our Mission & Values" renamed to "Our North Star"**
-
-3. **New Values Content**:
-   - "Built from the Deck Up" - Seasoned sailors first, technologists second
-   - "Pragmatism Over Hype" - Only solution when there is genuine need
-   - "The Human at the Helm" - Tools designed to amplify human judgment
-   - "Uncompromising Stewardship" - Full ownership of product lifecycle and security
-
-### Global Footer Component (December 4, 2025)
-
-1. **Shared Footer Component Created** (`client/components/Footer.tsx`):
-   - Microsoft for Startups badge
-   - Cadet Labs copyright notice
-   - Company links (About Us, Careers, Contact)
-   - Legal information (Privacy Policy, Terms, CIN)
-
-2. **Footer Added to All Pages**:
-   - Products.tsx
-   - Services.tsx
-   - About.tsx
-   - Contact.tsx
-   - Careers.tsx
+*Note: No database is currently configured. Content is static or fetched from external APIs via the Express backend.*
