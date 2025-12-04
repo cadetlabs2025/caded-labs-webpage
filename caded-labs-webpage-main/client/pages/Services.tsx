@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -343,6 +344,8 @@ export default function Services() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

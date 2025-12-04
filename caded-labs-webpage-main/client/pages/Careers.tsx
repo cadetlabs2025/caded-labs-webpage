@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -207,6 +208,8 @@ export default function Careers() {
           </div>
         </div>
       </motion.section>
+
+      <Footer />
     </div>
   );
 }

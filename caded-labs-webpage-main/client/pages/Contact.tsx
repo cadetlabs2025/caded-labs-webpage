@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -425,6 +426,8 @@ export default function Contact() {
           </div>
         </div>
       </section>
+
+      <Footer />
 
       {/* Demo Request Modal */}
       <AnimatePresence>

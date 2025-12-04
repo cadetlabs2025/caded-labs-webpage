@@ -304,3 +304,32 @@ The Navigation component uses a `useSafeRouter` hook that gracefully handles cas
    - Now opens the demo request popup (same modal as Products page)
    - Modal includes form fields: Name, Email ID, Company, Designation, Country
    - Dark mode support added to the modal
+
+### About Us Page Updates (December 4, 2025)
+
+1. **Innovation Hub Panel Removed**:
+   - Chennai Office gradient panel removed from Our Story section
+   - Our Story section now displays as full-width content
+
+2. **"Our Mission & Values" renamed to "Our North Star"**
+
+3. **New Values Content**:
+   - "Built from the Deck Up" - Seasoned sailors first, technologists second
+   - "Pragmatism Over Hype" - Only solution when there is genuine need
+   - "The Human at the Helm" - Tools designed to amplify human judgment
+   - "Uncompromising Stewardship" - Full ownership of product lifecycle and security
+
+### Global Footer Component (December 4, 2025)
+
+1. **Shared Footer Component Created** (`client/components/Footer.tsx`):
+   - Microsoft for Startups badge
+   - Cadet Labs copyright notice
+   - Company links (About Us, Careers, Contact)
+   - Legal information (Privacy Policy, Terms, CIN)
+
+2. **Footer Added to All Pages**:
+   - Products.tsx
+   - Services.tsx
+   - About.tsx
+   - Contact.tsx
+   - Careers.tsx
