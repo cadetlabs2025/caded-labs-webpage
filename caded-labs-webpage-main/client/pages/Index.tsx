@@ -505,11 +505,8 @@ function HomeTab({ onTabChange }: TabProps) {
               variants={fadeInUp}
             >
               <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-slate-900">Our North Star</h2>
-              <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-                <strong className="text-primary">
-                  "AI is an explainable superpower to humans."
-                </strong>{" "}
-                This core belief drives everything we do.
+              <p className="text-xl text-slate-600 max-w-2xl mx-auto italic">
+                Build from Lived Experiences
               </p>
             </motion.div>
 
