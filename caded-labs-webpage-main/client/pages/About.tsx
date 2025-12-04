@@ -3,38 +3,9 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import {
   MapPin,
   Calendar,
 } from "lucide-react";
-
-const values = [
-  {
-    title: "Built from the Deck Up",
-    description:
-      "We are seasoned sailors first, technologists second. We don't guess at maritime problems; we solve the ones we've lived through. Our empathy for the crew drives every feature we build.",
-  },
-  {
-    title: "Pragmatism Over Hype",
-    description:
-      "We understand the trade-offs between people, process, and technology. We don't build tech for tech's sake; we only solution when there is a genuine need that moves the business forward.",
-  },
-  {
-    title: "The Human at the Helm",
-    description:
-      "We distinguish between submitting to AI and being fueled by it. Our tools are designed to amplify human judgment, not replace it. We ensure the user always retains command.",
-  },
-  {
-    title: "Uncompromising Stewardship",
-    description:
-      "In maritime, risks are high and security is non-negotiable. We take full ownership of our product's lifecycle and security impact, treating your vessel's data with the same care as the vessel itself.",
-  },
-];
 
 export default function About() {
   return (
@@ -83,39 +54,6 @@ export default function About() {
                   Headquarters: Chennai, India
                 </span>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our North Star */}
-      <section className="py-20 bg-wave-light">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold mb-6">Our North Star</h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                <strong className="text-primary">
-                  "AI is an explainable superpower to humans."
-                </strong>{" "}
-                This core belief drives everything we do.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              {values.map((value, index) => (
-                <Card
-                  key={index}
-                  className="border-0 bg-background/60 backdrop-blur"
-                >
-                  <CardHeader>
-                    <CardTitle className="text-xl">{value.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">{value.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
             </div>
           </div>
         </div>

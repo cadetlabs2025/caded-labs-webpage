@@ -161,6 +161,29 @@ const testimonials = [
   },
 ];
 
+const northStarValues = [
+  {
+    title: "Built from the Deck Up",
+    description:
+      "We are seasoned sailors first, technologists second. We don't guess at maritime problems; we solve the ones we've lived through. Our empathy for the crew drives every feature we build.",
+  },
+  {
+    title: "Pragmatism Over Hype",
+    description:
+      "We understand the trade-offs between people, process, and technology. We don't build tech for tech's sake; we only solution when there is a genuine need that moves the business forward.",
+  },
+  {
+    title: "The Human at the Helm",
+    description:
+      "We distinguish between submitting to AI and being fueled by it. Our tools are designed to amplify human judgment, not replace it. We ensure the user always retains command.",
+  },
+  {
+    title: "Uncompromising Stewardship",
+    description:
+      "In maritime, risks are high and security is non-negotiable. We take full ownership of our product's lifecycle and security impact, treating your vessel's data with the same care as the vessel itself.",
+  },
+];
+
 export default function Index() {
   return (
     <div className="min-h-screen bg-background">
@@ -469,6 +492,50 @@ function HomeTab({ onTabChange }: TabProps) {
           </div>
         </div>
       </motion.section>
+
+      {/* Our North Star */}
+      <section className="py-20 bg-wave-light">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <motion.div 
+              className="text-center mb-16"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInUp}
+            >
+              <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-slate-900">Our North Star</h2>
+              <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+                <strong className="text-primary">
+                  "AI is an explainable superpower to humans."
+                </strong>{" "}
+                This core belief drives everything we do.
+              </p>
+            </motion.div>
+
+            <motion.div 
+              className="grid md:grid-cols-2 gap-8"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-50px" }}
+            >
+              {northStarValues.map((value, index) => (
+                <motion.div key={index} variants={itemVariants}>
+                  <Card className="border-0 bg-background/60 backdrop-blur h-full">
+                    <CardHeader>
+                      <CardTitle className="text-xl text-slate-900">{value.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-slate-600">{value.description}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
       {/* Why Choose Us */}
       <section className="py-20 bg-gray-50">
