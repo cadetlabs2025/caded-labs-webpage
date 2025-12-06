@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -27,8 +29,50 @@ import {
   BarChart3,
   Ship,
   ArrowLeft,
+  ArrowRight,
 } from "lucide-react";
 import Navigation from "@/components/Navigation";
+import { useReducedMotion } from "@/hooks/use-reduced-motion";
+
+const getContainerVariants = (reduceMotion: boolean) => ({
+  hidden: { opacity: reduceMotion ? 1 : 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: reduceMotion ? 0 : 0.1,
+    },
+  },
+});
+
+const getItemVariants = (reduceMotion: boolean) => ({
+  hidden: { opacity: reduceMotion ? 1 : 0, y: reduceMotion ? 0 : 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: reduceMotion ? 0 : 0.5,
+      ease: "easeOut",
+    },
+  },
+});
+
+const getFadeInUp = (reduceMotion: boolean) => ({
+  hidden: { opacity: reduceMotion ? 1 : 0, y: reduceMotion ? 0 : 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: reduceMotion ? 0 : 0.6, ease: "easeOut" },
+  },
+});
+
+const getHeroTextVariants = (reduceMotion: boolean) => ({
+  hidden: { opacity: reduceMotion ? 1 : 0, x: reduceMotion ? 0 : -30 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: reduceMotion ? 0 : 0.6, ease: "easeOut" },
+  },
+});
 
 const features = [
   {
@@ -41,7 +85,7 @@ const features = [
     icon: Shield,
     title: "Cybersecurity Excellence",
     description:
-      "NIST 2.0 compliant security solutions tailored for maritime and industrial environments.",
+      "Industry-leading security solutions tailored for maritime and industrial environments.",
   },
   {
     icon: Globe,
@@ -83,7 +127,7 @@ const services = [
   {
     title: "Cybersecurity Consultancy",
     description:
-      "NIST 2.0 framework implementation and MSC circulars compliance",
+      "Security framework implementation and maritime compliance standards",
     icon: Shield,
   },
   {
@@ -110,45 +154,49 @@ const testimonials = [
   },
   {
     quote:
-      "Their cybersecurity expertise helped us achieve NIST 2.0 compliance efficiently.",
+      "Their cybersecurity expertise helped us achieve full regulatory compliance efficiently.",
     author: "Tech Director",
     company: "Maritime Security Corp",
     rating: 5,
   },
 ];
 
+const northStarValues = [
+  {
+    title: "Built from the Deck Up",
+    description:
+      "We are seasoned sailors first, technologists second. We don't guess at maritime problems; we solve the ones we've lived through. Our empathy for the crew drives every feature we build.",
+  },
+  {
+    title: "Pragmatism Over Hype",
+    description:
+      "We understand the trade-offs between people, process, and technology. We don't build tech for tech's sake; we only solution when there is a genuine need that moves the business forward.",
+  },
+  {
+    title: "The Human at the Helm",
+    description:
+      "We distinguish between submitting to AI and being fueled by it. Our tools are designed to amplify human judgment, not replace it. We ensure the user always retains command.",
+  },
+  {
+    title: "Uncompromising Stewardship",
+    description:
+      "In maritime, risks are high and security is non-negotiable. We take full ownership of our product's lifecycle and security impact, treating your vessel's data with the same care as the vessel itself.",
+  },
+];
+
 export default function Index() {
-  const [activeTab, setActiveTab] = useState("home");
-
-  const renderTabContent = () => {
-    switch (activeTab) {
-      case "home":
-        return <HomeTab onTabChange={setActiveTab} />;
-      case "products":
-        return <ProductsTab onTabChange={setActiveTab} />;
-      case "services":
-        return <ServicesTab onTabChange={setActiveTab} />;
-      case "about":
-        return <AboutTab onTabChange={setActiveTab} />;
-      case "careers":
-        return <CareersTab onTabChange={setActiveTab} />;
-      case "contact":
-        return <ContactTab onTabChange={setActiveTab} />;
-      default:
-        return <HomeTab onTabChange={setActiveTab} />;
-    }
-  };
-
   return (
     <div className="min-h-screen bg-background">
-      <Navigation activeTab={activeTab} onTabChange={setActiveTab} />
-      <main className="min-h-screen">{renderTabContent()}</main>
+      <Navigation />
+      <main className="min-h-screen">
+        <HomeTab />
+      </main>
     </div>
   );
 }
 
 interface TabProps {
-  onTabChange: (tab: string) => void;
+  onTabChange?: (tab: string) => void;
 }
 
 // Footer Component
@@ -228,6 +276,13 @@ function Footer({ onTabChange }: TabProps) {
 
 // Home Tab Component
 function HomeTab({ onTabChange }: TabProps) {
+  const prefersReducedMotion = useReducedMotion();
+  
+  const containerVariants = getContainerVariants(prefersReducedMotion);
+  const itemVariants = getItemVariants(prefersReducedMotion);
+  const fadeInUp = getFadeInUp(prefersReducedMotion);
+  const heroTextVariants = getHeroTextVariants(prefersReducedMotion);
+
   return (
     <>
       {/* Hero Section - Full Background with 2 Column Layout */}
@@ -242,89 +297,236 @@ function HomeTab({ onTabChange }: TabProps) {
               'absolute inset-0 bg-[url(\'data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%2306b6d4" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\')] opacity-30'
             }
           />
-          {/* Floating geometric shapes */}
-          <div className="absolute top-20 right-20 w-32 h-32 bg-cyan-200/20 rounded-full blur-xl"></div>
-          <div className="absolute bottom-40 left-20 w-24 h-24 bg-blue-200/30 rounded-full blur-lg"></div>
-          <div className="absolute top-1/2 right-1/3 w-16 h-16 bg-teal-200/25 rounded-full blur-md"></div>
+          {/* Floating geometric shapes - static when reduced motion preferred */}
+          {prefersReducedMotion ? (
+            <>
+              <div className="absolute top-20 right-20 w-32 h-32 bg-cyan-200/20 rounded-full blur-xl" />
+              <div className="absolute bottom-40 left-20 w-24 h-24 bg-blue-200/30 rounded-full blur-lg" />
+              <div className="absolute top-1/2 right-1/3 w-16 h-16 bg-teal-200/25 rounded-full blur-md" />
+            </>
+          ) : (
+            <>
+              <motion.div
+                className="absolute top-20 right-20 w-32 h-32 bg-cyan-200/20 rounded-full blur-xl"
+                animate={{ y: [0, -20, 0], scale: [1, 1.1, 1] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              />
+              <motion.div
+                className="absolute bottom-40 left-20 w-24 h-24 bg-blue-200/30 rounded-full blur-lg"
+                animate={{ y: [0, 15, 0], scale: [1, 0.9, 1] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              />
+              <motion.div
+                className="absolute top-1/2 right-1/3 w-16 h-16 bg-teal-200/25 rounded-full blur-md"
+                animate={{ y: [0, -10, 0], x: [0, 10, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+              />
+            </>
+          )}
         </div>
 
         <div className="container mx-auto px-4 py-20 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
             {/* Left Column - Content */}
-            <div className="space-y-8 lg:pr-8">
-              <Badge className="inline-block bg-cyan-100 text-cyan-800 border-cyan-200 px-4 py-2 text-sm font-medium">
-                AI-Powered Maritime Solutions
-              </Badge>
+            <motion.div
+              className="space-y-8 lg:pr-8"
+              initial={prefersReducedMotion ? "visible" : "hidden"}
+              animate="visible"
+              variants={containerVariants}
+            >
+              <motion.div variants={itemVariants}>
+                <Badge className="inline-block bg-cyan-100 text-cyan-800 border-cyan-200 px-4 py-2 text-sm font-medium hover:bg-cyan-200 transition-colors cursor-default">
+                  AI-Powered Maritime Solutions
+                </Badge>
+              </motion.div>
 
               <div className="space-y-6">
                 <h1 className="text-5xl lg:text-7xl font-bold text-slate-900 leading-tight">
-                  <span className="block">Fleet Above.</span>
-                  <span className="block text-cyan-600">Data Below.</span>
-                  <span className="block text-3xl lg:text-4xl font-normal text-slate-600 mt-4">
+                  <motion.span
+                    className="block"
+                    variants={heroTextVariants}
+                    initial={prefersReducedMotion ? "visible" : "hidden"}
+                    animate="visible"
+                    transition={{ delay: prefersReducedMotion ? 0 : 0.2 }}
+                  >
+                    Fleet Above.
+                  </motion.span>
+                  <motion.span
+                    className="block text-cyan-600"
+                    variants={heroTextVariants}
+                    initial={prefersReducedMotion ? "visible" : "hidden"}
+                    animate="visible"
+                    transition={{ delay: prefersReducedMotion ? 0 : 0.4 }}
+                  >
+                    Data Below.
+                  </motion.span>
+                  <motion.span
+                    className="block text-3xl lg:text-4xl font-normal text-slate-600 mt-4"
+                    variants={heroTextVariants}
+                    initial={prefersReducedMotion ? "visible" : "hidden"}
+                    animate="visible"
+                    transition={{ delay: prefersReducedMotion ? 0 : 0.6 }}
+                  >
                     We Hold the Line
-                  </span>
+                  </motion.span>
                 </h1>
 
-                <p className="text-2xl text-slate-600 leading-relaxed italic font-medium">
-                  — and thank goodness someone does.
-                </p>
+                <motion.p
+                  className="text-2xl text-slate-600 leading-relaxed italic font-medium"
+                  variants={fadeInUp}
+                  initial={prefersReducedMotion ? "visible" : "hidden"}
+                  animate="visible"
+                  transition={{ delay: prefersReducedMotion ? 0 : 0.8 }}
+                >
+                  And thank goodness someone does.
+                </motion.p>
               </div>
 
-              <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
+              <motion.div
+                className="space-y-6 text-lg text-slate-600 leading-relaxed"
+                variants={itemVariants}
+              >
                 <p>
                   While you chase typhoons and tight turnarounds, we wrestle
                   malformed spreadsheets, temper tantrum–throwing databases, and
                   the occasional AI hallucination.
                 </p>
                 <p>
-                  Think of us as the below-deck crew in your digital engine room
-                  — not glamorous, perhaps, but absolutely vital.
+                  Think of us as the below-deck crew in your digital engine room.
+                  Not glamorous, perhaps, but absolutely vital.
                 </p>
                 <p>
                   At Cadet Labs, we build systems that make maritime data
                   behave: structured when it's messy, traceable when it's shady,
                   and intelligent when it's just plain dull.
                 </p>
-              </div>
-            </div>
+              </motion.div>
+
+              <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
+                <Link to="/products">
+                  <Button
+                    size="lg"
+                    className="group"
+                  >
+                    Explore Products
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
+              </motion.div>
+            </motion.div>
 
             {/* Right Column - Highlighted Logo/Image */}
-            <div className="flex items-center justify-center lg:justify-end relative">
+            <motion.div
+              className="flex items-center justify-center lg:justify-end relative"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
               {/* Background highlight effect */}
               <div className="absolute inset-0 bg-white/30 rounded-3xl blur-3xl transform scale-110"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-cyan-100/40 rounded-2xl transform rotate-3"></div>
 
               {/* Logo container with enhanced styling */}
-              <div className="relative z-10 bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-white/50">
+              <motion.div
+                className="relative z-10 bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-white/50"
+                whileHover={{ scale: 1.02, rotate: 1 }}
+                transition={{ duration: 0.3 }}
+              >
                 <img
                   src="/GPT_Marine.jpeg"
                   alt="GPT Maritime AI Container Ship"
                   className="h-80 lg:h-96 xl:h-[28rem] w-auto max-w-full filter drop-shadow-xl"
                 />
 
-                {/* Decorative elements around logo */}
-                <div className="absolute -top-4 -right-4 w-8 h-8 bg-cyan-400 rounded-full opacity-60"></div>
-                <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-blue-400 rounded-full opacity-40"></div>
-                <div className="absolute top-1/2 -left-6 w-4 h-4 bg-teal-400 rounded-full opacity-50"></div>
-              </div>
-            </div>
+                {/* Decorative elements around logo - static when reduced motion preferred */}
+                {prefersReducedMotion ? (
+                  <>
+                    <div className="absolute -top-4 -right-4 w-8 h-8 bg-cyan-400 rounded-full opacity-60" />
+                    <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-blue-400 rounded-full opacity-40" />
+                    <div className="absolute top-1/2 -left-6 w-4 h-4 bg-teal-400 rounded-full opacity-50" />
+                  </>
+                ) : (
+                  <>
+                    <motion.div
+                      className="absolute -top-4 -right-4 w-8 h-8 bg-cyan-400 rounded-full opacity-60"
+                      animate={{ scale: [1, 1.2, 1] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                    />
+                    <motion.div
+                      className="absolute -bottom-2 -left-2 w-6 h-6 bg-blue-400 rounded-full opacity-40"
+                      animate={{ scale: [1, 1.3, 1] }}
+                      transition={{ duration: 2.5, repeat: Infinity, delay: 0.5 }}
+                    />
+                    <motion.div
+                      className="absolute top-1/2 -left-6 w-4 h-4 bg-teal-400 rounded-full opacity-50"
+                      animate={{ scale: [1, 1.4, 1] }}
+                      transition={{ duration: 3, repeat: Infinity, delay: 1 }}
+                    />
+                  </>
+                )}
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Mission Statement */}
-      <section className="py-16 bg-white">
+      <motion.section
+        className="py-16 bg-white"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={fadeInUp}
+      >
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-slate-900">
               Our Mission
             </h2>
             <p className="text-xl text-slate-600 leading-relaxed">
-              We believe in the soul of shipping. That the toughest maritime
-              challenges deserve not shortcuts, but sharp minds and honest
-              grind. We build AI not to dominate, but to complement — with
-              respect, precision, and balance.
+              At Cadet Labs, we use technology carefully and purposefully, learning from the human grind of maritime work and building solutions through the eyes of the peers who live it every day.
             </p>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Our North Star */}
+      <section className="py-20 bg-wave-light">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <motion.div 
+              className="text-center mb-16"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInUp}
+            >
+              <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-slate-900">Our North Star</h2>
+              <p className="text-xl text-slate-600 max-w-2xl mx-auto italic">
+                Build from Lived Experiences
+              </p>
+            </motion.div>
+
+            <motion.div 
+              className="grid md:grid-cols-2 gap-8"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-50px" }}
+            >
+              {northStarValues.map((value, index) => (
+                <motion.div key={index} variants={itemVariants}>
+                  <Card className="border-0 bg-background/60 backdrop-blur h-full">
+                    <CardHeader>
+                      <CardTitle className="text-xl text-slate-900">{value.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-slate-600">{value.description}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
         </div>
       </section>
@@ -332,7 +534,13 @@ function HomeTab({ onTabChange }: TabProps) {
       {/* Why Choose Us */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <motion.div
+            className="text-center mb-16"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+          >
             <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-slate-900">
               Why Choose Cadet Labs?
             </h2>
@@ -340,26 +548,36 @@ function HomeTab({ onTabChange }: TabProps) {
               We combine deep domain expertise with cutting-edge technology to
               deliver solutions that actually work.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <motion.div
+            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+          >
             {features.map((feature, index) => (
-              <Card
-                key={index}
-                className="text-center border-0 bg-white shadow-lg hover:shadow-xl transition-shadow"
-              >
-                <CardHeader>
-                  <feature.icon className="h-12 w-12 text-cyan-600 mx-auto mb-4" />
-                  <CardTitle className="text-xl text-slate-900">
-                    {feature.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-slate-600">{feature.description}</p>
-                </CardContent>
-              </Card>
+              <motion.div key={index} variants={itemVariants}>
+                <Card className="text-center border-0 bg-white shadow-lg hover:shadow-2xl transition-all duration-300 h-full group hover:-translate-y-2">
+                  <CardHeader>
+                    <motion.div
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <feature.icon className="h-12 w-12 text-cyan-600 mx-auto mb-4 group-hover:text-cyan-500 transition-colors" />
+                    </motion.div>
+                    <CardTitle className="text-xl text-slate-900 group-hover:text-cyan-700 transition-colors">
+                      {feature.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-slate-600">{feature.description}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -388,35 +606,41 @@ function ProductsTab({ onTabChange }: TabProps) {
 
         <div className="grid md:grid-cols-2 gap-12 max-w-7xl mx-auto px-4 mb-16">
           {/* PMS Asset Builder */}
-          <Card className="hover:shadow-lg transition-shadow p-6">
+          <Card className="hover:shadow-lg transition-shadow p-6 relative border-2 border-cyan-500/30 ring-2 ring-cyan-500/20">
+            <Badge className="absolute top-4 right-4 bg-cyan-500 text-white">Featured</Badge>
             <CardHeader className="pb-6">
-              <CardTitle className="text-2xl font-bold mb-4">
-                PMS Asset Builder
-              </CardTitle>
+              <Link to="/products/pms-asset-builder">
+                <CardTitle className="text-2xl font-bold mb-4 hover:text-cyan-600 cursor-pointer transition-colors">
+                  PMS Asset Builder
+                </CardTitle>
+              </Link>
               <CardDescription className="text-lg text-primary">
-                <a
-                  href="/PMS Asset Builder Brochure.pdf"
-                  download="PMS Asset Builder Brochure.pdf"
-                  className="hover:underline cursor-pointer"
-                  onClick={(e) => {
-                    // You can add analytics tracking here if needed
-                    console.log("PDF download initiated");
-                  }}
-                >
-                  AI-driven extraction and structuring of PMS data — 5× faster.
-                </a>
+                AI-driven extraction and structuring of PMS data, 5× faster.
               </CardDescription>
             </CardHeader>
             <CardContent className="pt-0">
-              <p className="text-base text-muted-foreground leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed mb-6">
                 PMS Asset Builder is our AI-augmented scribe, built to decipher
                 the dense, oil-smudged scriptures of vessel manuals and spin
                 them into clean, structured PMS data. It doesn't just speed up
-                the data building — it builds a living library of reusable
+                the data building. It builds a living library of reusable
                 equipment intelligence while shaping every output to fit your
-                target PMS like a glove. Less grunt work, more smart work —
+                target PMS like a glove. Less grunt work, more smart work,
                 exactly what your chief engineer would've wanted.
               </p>
+              <div className="flex gap-3">
+                <Link to="/products/pms-asset-builder">
+                  <Button className="bg-cyan-600 hover:bg-cyan-700 text-white">
+                    View Details
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+                <a href="/PMS Asset Builder Brochure.pdf" download="PMS Asset Builder Brochure.pdf">
+                  <Button className="bg-cyan-600 hover:bg-cyan-700 text-white">
+                    Download Brochure
+                  </Button>
+                </a>
+              </div>
             </CardContent>
           </Card>
 
@@ -435,7 +659,7 @@ function ProductsTab({ onTabChange }: TabProps) {
                 Data Anchorage is a maritime-grade data integration and
                 migration platform. It standardizes enterprise data for agentic
                 AI use cases and enables seamless transitions between software
-                systems — preserving full historical context and transactional
+                systems while preserving full historical context and transactional
                 integrity. Designed for ship operators and managers, it turns
                 messy datasets into structured intelligence without friction or
                 loss.
@@ -572,7 +796,7 @@ function ServicesTab({ onTabChange }: TabProps) {
         },
       ],
       additionalText:
-        "Unlike generic analytics providers, we understand vessel operations at the granular level. Every variable — from hull condition to engine load — is interpreted by experts with years of maritime experience. This ensures that our findings are not just theoretical but directly applicable to your fleet.",
+        "Unlike generic analytics providers, we understand vessel operations at the granular level. Every variable, from hull condition to engine load, is interpreted by experts with years of maritime experience. This ensures that our findings are not just theoretical but directly applicable to your fleet.",
       highlightText:
         "With Cadet Labs, you gain a clear, unbiased view of your vessels' performance and a roadmap for measurable improvement.",
     },
@@ -851,7 +1075,7 @@ function CareersTab({ onTabChange }: TabProps) {
               </strong>
             </p>
             <p>
-              We're building something extraordinary at Cadet Labs — where
+              We're building something extraordinary at Cadet Labs where
               maritime expertise meets cutting-edge AI technology. Our team is
               growing, and we're looking for passionate individuals who share
               our vision of making complex maritime data intelligent and
@@ -883,7 +1107,7 @@ function CareersTab({ onTabChange }: TabProps) {
                   🔒 Cybersecurity Specialists
                 </h3>
                 <p className="text-sm">
-                  Secure maritime operations with NIST 2.0 expertise
+                  Secure maritime operations with industry-leading expertise
                 </p>
               </div>
               <div className="bg-gray-50 p-6 rounded-lg">
@@ -903,7 +1127,7 @@ function CareersTab({ onTabChange }: TabProps) {
               >
                 our contact page
               </button>{" "}
-              — we'd love to hear from you!
+              and we'd love to hear from you!
             </p>
           </div>
         </div>
@@ -932,7 +1156,7 @@ function ContactTab({ onTabChange }: TabProps) {
           <div>
             <Mail className="h-8 w-8 mx-auto mb-4" />
             <h3 className="text-lg font-semibold mb-2">Email</h3>
-            <p className="text-primary-foreground/80">ranjith@cadetlabs.io</p>
+            <p className="text-primary-foreground/80">contact@cadetlabs.io</p>
           </div>
           <div>
             <Phone className="h-8 w-8 mx-auto mb-4" />

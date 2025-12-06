@@ -483,7 +483,7 @@ export default function IndexOption7() {
             <div className="grid md:grid-cols-3 gap-8 text-center">
               <div>
                 <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-                <p className="text-slate-400">contact@cadetlabs.com</p>
+                <p className="text-slate-400">contact@cadetlabs.io</p>
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
