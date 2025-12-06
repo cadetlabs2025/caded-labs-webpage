@@ -1,4 +1,6 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -15,6 +17,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import {
   Shield,
   Globe,
@@ -24,8 +28,10 @@ import {
   Search,
   CheckCircle,
   ArrowRight,
+  X,
 } from "lucide-react";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
+import { useToast } from "@/hooks/use-toast";
 
 const getContainerVariants = (reduceMotion: boolean) => ({
   hidden: { opacity: reduceMotion ? 1 : 0 },
@@ -146,11 +152,67 @@ const services = [
 ];
 
 export default function Services() {
+  const [showDemoModal, setShowDemoModal] = useState(false);
+  const [demoForm, setDemoForm] = useState({
+    name: "",
+    email: "",
+    company: "",
+    designation: "",
+    country: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const prefersReducedMotion = useReducedMotion();
+  const { toast } = useToast();
   
   const containerVariants = getContainerVariants(prefersReducedMotion);
   const itemVariants = getItemVariants(prefersReducedMotion);
   const fadeInUp = getFadeInUp(prefersReducedMotion);
+
+  const handleDemoFormChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setDemoForm((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleDemoSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!demoForm.name || !demoForm.email || !demoForm.company) {
+      toast({
+        title: "Missing Information",
+        description: "Please fill in all required fields.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      
+      toast({
+        title: "Consultation Request Submitted!",
+        description: "Our team will contact you shortly at " + demoForm.email,
+      });
+      
+      setDemoForm({
+        name: "",
+        email: "",
+        company: "",
+        designation: "",
+        country: "",
+      });
+      setShowDemoModal(false);
+    } catch (error) {
+      toast({
+        title: "Submission Failed",
+        description: "Please try again or email us at contact@cadetlabs.io",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -330,20 +392,170 @@ export default function Services() {
               and achieve your business objectives.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="secondary" size="lg">
-                Schedule Consultation
-              </Button>
-              <Button
-                variant="outline"
+              <Button 
+                variant="secondary" 
                 size="lg"
-                className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                className="group"
+                onClick={() => setShowDemoModal(true)}
               >
-                Contact Us
+                Schedule Consultation
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <Button 
+                variant="secondary" 
+                size="lg"
+                className="group"
+                asChild
+              >
+                <Link to="/contact">
+                  Contact Us
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </Button>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Consultation Request Modal */}
+      <AnimatePresence>
+        {showDemoModal && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+            initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={prefersReducedMotion ? { opacity: 1 } : { opacity: 0 }}
+            onClick={() => setShowDemoModal(false)}
+          >
+            <motion.div
+              className="bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden"
+              initial={prefersReducedMotion ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={prefersReducedMotion ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 0 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Modal Header */}
+              <div className="bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-5 relative">
+                <button
+                  onClick={() => setShowDemoModal(false)}
+                  className="absolute top-4 right-4 text-white/80 hover:text-white transition-colors"
+                >
+                  <X className="h-5 w-5" />
+                </button>
+                <h3 className="text-xl font-bold text-white">Schedule Consultation</h3>
+                <p className="text-white/80 text-sm mt-1">
+                  Fill in your details and our team will reach out to schedule a consultation
+                </p>
+              </div>
+
+              {/* Modal Form */}
+              <form onSubmit={handleDemoSubmit} className="p-6 space-y-4">
+                <div className="space-y-2">
+                  <Label htmlFor="name" className="text-sm font-medium">
+                    Name <span className="text-red-500">*</span>
+                  </Label>
+                  <Input
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="Your full name"
+                    value={demoForm.name}
+                    onChange={handleDemoFormChange}
+                    required
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="email" className="text-sm font-medium">
+                    Email ID <span className="text-red-500">*</span>
+                  </Label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="your.email@company.com"
+                    value={demoForm.email}
+                    onChange={handleDemoFormChange}
+                    required
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="company" className="text-sm font-medium">
+                    Company <span className="text-red-500">*</span>
+                  </Label>
+                  <Input
+                    id="company"
+                    name="company"
+                    type="text"
+                    placeholder="Your company name"
+                    value={demoForm.company}
+                    onChange={handleDemoFormChange}
+                    required
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="designation" className="text-sm font-medium">
+                    Designation
+                  </Label>
+                  <Input
+                    id="designation"
+                    name="designation"
+                    type="text"
+                    placeholder="Your job title"
+                    value={demoForm.designation}
+                    onChange={handleDemoFormChange}
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="country" className="text-sm font-medium">
+                    Country
+                  </Label>
+                  <Input
+                    id="country"
+                    name="country"
+                    type="text"
+                    placeholder="Your country"
+                    value={demoForm.country}
+                    onChange={handleDemoFormChange}
+                  />
+                </div>
+
+                <div className="flex gap-3 pt-4">
+                  <Button
+                    type="button"
+                    variant="outline"
+                    className="flex-1"
+                    onClick={() => setShowDemoModal(false)}
+                    disabled={isSubmitting}
+                  >
+                    Cancel
+                  </Button>
+                  <Button
+                    type="submit"
+                    className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? "Submitting..." : "Submit Request"}
+                  </Button>
+                </div>
+
+                <p className="text-xs text-center text-muted-foreground pt-2">
+                  Or email us directly at{" "}
+                  <a
+                    href="mailto:contact@cadetlabs.io"
+                    className="text-cyan-600 hover:underline"
+                  >
+                    contact@cadetlabs.io
+                  </a>
+                </p>
+              </form>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <Footer />
     </div>
