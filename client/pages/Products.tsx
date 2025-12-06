@@ -200,21 +200,92 @@ export default function Products() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/api/send-consultation", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          ...demoForm,
-          product: "Product Inquiry",
-        }),
-      });
+      // Try EmailJS first (frontend solution) if available
+      let emailSent = false;
+      const emailjsServiceId =
+        import.meta.env.VITE_EMAILJS_SERVICE_ID || "YOUR_SERVICE_ID";
+      const emailjsTemplateId =
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "YOUR_TEMPLATE_ID";
+      const emailjsPublicKey =
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "YOUR_PUBLIC_KEY";
 
-      const data = await response.json();
+      // Try EmailJS if configured and package is available
+      if (
+        emailjsServiceId !== "YOUR_SERVICE_ID" &&
+        emailjsTemplateId !== "YOUR_TEMPLATE_ID"
+      ) {
+        try {
+          // Dynamic import to handle missing package gracefully
+          const emailjs = await import("@emailjs/browser").catch(() => null);
+          if (emailjs) {
+            await emailjs.default.send(
+              emailjsServiceId,
+              emailjsTemplateId,
+              {
+                to_email: "contact@cadetlabs.io",
+                from_name: demoForm.name,
+                from_email: demoForm.email,
+                company: demoForm.company,
+                designation: demoForm.designation || "Not provided",
+                country: demoForm.country || "Not provided",
+                product: "Product Inquiry",
+                message: `New consultation request from ${demoForm.name} (${demoForm.email}) at ${demoForm.company}`,
+                date: new Date().toLocaleString(),
+              },
+              emailjsPublicKey,
+            );
+            emailSent = true;
+            console.log("✅ Email sent successfully via EmailJS");
+          } else {
+            console.warn("⚠️ EmailJS package not available");
+          }
+        } catch (emailjsError: any) {
+          console.error("❌ EmailJS error:", emailjsError);
+          console.error(
+            "Error details:",
+            emailjsError.text || emailjsError.message,
+          );
+          // Continue to API fallback
+        }
+      } else {
+        console.warn(
+          "⚠️ EmailJS not configured - environment variables not set",
+        );
+        console.warn("Service ID:", emailjsServiceId);
+        console.warn("Template ID:", emailjsTemplateId);
+      }
 
-      if (!response.ok || !data.success) {
-        throw new Error(data.message || "Failed to send consultation request");
+      // Fallback to API endpoint if EmailJS not configured or failed
+      if (!emailSent) {
+        const response = await fetch("/api/send-consultation", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            ...demoForm,
+            product: "Product Inquiry",
+          }),
+        });
+
+        if (!response.ok) {
+          let errorMessage = "Failed to send consultation request";
+          try {
+            const errorData = await response.json();
+            errorMessage = errorData.message || errorMessage;
+          } catch {
+            errorMessage = `Server error: ${response.status} ${response.statusText}`;
+          }
+          throw new Error(errorMessage);
+        }
+
+        const data = await response.json();
+
+        if (!data.success) {
+          throw new Error(
+            data.message || "Failed to send consultation request",
+          );
+        }
       }
 
       toast({
@@ -231,9 +302,13 @@ export default function Products() {
       });
       setShowDemoModal(false);
     } catch (error) {
+      console.error("Error sending consultation:", error);
       toast({
         title: "Submission Failed",
-        description: "Please try again or email us at contact@cadetlabs.io",
+        description:
+          error instanceof Error
+            ? error.message
+            : "Please try again or email us at contact@cadetlabs.io",
         variant: "destructive",
       });
     } finally {

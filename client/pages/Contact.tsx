@@ -88,18 +88,78 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/api/send-message", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      // Try EmailJS first (frontend solution) if available
+      let emailSent = false;
+      const emailjsServiceId =
+        import.meta.env.VITE_EMAILJS_SERVICE_ID || "YOUR_SERVICE_ID";
+      const emailjsTemplateId =
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "YOUR_TEMPLATE_ID";
+      const emailjsPublicKey =
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "YOUR_PUBLIC_KEY";
 
-      const data = await response.json();
+      // Try EmailJS if configured and package is available
+      if (
+        emailjsServiceId !== "YOUR_SERVICE_ID" &&
+        emailjsTemplateId !== "YOUR_TEMPLATE_ID"
+      ) {
+        try {
+          // Dynamic import to handle missing package gracefully
+          const emailjs = await import("@emailjs/browser").catch(() => null);
+          if (emailjs) {
+            const fullName = formData.lastName
+              ? `${formData.firstName} ${formData.lastName}`
+              : formData.firstName;
 
-      if (!response.ok || !data.success) {
-        throw new Error(data.message || "Failed to send message");
+            await emailjs.default.send(
+              emailjsServiceId,
+              emailjsTemplateId,
+              {
+                to_email: "contact@cadetlabs.io",
+                from_name: fullName,
+                from_email: formData.email,
+                company: formData.company || "Not provided",
+                service: formData.interest || "Not provided",
+                interest: formData.interest || "Not provided",
+                message: formData.message,
+                date: new Date().toLocaleString(),
+              },
+              emailjsPublicKey,
+            );
+            emailSent = true;
+          }
+        } catch (emailjsError) {
+          console.error("EmailJS error:", emailjsError);
+          // Continue to API fallback
+        }
+      }
+
+      // Fallback to API endpoint if EmailJS not configured or failed
+      if (!emailSent) {
+        const response = await fetch("/api/send-message", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+
+        if (!response.ok) {
+          // Try to parse error message, but handle non-JSON responses
+          let errorMessage = "Failed to send message";
+          try {
+            const errorData = await response.json();
+            errorMessage = errorData.message || errorMessage;
+          } catch {
+            errorMessage = `Server error: ${response.status} ${response.statusText}`;
+          }
+          throw new Error(errorMessage);
+        }
+
+        const data = await response.json();
+
+        if (!data.success) {
+          throw new Error(data.message || "Failed to send message");
+        }
       }
 
       toast({
@@ -116,9 +176,13 @@ export default function Contact() {
         message: "",
       });
     } catch (error) {
+      console.error("Error sending message:", error);
       toast({
         title: "Failed to send message",
-        description: "Please try again or contact us directly via email.",
+        description:
+          error instanceof Error
+            ? error.message
+            : "Please try again or contact us directly via email.",
         variant: "destructive",
       });
     } finally {
@@ -146,21 +210,80 @@ export default function Contact() {
     setIsDemoSubmitting(true);
 
     try {
-      const response = await fetch("/api/send-consultation", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          ...demoForm,
-          service: "General Consultation",
-        }),
-      });
+      // Try EmailJS first (frontend solution) if available
+      let emailSent = false;
+      const emailjsServiceId =
+        import.meta.env.VITE_EMAILJS_SERVICE_ID || "YOUR_SERVICE_ID";
+      const emailjsTemplateId =
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "YOUR_TEMPLATE_ID";
+      const emailjsPublicKey =
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "YOUR_PUBLIC_KEY";
 
-      const data = await response.json();
+      // Try EmailJS if configured and package is available
+      if (
+        emailjsServiceId !== "YOUR_SERVICE_ID" &&
+        emailjsTemplateId !== "YOUR_TEMPLATE_ID"
+      ) {
+        try {
+          // Dynamic import to handle missing package gracefully
+          const emailjs = await import("@emailjs/browser").catch(() => null);
+          if (emailjs) {
+            await emailjs.default.send(
+              emailjsServiceId,
+              emailjsTemplateId,
+              {
+                to_email: "contact@cadetlabs.io",
+                from_name: demoForm.name,
+                from_email: demoForm.email,
+                company: demoForm.company,
+                designation: demoForm.designation || "Not provided",
+                country: demoForm.country || "Not provided",
+                service: "General Consultation",
+                message: `New consultation request from ${demoForm.name} (${demoForm.email}) at ${demoForm.company}`,
+                date: new Date().toLocaleString(),
+              },
+              emailjsPublicKey,
+            );
+            emailSent = true;
+          }
+        } catch (emailjsError) {
+          console.error("EmailJS error:", emailjsError);
+          // Continue to API fallback
+        }
+      }
 
-      if (!response.ok || !data.success) {
-        throw new Error(data.message || "Failed to send consultation request");
+      // Fallback to API endpoint if EmailJS not configured or failed
+      if (!emailSent) {
+        const response = await fetch("/api/send-consultation", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            ...demoForm,
+            service: "General Consultation",
+          }),
+        });
+
+        if (!response.ok) {
+          // Try to parse error message, but handle non-JSON responses
+          let errorMessage = "Failed to send consultation request";
+          try {
+            const errorData = await response.json();
+            errorMessage = errorData.message || errorMessage;
+          } catch {
+            errorMessage = `Server error: ${response.status} ${response.statusText}`;
+          }
+          throw new Error(errorMessage);
+        }
+
+        const data = await response.json();
+
+        if (!data.success) {
+          throw new Error(
+            data.message || "Failed to send consultation request",
+          );
+        }
       }
 
       toast({
@@ -177,9 +300,13 @@ export default function Contact() {
       });
       setShowDemoModal(false);
     } catch (error) {
+      console.error("Error sending consultation:", error);
       toast({
         title: "Submission Failed",
-        description: "Please try again or email us at contact@cadetlabs.io",
+        description:
+          error instanceof Error
+            ? error.message
+            : "Please try again or email us at contact@cadetlabs.io",
         variant: "destructive",
       });
     } finally {

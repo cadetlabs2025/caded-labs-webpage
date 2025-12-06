@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import { handleDemo } from "./routes/demo";
 import { handleConsultation } from "./routes/consultation";
+import { handleMessage } from "./routes/message";
 
 export function createServer() {
   const app = express();
@@ -20,6 +21,9 @@ export function createServer() {
 
   // Consultation request endpoint
   app.post("/api/send-consultation", handleConsultation);
+
+  // Contact form message endpoint
+  app.post("/api/send-message", handleMessage);
 
   return app;
 }

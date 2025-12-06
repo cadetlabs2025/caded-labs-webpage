@@ -243,9 +243,20 @@ export default function Services() {
           }),
         });
 
+        if (!response.ok) {
+          let errorMessage = "Failed to send consultation request";
+          try {
+            const errorData = await response.json();
+            errorMessage = errorData.message || errorMessage;
+          } catch {
+            errorMessage = `Server error: ${response.status} ${response.statusText}`;
+          }
+          throw new Error(errorMessage);
+        }
+
         const data = await response.json();
 
-        if (!response.ok || !data.success) {
+        if (!data.success) {
           throw new Error(
             data.message || "Failed to send consultation request",
           );
@@ -276,9 +287,10 @@ export default function Services() {
       });
       setShowDemoModal(false);
     } catch (error) {
+      console.error("Error sending consultation:", error);
       toast({
         title: "Submission Failed",
-        description: "Please try again or email us at contact@cadetlabs.io",
+        description: error instanceof Error ? error.message : "Please try again or email us at contact@cadetlabs.io",
         variant: "destructive",
       });
     } finally {
