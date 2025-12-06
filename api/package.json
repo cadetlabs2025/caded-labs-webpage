@@ -1,0 +1,9 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Azure Functions for Static Web App",
+  "main": "index.js",
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.0"
+  }
+}
