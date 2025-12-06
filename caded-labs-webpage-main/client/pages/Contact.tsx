@@ -63,7 +63,7 @@ export default function Contact() {
   const [isDemoSubmitting, setIsDemoSubmitting] = useState(false);
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { id, value } = e.target;
     setFormData((prev) => ({ ...prev, [id]: value }));
@@ -121,7 +121,7 @@ export default function Contact() {
 
   const handleDemoSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!demoForm.name || !demoForm.email || !demoForm.company) {
       toast({
         title: "Missing Information",
@@ -132,15 +132,30 @@ export default function Contact() {
     }
 
     setIsDemoSubmitting(true);
-    
+
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      
+      const response = await fetch("/api/send-consultation", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...demoForm,
+          service: "General Consultation",
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok || !data.success) {
+        throw new Error(data.message || "Failed to send consultation request");
+      }
+
       toast({
-        title: "Demo Request Submitted!",
+        title: "Consultation Request Submitted!",
         description: "Our team will contact you shortly at " + demoForm.email,
       });
-      
+
       setDemoForm({
         name: "",
         email: "",
@@ -360,7 +375,7 @@ export default function Contact() {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <Button 
+                    <Button
                       className="w-full"
                       onClick={() => setShowDemoModal(true)}
                     >
@@ -441,9 +456,17 @@ export default function Contact() {
           >
             <motion.div
               className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl w-full max-w-md overflow-hidden"
-              initial={prefersReducedMotion ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 0 }}
+              initial={
+                prefersReducedMotion
+                  ? { scale: 1, opacity: 1 }
+                  : { scale: 0.9, opacity: 0 }
+              }
               animate={{ scale: 1, opacity: 1 }}
-              exit={prefersReducedMotion ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 0 }}
+              exit={
+                prefersReducedMotion
+                  ? { scale: 1, opacity: 1 }
+                  : { scale: 0.9, opacity: 0 }
+              }
               onClick={(e) => e.stopPropagation()}
             >
               {/* Modal Header */}
@@ -454,9 +477,12 @@ export default function Contact() {
                 >
                   <X className="h-5 w-5" />
                 </button>
-                <h3 className="text-xl font-bold text-white">Book a Consultation</h3>
+                <h3 className="text-xl font-bold text-white">
+                  Book a Consultation
+                </h3>
                 <p className="text-white/80 text-sm mt-1">
-                  Fill in your details and our team will reach out to schedule a call
+                  Fill in your details and our team will reach out to schedule a
+                  call
                 </p>
               </div>
 

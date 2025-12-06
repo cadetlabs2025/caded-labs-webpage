@@ -14,7 +14,21 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Brain, Shield, Globe, Eye, FileText, TrendingUp, ArrowRight, Database, Zap, Star, X, Anchor, Ship } from "lucide-react";
+import {
+  Brain,
+  Shield,
+  Globe,
+  Eye,
+  FileText,
+  TrendingUp,
+  ArrowRight,
+  Database,
+  Zap,
+  Star,
+  X,
+  Anchor,
+  Ship,
+} from "lucide-react";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 import { useToast } from "@/hooks/use-toast";
 
@@ -85,7 +99,12 @@ const products = [
     name: "Vessel Performance Analytics",
     description:
       "Advanced performance analytics leveraging vessel operational data to identify speed degradation, optimize hull efficiency, and guide critical maintenance decisions.",
-    tech: ["Performance Modeling", "Data Analytics", "Predictive Insights", "Operational Intelligence"],
+    tech: [
+      "Performance Modeling",
+      "Data Analytics",
+      "Predictive Insights",
+      "Operational Intelligence",
+    ],
     category: "Performance",
     icon: Ship,
     image: "/data_analytics_dashb_80ee824c.jpg",
@@ -168,7 +187,7 @@ export default function Products() {
 
   const handleDemoSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!demoForm.name || !demoForm.email || !demoForm.company) {
       toast({
         title: "Missing Information",
@@ -179,15 +198,30 @@ export default function Products() {
     }
 
     setIsSubmitting(true);
-    
+
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      
+      const response = await fetch("/api/send-consultation", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...demoForm,
+          product: "Product Inquiry",
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok || !data.success) {
+        throw new Error(data.message || "Failed to send consultation request");
+      }
+
       toast({
-        title: "Demo Request Submitted!",
+        title: "Consultation Request Submitted!",
         description: "Our team will contact you shortly at " + demoForm.email,
       });
-      
+
       setDemoForm({
         name: "",
         email: "",
@@ -206,7 +240,7 @@ export default function Products() {
       setIsSubmitting(false);
     }
   };
-  
+
   const containerVariants = getContainerVariants(prefersReducedMotion);
   const itemVariants = getItemVariants(prefersReducedMotion);
   const heroVariants = getHeroVariants(prefersReducedMotion);
@@ -225,7 +259,11 @@ export default function Products() {
             variants={heroVariants}
           >
             <motion.div
-              initial={prefersReducedMotion ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 0 }}
+              initial={
+                prefersReducedMotion
+                  ? { scale: 1, opacity: 1 }
+                  : { scale: 0.9, opacity: 0 }
+              }
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: prefersReducedMotion ? 0 : 0.5 }}
             >
@@ -237,7 +275,8 @@ export default function Products() {
               Our Products
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Thoughtfully ideated and crafted products and solutions for Maritime Industry.
+              Thoughtfully ideated and crafted products and solutions for
+              Maritime Industry.
             </p>
           </motion.div>
         </div>
@@ -262,7 +301,9 @@ export default function Products() {
                 onTouchStart={() => setHoveredIndex(index)}
                 onTouchEnd={() => setTimeout(() => setHoveredIndex(null), 300)}
               >
-                <Card className={`relative overflow-hidden h-full group hover:shadow-2xl transition-all duration-500 border-2 hover:border-primary/30 active:shadow-xl active:border-primary/20 ${(product as any).featured ? 'ring-2 ring-cyan-500/50 border-cyan-500/30' : ''}`}>
+                <Card
+                  className={`relative overflow-hidden h-full group hover:shadow-2xl transition-all duration-500 border-2 hover:border-primary/30 active:shadow-xl active:border-primary/20 ${(product as any).featured ? "ring-2 ring-cyan-500/50 border-cyan-500/30" : ""}`}
+                >
                   {/* Featured Badge */}
                   {(product as any).featured && (
                     <div className="absolute top-0 left-0 z-20 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-1 text-xs font-bold rounded-br-lg flex items-center gap-1">
@@ -273,7 +314,10 @@ export default function Products() {
                   {/* Product Image */}
                   <div className="relative h-40 sm:h-48 md:h-56 overflow-hidden">
                     {(product as any).link ? (
-                      <Link to={(product as any).link} className="block w-full h-full">
+                      <Link
+                        to={(product as any).link}
+                        className="block w-full h-full"
+                      >
                         <img
                           src={product.image}
                           alt={product.name}
@@ -298,13 +342,19 @@ export default function Products() {
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent pointer-events-none" />
                     <div className="absolute top-3 right-3 sm:top-4 sm:right-4">
-                      <Badge className={`shadow-lg text-xs sm:text-sm ${(product as any).featured ? 'bg-cyan-500 text-white' : 'bg-white/90 text-primary'}`}>
+                      <Badge
+                        className={`shadow-lg text-xs sm:text-sm ${(product as any).featured ? "bg-cyan-500 text-white" : "bg-white/90 text-primary"}`}
+                      >
                         {product.category}
                       </Badge>
                     </div>
                     <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4">
-                      <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl shadow-lg flex items-center justify-center group-hover:-translate-y-1 md:group-hover:-translate-y-2 transition-transform duration-300 ${(product as any).featured ? 'bg-gradient-to-br from-cyan-500 to-blue-600' : 'bg-white'}`}>
-                        <product.icon className={`h-6 w-6 sm:h-7 sm:w-7 ${(product as any).featured ? 'text-white' : 'text-primary'}`} />
+                      <div
+                        className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl shadow-lg flex items-center justify-center group-hover:-translate-y-1 md:group-hover:-translate-y-2 transition-transform duration-300 ${(product as any).featured ? "bg-gradient-to-br from-cyan-500 to-blue-600" : "bg-white"}`}
+                      >
+                        <product.icon
+                          className={`h-6 w-6 sm:h-7 sm:w-7 ${(product as any).featured ? "text-white" : "text-primary"}`}
+                        />
                       </div>
                     </div>
                   </div>
@@ -337,9 +387,17 @@ export default function Products() {
                             <motion.li
                               key={featureIndex}
                               className="flex items-center text-sm"
-                              initial={prefersReducedMotion ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
+                              initial={
+                                prefersReducedMotion
+                                  ? { opacity: 1, x: 0 }
+                                  : { opacity: 0, x: -10 }
+                              }
                               whileInView={{ opacity: 1, x: 0 }}
-                              transition={{ delay: prefersReducedMotion ? 0 : featureIndex * 0.1 }}
+                              transition={{
+                                delay: prefersReducedMotion
+                                  ? 0
+                                  : featureIndex * 0.1,
+                              }}
                               viewport={{ once: true }}
                             >
                               <div className="w-2 h-2 rounded-full bg-primary mr-2 flex-shrink-0" />
@@ -368,7 +426,7 @@ export default function Products() {
 
                       {(product as any).featured && (
                         <div className="flex flex-col sm:flex-row gap-3 pt-4">
-                          <Button 
+                          <Button
                             className="flex-1 group/btn bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
                             onClick={() => setShowDemoModal(true)}
                           >
@@ -376,8 +434,8 @@ export default function Products() {
                             <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                           </Button>
                           <Link to={(product as any).link} className="flex-1">
-                            <Button 
-                              variant="default" 
+                            <Button
+                              variant="default"
                               className="w-full group/learn bg-cyan-600 hover:bg-cyan-700 text-white"
                             >
                               Learn More
@@ -407,7 +465,11 @@ export default function Products() {
           <div className="max-w-3xl mx-auto text-center">
             <motion.h2
               className="text-3xl font-bold text-primary-foreground mb-4"
-              initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              initial={
+                prefersReducedMotion
+                  ? { opacity: 1, y: 0 }
+                  : { opacity: 0, y: 20 }
+              }
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: prefersReducedMotion ? 0 : 0.2 }}
@@ -416,7 +478,11 @@ export default function Products() {
             </motion.h2>
             <motion.p
               className="text-lg text-primary-foreground/80 mb-8"
-              initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              initial={
+                prefersReducedMotion
+                  ? { opacity: 1, y: 0 }
+                  : { opacity: 0, y: 20 }
+              }
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: prefersReducedMotion ? 0 : 0.3 }}
@@ -426,14 +492,18 @@ export default function Products() {
             </motion.p>
             <motion.div
               className="flex flex-col sm:flex-row gap-4 justify-center"
-              initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              initial={
+                prefersReducedMotion
+                  ? { opacity: 1, y: 0 }
+                  : { opacity: 0, y: 20 }
+              }
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: prefersReducedMotion ? 0 : 0.4 }}
             >
-              <Button 
-                variant="secondary" 
-                size="lg" 
+              <Button
+                variant="secondary"
+                size="lg"
                 className="group"
                 onClick={() => setShowDemoModal(true)}
               >
@@ -457,9 +527,17 @@ export default function Products() {
           >
             <motion.div
               className="bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden"
-              initial={prefersReducedMotion ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 0 }}
+              initial={
+                prefersReducedMotion
+                  ? { scale: 1, opacity: 1 }
+                  : { scale: 0.9, opacity: 0 }
+              }
               animate={{ scale: 1, opacity: 1 }}
-              exit={prefersReducedMotion ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 0 }}
+              exit={
+                prefersReducedMotion
+                  ? { scale: 1, opacity: 1 }
+                  : { scale: 0.9, opacity: 0 }
+              }
               onClick={(e) => e.stopPropagation()}
             >
               {/* Modal Header */}
@@ -472,7 +550,8 @@ export default function Products() {
                 </button>
                 <h3 className="text-xl font-bold text-white">Request a Demo</h3>
                 <p className="text-white/80 text-sm mt-1">
-                  Fill in your details and our team will reach out to schedule a demo
+                  Fill in your details and our team will reach out to schedule a
+                  demo
                 </p>
               </div>
 

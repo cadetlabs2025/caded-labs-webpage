@@ -163,7 +163,7 @@ export default function Services() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const prefersReducedMotion = useReducedMotion();
   const { toast } = useToast();
-  
+
   const containerVariants = getContainerVariants(prefersReducedMotion);
   const itemVariants = getItemVariants(prefersReducedMotion);
   const fadeInUp = getFadeInUp(prefersReducedMotion);
@@ -175,7 +175,7 @@ export default function Services() {
 
   const handleDemoSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!demoForm.name || !demoForm.email || !demoForm.company) {
       toast({
         title: "Missing Information",
@@ -186,15 +186,87 @@ export default function Services() {
     }
 
     setIsSubmitting(true);
-    
+
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      
+      // Try EmailJS first (frontend solution) if available
+      let emailSent = false;
+      const emailjsServiceId =
+        import.meta.env.VITE_EMAILJS_SERVICE_ID || "YOUR_SERVICE_ID";
+      const emailjsTemplateId =
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "YOUR_TEMPLATE_ID";
+      const emailjsPublicKey =
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "YOUR_PUBLIC_KEY";
+
+      // Try EmailJS if configured and package is available
+      if (
+        emailjsServiceId !== "YOUR_SERVICE_ID" &&
+        emailjsTemplateId !== "YOUR_TEMPLATE_ID"
+      ) {
+        try {
+          // Dynamic import to handle missing package gracefully
+          const emailjs = await import("@emailjs/browser").catch(() => null);
+          if (emailjs) {
+            await emailjs.default.send(
+              emailjsServiceId,
+              emailjsTemplateId,
+              {
+                to_email: "contact@cadetlabs.io",
+                from_name: demoForm.name,
+                from_email: demoForm.email,
+                company: demoForm.company,
+                designation: demoForm.designation || "Not provided",
+                country: demoForm.country || "Not provided",
+                service: "General Consultation",
+                message: `New consultation request from ${demoForm.name} (${demoForm.email}) at ${demoForm.company}`,
+                date: new Date().toLocaleString(),
+              },
+              emailjsPublicKey,
+            );
+            emailSent = true;
+          }
+        } catch (emailjsError) {
+          console.error("EmailJS error:", emailjsError);
+          // Continue to API fallback
+        }
+      }
+
+      // Fallback to API endpoint (this will log to console if no email service configured)
+      if (!emailSent) {
+        const response = await fetch("/api/send-consultation", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            ...demoForm,
+            service: "General Consultation",
+          }),
+        });
+
+        const data = await response.json();
+
+        if (!response.ok || !data.success) {
+          throw new Error(
+            data.message || "Failed to send consultation request",
+          );
+        }
+
+        // Log warning if email wasn't actually sent
+        if (!emailSent) {
+          console.warn(
+            "⚠️ Email service not configured. Check server console for form data.",
+          );
+          console.warn(
+            "To enable email sending, set up EmailJS (see EMAIL_SETUP.md)",
+          );
+        }
+      }
+
       toast({
         title: "Consultation Request Submitted!",
         description: "Our team will contact you shortly at " + demoForm.email,
       });
-      
+
       setDemoForm({
         name: "",
         email: "",
@@ -229,7 +301,11 @@ export default function Services() {
           >
             <motion.h1
               className="text-4xl lg:text-6xl font-bold text-foreground mb-6"
-              initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+              initial={
+                prefersReducedMotion
+                  ? { opacity: 1, y: 0 }
+                  : { opacity: 0, y: -20 }
+              }
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: prefersReducedMotion ? 0 : 0.6 }}
             >
@@ -237,9 +313,16 @@ export default function Services() {
             </motion.h1>
             <motion.p
               className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
-              initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              initial={
+                prefersReducedMotion
+                  ? { opacity: 1, y: 0 }
+                  : { opacity: 0, y: 20 }
+              }
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: prefersReducedMotion ? 0 : 0.6, delay: prefersReducedMotion ? 0 : 0.2 }}
+              transition={{
+                duration: prefersReducedMotion ? 0 : 0.6,
+                delay: prefersReducedMotion ? 0 : 0.2,
+              }}
             >
               Comprehensive consulting and implementation services to accelerate
               your digital transformation journey.
@@ -321,8 +404,11 @@ export default function Services() {
                         ))}
                       </ul>
                       <div className="mt-6 flex gap-3">
-                        <Button size="sm">Get Quote</Button>
-                        <Button variant="outline" size="sm">
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          onClick={() => setShowDemoModal(true)}
+                        >
                           Schedule Call
                         </Button>
                       </div>
@@ -392,8 +478,8 @@ export default function Services() {
               and achieve your business objectives.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                variant="secondary" 
+              <Button
+                variant="secondary"
                 size="lg"
                 className="group"
                 onClick={() => setShowDemoModal(true)}
@@ -401,12 +487,7 @@ export default function Services() {
                 Schedule Consultation
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button 
-                variant="secondary" 
-                size="lg"
-                className="group"
-                asChild
-              >
+              <Button variant="secondary" size="lg" className="group" asChild>
                 <Link to="/contact">
                   Contact Us
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -429,9 +510,17 @@ export default function Services() {
           >
             <motion.div
               className="bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden"
-              initial={prefersReducedMotion ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 0 }}
+              initial={
+                prefersReducedMotion
+                  ? { scale: 1, opacity: 1 }
+                  : { scale: 0.9, opacity: 0 }
+              }
               animate={{ scale: 1, opacity: 1 }}
-              exit={prefersReducedMotion ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 0 }}
+              exit={
+                prefersReducedMotion
+                  ? { scale: 1, opacity: 1 }
+                  : { scale: 0.9, opacity: 0 }
+              }
               onClick={(e) => e.stopPropagation()}
             >
               {/* Modal Header */}
@@ -442,9 +531,12 @@ export default function Services() {
                 >
                   <X className="h-5 w-5" />
                 </button>
-                <h3 className="text-xl font-bold text-white">Schedule Consultation</h3>
+                <h3 className="text-xl font-bold text-white">
+                  Schedule Consultation
+                </h3>
                 <p className="text-white/80 text-sm mt-1">
-                  Fill in your details and our team will reach out to schedule a consultation
+                  Fill in your details and our team will reach out to schedule a
+                  consultation
                 </p>
               </div>
 

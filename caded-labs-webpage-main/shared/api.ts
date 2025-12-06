@@ -10,3 +10,24 @@
 export interface DemoResponse {
   message: string;
 }
+
+/**
+ * Consultation request form data
+ */
+export interface ConsultationRequest {
+  name: string;
+  email: string;
+  company: string;
+  designation?: string;
+  country?: string;
+  service?: string;
+  product?: string;
+}
+
+/**
+ * Response type for /api/send-consultation
+ */
+export interface ConsultationResponse {
+  success: boolean;
+  message: string;
+}

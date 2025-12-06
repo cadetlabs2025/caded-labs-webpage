@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import { handleDemo } from "./routes/demo";
+import { handleConsultation } from "./routes/consultation";
 
 export function createServer() {
   const app = express();
@@ -16,6 +17,9 @@ export function createServer() {
   });
 
   app.get("/api/demo", handleDemo);
+
+  // Consultation request endpoint
+  app.post("/api/send-consultation", handleConsultation);
 
   return app;
 }

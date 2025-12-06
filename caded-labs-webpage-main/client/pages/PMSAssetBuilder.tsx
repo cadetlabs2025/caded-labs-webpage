@@ -128,7 +128,7 @@ export default function PMSAssetBuilder() {
 
   const handleDemoSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!demoForm.name || !demoForm.email || !demoForm.company) {
       toast({
         title: "Missing Information",
@@ -139,15 +139,30 @@ export default function PMSAssetBuilder() {
     }
 
     setIsSubmitting(true);
-    
+
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      
+      const response = await fetch("/api/send-consultation", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...demoForm,
+          product: "PMS Asset Builder",
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok || !data.success) {
+        throw new Error(data.message || "Failed to send consultation request");
+      }
+
       toast({
-        title: "Demo Request Submitted!",
+        title: "Consultation Request Submitted!",
         description: "Our team will contact you shortly at " + demoForm.email,
       });
-      
+
       setDemoForm({
         name: "",
         email: "",
@@ -195,7 +210,12 @@ export default function PMSAssetBuilder() {
             <motion.div
               className="absolute bottom-20 left-20 w-24 h-24 bg-blue-500/10 rounded-full blur-lg"
               animate={{ y: [0, 15, 0] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 1,
+              }}
             />
           </>
         )}
@@ -204,12 +224,17 @@ export default function PMSAssetBuilder() {
           {/* Back Button */}
           <motion.div
             className="mb-8"
-            initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, x: -20 }}
+            initial={
+              prefersReducedMotion ? { opacity: 1 } : { opacity: 0, x: -20 }
+            }
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: prefersReducedMotion ? 0 : 0.5 }}
           >
             <Link to="/products">
-              <Button variant="ghost" className="text-white/80 hover:text-white hover:bg-white/10">
+              <Button
+                variant="ghost"
+                className="text-white/80 hover:text-white hover:bg-white/10"
+              >
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Products
               </Button>
@@ -248,22 +273,24 @@ export default function PMSAssetBuilder() {
                 className="text-xl text-white/80"
                 variants={itemVariants}
               >
-                Build PMS Data <span className="text-cyan-400 font-bold">5x Faster</span>.
+                Build PMS Data{" "}
+                <span className="text-cyan-400 font-bold">5x Faster</span>.
               </motion.p>
 
               <motion.p
                 className="text-lg text-white/70 leading-relaxed"
                 variants={itemVariants}
               >
-                From unstructured manuals to clean, PMS-ready datasets in a fraction of the time.
+                From unstructured manuals to clean, PMS-ready datasets in a
+                fraction of the time.
               </motion.p>
 
               <motion.div
                 className="flex flex-wrap gap-4"
                 variants={itemVariants}
               >
-                <Button 
-                  size="lg" 
+                <Button
+                  size="lg"
                   className="bg-cyan-500 hover:bg-cyan-600 text-white group shadow-md hover:shadow-lg active:scale-[0.98] transition-all"
                   onClick={() => setShowDemoModal(true)}
                 >
@@ -271,7 +298,10 @@ export default function PMSAssetBuilder() {
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 <a href="/PMS Asset Builder Brochure.pdf" download>
-                  <Button size="lg" className="bg-cyan-500 hover:bg-cyan-600 text-white shadow-md hover:shadow-lg active:scale-[0.98] transition-all">
+                  <Button
+                    size="lg"
+                    className="bg-cyan-500 hover:bg-cyan-600 text-white shadow-md hover:shadow-lg active:scale-[0.98] transition-all"
+                  >
                     <Download className="mr-2 h-4 w-4" />
                     Download Brochure
                   </Button>
@@ -282,9 +312,16 @@ export default function PMSAssetBuilder() {
             {/* Right Content - Visual */}
             <motion.div
               className="relative"
-              initial={prefersReducedMotion ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+              initial={
+                prefersReducedMotion
+                  ? { opacity: 1, scale: 1 }
+                  : { opacity: 0, scale: 0.9 }
+              }
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: prefersReducedMotion ? 0 : 0.8, delay: 0.3 }}
+              transition={{
+                duration: prefersReducedMotion ? 0 : 0.8,
+                delay: 0.3,
+              }}
             >
               <div className="relative bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-3xl p-8 backdrop-blur-sm border border-white/10">
                 {/* Stats Cards */}
@@ -292,13 +329,21 @@ export default function PMSAssetBuilder() {
                   {stats.map((stat, index) => (
                     <motion.div
                       key={index}
-                      className={`bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10 ${prefersReducedMotion ? '' : 'hover:scale-105'} transition-transform`}
-                      initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                      className={`bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10 ${prefersReducedMotion ? "" : "hover:scale-105"} transition-transform`}
+                      initial={
+                        prefersReducedMotion
+                          ? { opacity: 1, y: 0 }
+                          : { opacity: 0, y: 20 }
+                      }
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: prefersReducedMotion ? 0 : 0.5 + index * 0.1 }}
+                      transition={{
+                        delay: prefersReducedMotion ? 0 : 0.5 + index * 0.1,
+                      }}
                     >
                       <stat.icon className="h-6 w-6 text-cyan-400 mx-auto mb-2" />
-                      <div className="text-3xl font-bold text-white">{stat.value}</div>
+                      <div className="text-3xl font-bold text-white">
+                        {stat.value}
+                      </div>
                       <div className="text-xs text-white/60">{stat.label}</div>
                     </motion.div>
                   ))}
@@ -318,7 +363,9 @@ export default function PMSAssetBuilder() {
                       <div className="w-16 h-16 mx-auto bg-cyan-500/20 rounded-xl flex items-center justify-center mb-2 border-2 border-cyan-500/50">
                         <Brain className="h-8 w-8 text-cyan-400" />
                       </div>
-                      <p className="text-xs text-cyan-400 font-medium">AI Processing</p>
+                      <p className="text-xs text-cyan-400 font-medium">
+                        AI Processing
+                      </p>
                     </div>
                     <ArrowRight className="h-6 w-6 text-cyan-400 mx-4" />
                     <div className="flex-1 text-center">
@@ -350,20 +397,29 @@ export default function PMSAssetBuilder() {
               </h2>
               <div className="space-y-4 text-lg text-slate-600 leading-relaxed">
                 <p>
-                  PMS Asset Builder is an <strong className="text-cyan-600">AI-augmented platform</strong> designed 
-                  for maritime teams to accelerate the creation and structuring of Planned Maintenance System (PMS) data.
+                  PMS Asset Builder is an{" "}
+                  <strong className="text-cyan-600">
+                    AI-augmented platform
+                  </strong>{" "}
+                  designed for maritime teams to accelerate the creation and
+                  structuring of Planned Maintenance System (PMS) data.
                 </p>
                 <p>
-                  Whether you're setting up a PMS from scratch or migrating between systems, PMS Asset Builder 
-                  simplifies the process of converting vessel technical manuals into high-quality, export-ready 
-                  datasets tailored to your target PMS platform.
+                  Whether you're setting up a PMS from scratch or migrating
+                  between systems, PMS Asset Builder simplifies the process of
+                  converting vessel technical manuals into high-quality,
+                  export-ready datasets tailored to your target PMS platform.
                 </p>
               </div>
             </motion.div>
 
             <motion.div
               className="relative"
-              initial={prefersReducedMotion ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
+              initial={
+                prefersReducedMotion
+                  ? { opacity: 1, x: 0 }
+                  : { opacity: 0, x: 30 }
+              }
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: prefersReducedMotion ? 0 : 0.6 }}
@@ -374,8 +430,12 @@ export default function PMSAssetBuilder() {
                     <Anchor className="h-6 w-6 text-cyan-600" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-slate-900 text-lg mb-1">Maritime-First Design</h3>
-                    <p className="text-slate-600">Built by ex-seafarers who understand vessel operations</p>
+                    <h3 className="font-bold text-slate-900 text-lg mb-1">
+                      Maritime-First Design
+                    </h3>
+                    <p className="text-slate-600">
+                      Built by ex-seafarers who understand vessel operations
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -383,8 +443,12 @@ export default function PMSAssetBuilder() {
                     <Zap className="h-6 w-6 text-cyan-600" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-slate-900 text-lg mb-1">5x Faster Delivery</h3>
-                    <p className="text-slate-600">Complete vessel PMS data in just 7 days</p>
+                    <h3 className="font-bold text-slate-900 text-lg mb-1">
+                      5x Faster Delivery
+                    </h3>
+                    <p className="text-slate-600">
+                      Complete vessel PMS data in just 7 days
+                    </p>
                   </div>
                 </div>
               </div>
@@ -407,7 +471,8 @@ export default function PMSAssetBuilder() {
               Key Features
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Everything you need to transform technical manuals into structured PMS data
+              Everything you need to transform technical manuals into structured
+              PMS data
             </p>
           </motion.div>
 
@@ -420,19 +485,21 @@ export default function PMSAssetBuilder() {
           >
             {features.map((feature, index) => (
               <motion.div key={index} variants={itemVariants}>
-                <Card className={`h-full border-0 bg-white group ${prefersReducedMotion ? '' : 'hover:shadow-xl hover:-translate-y-1'} transition-all duration-300`}>
+                <Card
+                  className={`h-full border-0 bg-white group ${prefersReducedMotion ? "" : "hover:shadow-xl hover:-translate-y-1"} transition-all duration-300`}
+                >
                   <CardContent className="p-6">
                     <div
-                      className={`w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-4 ${prefersReducedMotion ? '' : 'group-hover:scale-110'} transition-transform duration-300`}
+                      className={`w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-4 ${prefersReducedMotion ? "" : "group-hover:scale-110"} transition-transform duration-300`}
                     >
                       <feature.icon className="h-7 w-7 text-white" />
                     </div>
-                    <h3 className={`text-xl font-bold text-slate-900 mb-2 ${prefersReducedMotion ? '' : 'group-hover:text-cyan-600'} transition-colors`}>
+                    <h3
+                      className={`text-xl font-bold text-slate-900 mb-2 ${prefersReducedMotion ? "" : "group-hover:text-cyan-600"} transition-colors`}
+                    >
                       {feature.title}
                     </h3>
-                    <p className="text-slate-600">
-                      {feature.description}
-                    </p>
+                    <p className="text-slate-600">{feature.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -447,7 +514,11 @@ export default function PMSAssetBuilder() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
               className="order-2 lg:order-1"
-              initial={prefersReducedMotion ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+              initial={
+                prefersReducedMotion
+                  ? { opacity: 1, x: 0 }
+                  : { opacity: 0, x: -30 }
+              }
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: prefersReducedMotion ? 0 : 0.6 }}
@@ -456,14 +527,18 @@ export default function PMSAssetBuilder() {
                 <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-3xl blur-xl" />
                 <div className="relative bg-gradient-to-br from-slate-900 to-cyan-900 rounded-2xl p-8 text-white">
                   <Users className="h-12 w-12 text-cyan-400 mb-6" />
-                  <h3 className="text-2xl font-bold mb-4">Built by Maritime Professionals</h3>
+                  <h3 className="text-2xl font-bold mb-4">
+                    Built by Maritime Professionals
+                  </h3>
                   <p className="text-white/80 leading-relaxed mb-6">
-                    We are ex-seafarers, marine engineers, and product builders who understand the pain of 
-                    PMS data setup. This product is not just tech. It's a practical response to a long-standing 
+                    We are ex-seafarers, marine engineers, and product builders
+                    who understand the pain of PMS data setup. This product is
+                    not just tech. It's a practical response to a long-standing
                     operational headache.
                   </p>
                   <p className="text-cyan-400 italic">
-                    "We built it the way we wished it existed when we were on the other side."
+                    "We built it the way we wished it existed when we were on
+                    the other side."
                   </p>
                 </div>
               </div>
@@ -488,8 +563,12 @@ export default function PMSAssetBuilder() {
                     <CheckCircle className="h-5 w-5 text-green-600" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-slate-900 mb-1">Complete vessel PMS data in 7 days</h4>
-                    <p className="text-slate-600">That's right: just 7 days! (Average ETA: 1 month)</p>
+                    <h4 className="font-bold text-slate-900 mb-1">
+                      Complete vessel PMS data in 7 days
+                    </h4>
+                    <p className="text-slate-600">
+                      That's right: just 7 days! (Average ETA: 1 month)
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -497,8 +576,13 @@ export default function PMSAssetBuilder() {
                     <CheckCircle className="h-5 w-5 text-green-600" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-slate-900 mb-1">AI + Document Intelligence</h4>
-                    <p className="text-slate-600">Mature technologies that eliminate slow, costly, manual PMS creation</p>
+                    <h4 className="font-bold text-slate-900 mb-1">
+                      AI + Document Intelligence
+                    </h4>
+                    <p className="text-slate-600">
+                      Mature technologies that eliminate slow, costly, manual
+                      PMS creation
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -506,8 +590,13 @@ export default function PMSAssetBuilder() {
                     <CheckCircle className="h-5 w-5 text-green-600" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-slate-900 mb-1">Maritime Domain Expertise</h4>
-                    <p className="text-slate-600">Built with deep understanding of vessel operations and regulations</p>
+                    <h4 className="font-bold text-slate-900 mb-1">
+                      Maritime Domain Expertise
+                    </h4>
+                    <p className="text-slate-600">
+                      Built with deep understanding of vessel operations and
+                      regulations
+                    </p>
                   </div>
                 </div>
               </div>
@@ -528,7 +617,11 @@ export default function PMSAssetBuilder() {
           <div className="max-w-3xl mx-auto text-center">
             <motion.h2
               className="text-3xl lg:text-4xl font-bold text-white mb-4"
-              initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              initial={
+                prefersReducedMotion
+                  ? { opacity: 1, y: 0 }
+                  : { opacity: 0, y: 20 }
+              }
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: prefersReducedMotion ? 0 : 0.2 }}
@@ -537,7 +630,11 @@ export default function PMSAssetBuilder() {
             </motion.h2>
             <motion.p
               className="text-xl text-white/80 mb-8"
-              initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              initial={
+                prefersReducedMotion
+                  ? { opacity: 1, y: 0 }
+                  : { opacity: 0, y: 20 }
+              }
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: prefersReducedMotion ? 0 : 0.3 }}
@@ -546,13 +643,17 @@ export default function PMSAssetBuilder() {
             </motion.p>
             <motion.div
               className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
-              initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              initial={
+                prefersReducedMotion
+                  ? { opacity: 1, y: 0 }
+                  : { opacity: 0, y: 20 }
+              }
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: prefersReducedMotion ? 0 : 0.4 }}
             >
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-white text-cyan-600 hover:bg-white/90 group shadow-md hover:shadow-lg active:scale-[0.98] transition-all"
                 onClick={() => setShowDemoModal(true)}
               >
@@ -568,7 +669,10 @@ export default function PMSAssetBuilder() {
               transition={{ delay: prefersReducedMotion ? 0 : 0.5 }}
             >
               <Mail className="h-5 w-5" />
-              <a href="mailto:contact@cadetlabs.io" className="hover:text-white transition-colors underline">
+              <a
+                href="mailto:contact@cadetlabs.io"
+                className="hover:text-white transition-colors underline"
+              >
                 contact@cadetlabs.io
               </a>
             </motion.div>
@@ -588,9 +692,17 @@ export default function PMSAssetBuilder() {
           >
             <motion.div
               className="bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden"
-              initial={prefersReducedMotion ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 0 }}
+              initial={
+                prefersReducedMotion
+                  ? { scale: 1, opacity: 1 }
+                  : { scale: 0.9, opacity: 0 }
+              }
               animate={{ scale: 1, opacity: 1 }}
-              exit={prefersReducedMotion ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 0 }}
+              exit={
+                prefersReducedMotion
+                  ? { scale: 1, opacity: 1 }
+                  : { scale: 0.9, opacity: 0 }
+              }
               onClick={(e) => e.stopPropagation()}
             >
               {/* Modal Header */}
@@ -603,7 +715,8 @@ export default function PMSAssetBuilder() {
                 </button>
                 <h3 className="text-xl font-bold text-white">Request a Demo</h3>
                 <p className="text-white/80 text-sm mt-1">
-                  Fill in your details and our team will reach out to schedule a demo
+                  Fill in your details and our team will reach out to schedule a
+                  demo
                 </p>
               </div>
 
